@@ -250,6 +250,12 @@
                             <div class="layout__col-7 " bis_skin_checked="1">
                                 <p id="to_lang">English</p>
                             </div>
+                            <div class="layout__col-5 " bis_skin_checked="1">
+                                <p id="">Subject</p>
+                            </div>
+                            <div class="layout__col-7 " bis_skin_checked="1">
+                                <p id="selected_subject">Accounting & Finance</p>
+                            </div>
                         </div>
 
                         <h5>Pricing ($0.10 / word)</h5>
@@ -403,6 +409,7 @@
         const currentDate = new Date();
         let from_lang = '';
         let to_lang = '';
+        let selected_subject = '';
         let total_word = 0;
         const per_word = 0.10;
         let total_price = 0;
@@ -412,7 +419,7 @@
             $('.select2').select2();
             updateQuotation();
 
-            $("#from, #to, #delivery_date").on("change", function() {
+            $("#from, #to, #subject, #delivery_date").on("change", function() {
                 // Call the updateQuotation function when a change occurs
                 updateQuotation();
             });
@@ -553,6 +560,7 @@
         function updateContextValue() {
             from_lang = $("#from").val();
             to_lang = $("#to").val();
+            selected_subject = $("#subject").val();
             total_word = updateWordCountField();
             total_price = parseFloat(per_word * total_word).toFixed(2);
 
@@ -563,6 +571,7 @@
             updateContextValue();
             $("#from_lang").text(from_lang);
             $("#to_lang").text(to_lang);
+            $("#selected_subject").text(selected_subject);
             $("#total_word").text(total_word + ' words');
             $("#total_price").text('$' +total_price);
             $("#estimate_date").text(estimate_date);
