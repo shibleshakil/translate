@@ -141,7 +141,7 @@
 
                         <div class="layout__col-12 layout__col-sm-12 layout__col-xs-12 form-group mb-0" bis_skin_checked="1"
                             style="display: grid; align-items: end;">
-                            <button class="btn button--secondary check price" type="button">Update prices</button>
+                            <button class="btn button--secondary check price" type="button">Place Order</button>
                         </div>
                     </div>
                 </div>
