@@ -10,9 +10,9 @@
             <ul>
                 <li style="font-weight: bold; color: #fff;">Useful &darr;</li>
                 <li><a href="#" style="color: #fff;"><br></a></li>
-                <li><a href="#" style="color: #fff;">Solutions</a></li>
-                <li><a href="#" style="color: #fff;">Language Professionals</a></li>
-                <li><a href="#" style="color: #fff;">Instant Quote</a></li>
+                <li><a href="{{ route ('solutions') }}" style="color: #fff;">Solutions</a></li>
+                <li><a href="{{ route ('languageProfessionals') }}" style="color: #fff;">Language Professionals</a></li>
+                <li><a href="{{ route ('instantQuote') }}" style="color: #fff;">Instant Quote</a></li>
             </ul>
         </div>
 
@@ -95,15 +95,15 @@
     <div class="contentCentered" bis_skin_checked="1">
         <div class="row" bis_skin_checked="1">
             <div class="legalLinks" bis_skin_checked="1">
-                <a href="#">Terms and Conditions</a>
+                <a href="{{ route ('terms-and-conditions') }}">Terms and Conditions</a>
             </div>
 
             <div class="legalLinks" bis_skin_checked="1">
-                <a href="#">Privacy Policy</a>
+                <a href="{{ route ('privacy-policy') }}">Privacy Policy</a>
             </div>
 
             <div class="legalLinks" bis_skin_checked="1">
-                <a href="#">Cookie Policy</a>
+                <a href="{{ route ('cookie-policy') }}">Cookie Policy</a>
             </div>
         </div>
     </div>

@@ -40,9 +40,8 @@
 
             <input type="submit" value="Login">
             <p>By signing up, you agree to our
-                <a href="terms-and-conditions.html" style="text-decoration: none; color: #625BF6;"> Terms of Service
-                </a> and <a href="privacy-policy.html" style="text-decoration: none; color: #625BF6;">Privacy
-                    Policy</a>.
+                <a href="{{ route ('terms-and-conditions') }}" style="text-decoration: none; color: #625BF6;"> Terms of Service
+                </a> and <a href="{{ route ('privacy-policy') }}" style="text-decoration: none; color: #625BF6;">Privacy Policy</a>.
             </p>
         </form>
     </div>

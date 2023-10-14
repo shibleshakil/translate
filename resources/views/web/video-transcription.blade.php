@@ -19,7 +19,7 @@
                         blend of transcription and localization, converting your videos into a language-rich
                         experience tailored to your audience's cultural context.
                     </p>
-                    <a href="contact-us.html" class="button button--secondary">Transcribe Now
+                    <a href="{{ route ('contactUs') }}" class="button button--secondary">Transcribe Now
                     </a>
                 </div>
             </div>
@@ -55,7 +55,7 @@
                         stories are not restricted by language barriers but instead amplified through accurate and
                         localized transcriptions.
                     </p>
-                    <a href="contact-us.html" class="button button--secondary">Talk to Us
+                    <a href="{{ route ('contactUs') }}" class="button button--secondary">Talk to Us
                     </a>
                 </div>
             </div>
@@ -75,7 +75,7 @@
                             connect with and captivate your global audience.
                         </p>
                     </div>
-                    <a href="contact-us.html" class="button button--stretched button--big ">
+                    <a href="{{ route ('contactUs') }}" class="button button--stretched button--big ">
                         Localize Now
                     </a>
                 </div>
@@ -96,7 +96,7 @@
                     <p>Make your webinars and presentations accessible to all, regardless of language. Our
                         transcription services ensure that every word, every sentiment, is captured and understood.
                     </p>
-                    <a href="get-started.html" style="color: #69CDFF !important;" class="link link--noline ">Get
+                    <a href="{{ route ('getStarted') }}" style="color: #69CDFF !important;" class="link link--noline ">Get
                         Started</a>
                 </div>
             </div>
@@ -109,7 +109,7 @@
                     <p>Knowledge should have no boundaries. Transcribe and localize your eLearning and training
                         videos to ensure that learning is universal, breaking the confines of language.
                     </p>
-                    <a href="contact-us.html" style="color: #69CDFF !important;" class="link link--noline ">Talk to
+                    <a href="{{ route ('contactUs') }}" style="color: #69CDFF !important;" class="link link--noline ">Talk to
                         Us</a>
                 </div>
             </div>
@@ -123,7 +123,7 @@
                         these details are captured and localized, ensuring that every step is clear and
                         comprehensible.
                     </p>
-                    <a href="contact-us.html" style="color: #69CDFF !important;" class="link link--noline ">Transcribe
+                    <a href="{{ route ('contactUs') }}" style="color: #69CDFF !important;" class="link link--noline ">Transcribe
                         Today</a>
                 </div>
             </div>
@@ -187,7 +187,7 @@
                             detail, and a commitment to excellence when you choose us.
                         </p>
                     </div>
-                    <a href="contact-us.html" class="button button--stretched button--big ">
+                    <a href="{{ route ('contactUs') }}" class="button button--stretched button--big ">
                         Get in Touch
                     </a>
                 </div>

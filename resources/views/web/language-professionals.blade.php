@@ -124,7 +124,7 @@
             <div class="layout__row   ">
                 <div class="layout__col-12 layout__col-xs-12 ">
                     <div class="hero-text hero-text--center ">
-                        <a href="signup.html" class="button button--secondary">Register Now
+                        <a href="{{ route ('register') }}" class="button button--secondary">Register Now
                         </a>
                     </div>
                 </div>
@@ -147,14 +147,27 @@
         </div>
     </section>
 
-    <div class="container22" style="margin-bottom: 100px;">
+    <section class="section--overflow" id="our-services">
+        <div class="layout">
+            <div class="layout__row   ">
+                <div class="layout__col-12 layout__col-xs-12 ">
+                    <div class="hero-text hero-text--center ">
+                        <a href="{{ route ('instantQuote') }}" class="button button--secondary">Get a Quote
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    {{-- <div class="container22" style="margin-bottom: 100px;">
         <form action="#">
             <label for="Email">Email Address</label>
             <input type="email" id="email" name="email" placeholder="Your Email Address..">
 
             <input type="submit" value="Get a Quote">
         </form>
-    </div>
+    </div> --}}
 
     <section class="section--overflow">
         <div class="layout">

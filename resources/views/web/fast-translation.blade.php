@@ -38,7 +38,7 @@
                         Our specialized legal translators navigate the intricacies of legal documents translation
                         with precision.
                     </p>
-                    <a href="legal-translations.html" class="button button--secondary">Learn More
+                    <a href="{{ route ('legalTranslations') }}" class="button button--secondary">Learn More
                     </a>
                 </div>
 
@@ -82,7 +82,7 @@
                         ensure accuracy and clarity, meeting the demands of global manufacturing and engineering
                         products sectors.
                     </p>
-                    <a href="technical-translation.html" class="button button--secondary">Learn More
+                    <a href="{{ route ('technicalTranslation') }}" class="button button--secondary">Learn More
                     </a>
                 </div>
 
@@ -125,7 +125,7 @@
                         marketing films & videos, our Professional Marketing & Advertising Translation Services
                         ensure that your brand message resonates universally.
                     </p>
-                    <a href="marketing-translation.html" class="button button--secondary">Learn More
+                    <a href="{{ route ('marketingTranslation') }}" class="button button--secondary">Learn More
                     </a>
                 </div>
 
@@ -167,7 +167,7 @@
                         translating financial documentation, from RFIs and RFPs to financial and audit reports. With
                         our seasoned financial translators, every detail is meticulously translated and localized.
                     </p>
-                    <a href="financial-translation.html" class="button button--secondary">Learn More
+                    <a href="{{ route ('financialTranslation') }}" class="button button--secondary">Learn More
                     </a>
                 </div>
 
@@ -209,7 +209,7 @@
                         content speaks to every visitor, in every language, maintaining the essence of your brand
                         message.
                     </p>
-                    <a href="website-translation.html" class="button button--secondary">Learn More
+                    <a href="{{ route ('websiteTranslation') }}" class="button button--secondary">Learn More
                     </a>
                 </div>
 
@@ -255,7 +255,7 @@
                         certificates, our professional document translators ensure clarity, accuracy, and
                         authenticity. Trust us for seamless translations of any document in any language.
                     </p>
-                    <a href="document-translation.html" class="button button--secondary">Learn More
+                    <a href="{{ route ('documentTranslation') }}" class="button button--secondary">Learn More
                     </a>
                 </div>
 

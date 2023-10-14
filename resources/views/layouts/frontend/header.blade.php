@@ -83,7 +83,7 @@
                 <li class="dropdownn">
                     <a href="{{ route ('contactUs') }}">Contact us</a>
                 </li>
-                <li id="userInfo" class="header__userInfo header__userInfo--hidden dropdownn" aria-label="user menu">
+                <li id="userInfo" class="header__userInfo header__userInfo--hidden dropdownn d-none" aria-label="user menu">
                     <a id="signin">
                         <i class="icon  ">
                         <svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1"

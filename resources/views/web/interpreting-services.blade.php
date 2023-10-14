@@ -21,7 +21,7 @@
                         ensuring your voice is heard, understood, and responded to, irrespective of the language
                         spoken.
                     </p>
-                    <a href="contact-us.html" class="button button--secondary">Interpret Now
+                    <a href="{{ route ('contactUs') }}" class="button button--secondary">Interpret Now
                     </a>
                 </div>
             </div>
@@ -75,7 +75,7 @@
                         interpreters not only understand the technical jargon but also appreciate the emotional
                         nuances, ensuring patient-caregiver communication is both clear and compassionate.
                     </p>
-                    <a href="contact-us.html" class="button button--secondary">Interpret Now
+                    <a href="{{ route ('contactUs') }}" class="button button--secondary">Interpret Now
                     </a>
                 </div>
             </div>
@@ -96,7 +96,7 @@
                     <p>In the realm of law, every word counts. Our legal interpreters are well-versed in courtroom
                         protocols and legal terminologies, ensuring justice isn't hindered by language differences.
                     </p>
-                    <a href="contact-us.html" class="button button--secondary">Get Started
+                    <a href="{{ route ('contactUs') }}" class="button button--secondary">Get Started
                     </a>
                 </div>
             </div>
@@ -118,7 +118,7 @@
                         your message resonates universally, with our skilled interpreters making real-time
                         Interpretations seem effortless.
                     </p>
-                    <a href="contact-us.html" class="button button--secondary">Get Started
+                    <a href="{{ route ('contactUs') }}" class="button button--secondary">Get Started
                     </a>
                 </div>
             </div>
@@ -137,7 +137,7 @@
                         negotiation, a telehealth consultation, or a virtual team meeting, our interpreters ensure
                         clarity and coherence, facilitating communication seamlessly over any medium.
                     </p>
-                    <a href="contact-us.html" class="button button--secondary">Interpret Today
+                    <a href="{{ route ('contactUs') }}" class="button button--secondary">Interpret Today
                     </a>
                 </div>
             </div>
@@ -151,7 +151,7 @@
                 <div class="hero-text ">
                     <h3>Why Choose TranslationsX for Interpreting?
                     </h3>
-                    <a href="solutions.html" class="button button--secondary">Explore Our Expertise
+                    <a href="{{ route ('solutions') }}" class="button button--secondary">Explore Our Expertise
                     </a>
                 </div>
             </div>
@@ -210,7 +210,7 @@
                             dedicated to facilitating meaningful connections.
                         </p>
                     </div>
-                    <a href="contact-us.html" class="button button--stretched button--big ">
+                    <a href="{{ route ('contactUs') }}" class="button button--stretched button--big ">
                         Get in Touch
                     </a>
                 </div>

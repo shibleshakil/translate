@@ -35,6 +35,8 @@
 
     @include('layouts.frontend.footer')
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.11/js/select2.full.min.js"></script>
     @yield('script')
 
 </body>

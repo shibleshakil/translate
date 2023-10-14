@@ -28,7 +28,7 @@
                     </p>
                 </div>
             </div>
-            <a href="contact-us.html" class="button button--secondary">Transcribe Now
+            <a href="{{ route ('contactUs') }}" class="button button--secondary">Transcribe Now
             </a>
         </div>
     </div>
@@ -48,7 +48,7 @@
                         mission is to let these narratives flourish without being
                         bound by language constraints.
                     </p>
-                    <a href="contact-us.html" class="button button--secondary">Talk to Us
+                    <a href="{{ route ('contactUs') }}" class="button button--secondary">Talk to Us
                     </a>
                 </div>
             </div>
@@ -83,7 +83,7 @@
                         context, and nuance of your interviews and discussions are preserved and made accessible to
                         a broader audience.
                     </p>
-                    <a href="contact-us.html" style="color: #FBA24C !important;" class="link link--noline ">Get
+                    <a href="{{ route ('contactUs') }}" style="color: #FBA24C !important;" class="link link--noline ">Get
                         Started</a>
                 </div>
             </div>
@@ -98,7 +98,7 @@
                         capture the emotion, the humor, and the intelligence of your
                         content, making it universally relatable.
                     </p>
-                    <a href="contact-us.html" style="color: #FBA24C !important;" class="link link--noline ">Talk to
+                    <a href="{{ route ('contactUs') }}" style="color: #FBA24C !important;" class="link link--noline ">Talk to
                         Us</a>
                 </div>
             </div>
@@ -111,7 +111,7 @@
                     <p>Stories are meant to be shared far and wide. Transcribe and localize your audiobooks and
                         narratives to ensure that the magic of storytelling transcends linguistic barriers.
                     </p>
-                    <a href="contact-us.html" style="color: #FBA24C !important;" class="link link--noline ">Learn
+                    <a href="{{ route ('contactUs') }}" style="color: #FBA24C !important;" class="link link--noline ">Learn
                         More</a>
                 </div>
             </div>
@@ -135,7 +135,7 @@
                     </p>
                 </div>
             </div>
-            <a href="contact-us.html" class="button button--secondary">Transcribe Today
+            <a href="{{ route ('contactUs') }}" class="button button--secondary">Transcribe Today
             </a>
         </div>
     </div>
@@ -170,7 +170,7 @@
                             compatibility, our transcription services promise to elevate your audio's impact.
                         </p>
                     </div>
-                    <a href="contact-us.html" class="button button--stretched button--big ">
+                    <a href="{{ route ('contactUs') }}" class="button button--stretched button--big ">
                         Get in Touch
                     </a>
                 </div>

@@ -19,7 +19,7 @@
                         <p>We professionally translate documents with speed and
                             precision. Connect more, do more.</p>
 
-                        <a href="get-started.html" class="button button--big">Get
+                        <a href="{{ route ('getStarted') }}" class="button button--big">Get
                             Started
                         </a>
 
@@ -61,7 +61,7 @@
                         <h4>Accurate and Reliable Transcription</h4>
                         <p>We convert spoken words into written form with 100% accuracy.
                             Our professionally trained team ensures that nothing is lost.</p>
-                        <a href="reliable-transcription.html" class="link link--noline "
+                        <a href="{{ route ('reliableTranscription') }}" class="link link--noline "
                             style="color: #625BF6 !important;">Learn
                             More</a>
                     </div>
@@ -75,7 +75,7 @@
                             Entrust
                             your words to us and get your message across, clearly and
                             effectively.</p>
-                        <a href="professional-translation.html" class="link link--noline "
+                        <a href="{{ route ('professionalTranslation') }}" class="link link--noline "
                             style="color: #625BF6 !important;">Learn
                             more</a>
                     </div>
@@ -89,9 +89,8 @@
                             simultaneous and consecutive interpretations, ensuring
                             seamless communication in any setting
                         </p>
-                        <a href="expert-interpreting.html" class="link link--noline "
-                            style="color: #625BF6 !important;">Learn
-                            More</a>
+                        <a href="{{ route ('expertInterpreting') }}" class="link link--noline "
+                            style="color: #625BF6 !important;">Learn More</a>
                     </div>
                 </div>
             </div>
@@ -207,7 +206,7 @@
                                 fast translation, and how to get the most out of our
                                 professional translation services.</p>
                         </div>
-                        <a href="signup.html" class="button button--stretched button--big ">
+                        <a href="{{ route ('register') }}" class="button button--stretched button--big ">
                             Sign up for newsletter
                         </a>
                     </div>

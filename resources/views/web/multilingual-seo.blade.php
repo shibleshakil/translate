@@ -21,7 +21,7 @@
                         engines across the globe. By bridging the gap between language and search engine algorithms,
                         we position your business for international success.
                     </p>
-                    <a href="contact-us.html" class="button button--secondary">Talk to us
+                    <a href="{{ route ('contactUs') }}" class="button button--secondary">Talk to us
                     </a>
                 </div>
             </div>
@@ -57,7 +57,7 @@
                             visibility it merits.
                         </p>
                     </div>
-                    <a href="contact-us.html" class="button button--stretched button--big ">
+                    <a href="{{ route ('contactUs') }}" class="button button--stretched button--big ">
                         Talk to Us
                     </a>
 
@@ -79,7 +79,7 @@
                         cultural nuances and linguistic preferences. We ensure your content resonates and remains
                         SEO-friendly, offering a seamless experience for every user, no matter where they come from.
                     </p>
-                    <a href="contact-us.html" class="button button--secondary">Talk to us
+                    <a href="{{ route ('contactUs') }}" class="button button--secondary">Talk to us
                     </a>
                 </div>
             </div>
@@ -98,7 +98,7 @@
                             precision of SEO, we maintain the consistency and impact of your brand's voice.
                         </p>
                     </div>
-                    <a href="contact-us.html" class="button button--stretched button--big ">
+                    <a href="{{ route ('contactUs') }}" class="button button--stretched button--big ">
                         Contact Us
                     </a>
 
@@ -120,7 +120,7 @@
                         guide you through every step, ensuring your website stands out no matter the language.
                         Contact us today and let’s embark on this journey together.
                     </p>
-                    <a href="contact-us.html" class="button button--secondary">Contact TranslationsX
+                    <a href="{{ route ('contactUs') }}" class="button button--secondary">Contact TranslationsX
                     </a>
                 </div>
             </div>

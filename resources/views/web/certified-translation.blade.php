@@ -22,7 +22,7 @@
                         professionalism, and punctuality. Entrust us with your most vital documents, and we’ll
                         ensure they resonate with credibility across borders.
                     </p>
-                    <a href="instant-quote.html" class="button button--secondary">Translate now
+                    <a href="{{ route ('instantQuote') }}" class="button button--secondary">Translate now
                     </a>
                 </div>
 
@@ -65,7 +65,7 @@
                         certified translators ensure every word aligns with the legal standards of the destination
                         country. Maintain the integrity and credibility of your legal documents, always.
                     </p>
-                    <a href="instant-quote.html" style="color: #538F4A !important;" class="link link--noline ">Translate
+                    <a href="{{ route ('instantQuote') }}" style="color: #538F4A !important;" class="link link--noline ">Translate
                         Now</a>
                 </div>
             </div>
@@ -76,7 +76,7 @@
                     <p>Your academic pursuits know no boundaries, and neither should your documents. Whether it's
                         diplomas, transcripts, or letters of recommendation, our certified translations help you
                         make a mark in institutions worldwide.</p>
-                    <a href="instant-quote.html" style="color: #538F4A !important;" class="link link--noline ">Translate
+                    <a href="{{ route ('instantQuote') }}" style="color: #538F4A !important;" class="link link--noline ">Translate
                         Now</a>
                 </div>
             </div>
@@ -87,7 +87,7 @@
                         services for immigration documents like birth certificates, marriage licenses, and passports
                         smooth out your transition, making global relocations a breeze.
                     </p>
-                    <a href="instant-quote.html" style="color: #538F4A !important;" class="link link--noline ">Translate
+                    <a href="{{ route ('instantQuote') }}" style="color: #538F4A !important;" class="link link--noline ">Translate
                         Now</a>
                 </div>
             </div>
@@ -105,7 +105,7 @@
                     <p>The nuances of healthcare documentation require a sensitive touch. Trust our certified
                         translators to handle medical records, clinical trials, and patient histories with utmost
                         confidentiality and care.</p>
-                    <a href="instant-quote.html" style="color: #538F4A !important;" class="link link--noline ">Translate
+                    <a href="{{ route ('instantQuote') }}" style="color: #538F4A !important;" class="link link--noline ">Translate
                         Now</a>
                 </div>
             </div>
@@ -117,7 +117,7 @@
                         business contracts, MOUs, and shareholder agreements, ensure your enterprise thrives without
                         linguistic hitches.
                     </p>
-                    <a href="instant-quote.html" style="color: #538F4A !important;" class="link link--noline ">Translate
+                    <a href="{{ route ('instantQuote') }}" style="color: #538F4A !important;" class="link link--noline ">Translate
                         Today</a>
                 </div>
             </div>
@@ -145,7 +145,7 @@
                         </li>
                     </ul>
                 </div>
-                <a href="solutions.html" class="button button--stretched button--big ">
+                <a href="{{ route ('solutions') }}" class="button button--stretched button--big ">
                     Explore our Expertise
                 </a>
 
@@ -168,7 +168,7 @@
                             alike. Experience a partnership that values integrity as much as you do.
                         </p>
                     </div>
-                    <a href="contact-us.html" class="button button--stretched button--big ">
+                    <a href="{{ route ('contactUs') }}" class="button button--stretched button--big ">
                         Get in Touch
                     </a>
                 </div>

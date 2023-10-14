@@ -22,7 +22,7 @@
                         seminar, a clip, or an interview, we have the language expertise to bridge communication
                         gaps seamlessly.
                     </p>
-                    <a href="contact-us.html" class="button button--secondary">Transcribe Now
+                    <a href="{{ route ('contactUs') }}" class="button button--secondary">Transcribe Now
                     </a>
                 </div>
             </div>
@@ -60,7 +60,7 @@
                             nuance is captured and every word is transcribed with precision.
                         </p>
                     </div>
-                    <a href="contact-us.html" class="button button--stretched button--big ">
+                    <a href="{{ route ('contactUs') }}" class="button button--stretched button--big ">
                         Talk to Us
                     </a>
 
@@ -84,7 +84,7 @@
                         just linguistically sound but culturally resonant. Dive into the world of multilingual
                         transcription with a team that prioritizes your message's integrity in every language.
                     </p>
-                    <a href="contact-us.html" class="button button--secondary">Talk to us
+                    <a href="{{ route ('contactUs') }}" class="button button--secondary">Talk to us
                     </a>
                 </div>
             </div>
@@ -101,7 +101,7 @@
                         </h3>
                         <p>Dive into our streamlined process designed for ease and precision. From submitting your
                             files to receiving transcriptions in the language of your choice, every step is
-                            transparent and efficient. <a href="contact-us.html" style="text-decoration: none;">Connect
+                            transparent and efficient. <a href="{{ route ('contactUs') }}" style="text-decoration: none;">Connect
                                 with us</a>, and let our experts guide you
                             through each stage, ensuring your content is ready for global audiences.</p>
                     </div>

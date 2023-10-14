@@ -189,7 +189,7 @@
                         guide you through every step, ensuring your website stands out no matter the language.
                         Contact us today and let’s embark on this journey together.
                     </p>
-                    <a href="contact-us.html" class="button button--secondary">Contact TranslationsX
+                    <a href="{{ route ('contactUs') }}" class="button button--secondary">Contact TranslationsX
                     </a>
                 </div>
             </div>
