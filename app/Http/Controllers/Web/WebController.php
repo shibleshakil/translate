@@ -73,55 +73,46 @@ class WebController extends Controller
 
 
     public function reliableTranscription(){
-        abort(404);
         return view('web.reliable-transcription');
     }
 
 
     public function professionalTranslation(){
-        abort(404);
         return view('web.professional-translation');
     }
 
 
     public function expertInterpreting(){
-        abort(404);
         return view('web.expert-interpreting');
     }
 
 
     public function getStarted(){
-        abort(404);
         return view('web.get-started');
     }
 
 
     public function terms_and_conditions(){
-        abort(404);
         return view('web.terms-and-conditions');
     }
 
 
     public function privacy_policy(){
-        abort(404);
         return view('web.privacy-policy');
     }
 
 
     public function cookie_policy(){
-        abort(404);
         return view('web.cookie-policy');
     }
 
 
     public function legalTranslations(){
-        abort(404);
         return view('web.legal-translations');
     }
 
 
     public function technicalTranslation(){
-        abort(404);
         return view('web.technical-translation');
     }
 
