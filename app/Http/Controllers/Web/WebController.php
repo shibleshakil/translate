@@ -118,31 +118,26 @@ class WebController extends Controller
 
 
     public function marketingTranslation(){
-        abort(404);
         return view('web.marketing-translation');
     }
 
 
     public function financialTranslation(){
-        abort(404);
         return view('web.financial-translation');
     }
 
 
     public function websiteTranslation(){
-        abort(404);
         return view('web.website-translation');
     }
 
 
     public function documentTranslation(){
-        abort(404);
         return view('web.document-translation');
     }
 
 
     public function solutions(){
-        abort(404);
         return view('web.solutions');
     }
 
