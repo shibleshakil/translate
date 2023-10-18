@@ -15,9 +15,9 @@ return new class extends Migration
     {
         Schema::create('business_settings', function (Blueprint $table) {
             $table->id();
-            $table->string('type');
+            $table->string('type')->index();
             $table->text('value')->nullable();
-            $table->unsignedBigInteger('updated_by')->unsigned()->index()->nullable();
+            $table->unsignedBigInteger('updated_by')->unsigned()->nullable();
             $table->foreign('updated_by')->references('id')->on('admins')->onDelete('cascade');
             $table->timestamps();
         });

@@ -43,7 +43,7 @@ class DatabaseSeeder extends Seeder
         DB::table('business_settings')->insert([
             [
                 "type" => "company_name",
-                "value" => "Chamaz",
+                "value" => "Translations",
                 "updated_by" => 1,
                 "created_at" => date('Y-m-d H:i:s'),
                 "updated_at" => date('Y-m-d H:i:s'),
@@ -57,21 +57,21 @@ class DatabaseSeeder extends Seeder
             ],
             [
                 "type" => "logo",
-                "value" => "logo.png",
+                "value" => null,
                 "updated_by" => 1,
                 "created_at" => date('Y-m-d H:i:s'),
                 "updated_at" => date('Y-m-d H:i:s'),
             ],
             [
                 "type" => "favicon",
-                "value" => "favicon.png",
+                "value" => null,
                 "updated_by" => 1,
                 "created_at" => date('Y-m-d H:i:s'),
                 "updated_at" => date('Y-m-d H:i:s'),
             ],
             [
                 "type" => "company_email",
-                "value" => "info@chamaz.com",
+                "value" => "support@translationsx.com",
                 "updated_by" => 1,
                 "created_at" => date('Y-m-d H:i:s'),
                 "updated_at" => date('Y-m-d H:i:s'),
@@ -101,7 +101,7 @@ class DatabaseSeeder extends Seeder
             ],
             [
                 "type" => "copy_right_text",
-                "value" => "Copyright © 2023 Chamaz",
+                "value" => "Copyright © 2023 Translations",
                 "updated_by" => 1,
                 "created_at" => date('Y-m-d H:i:s'),
                 "updated_at" => date('Y-m-d H:i:s'),

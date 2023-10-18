@@ -1,10 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 
+@php($logo = \App\Helpers\Common::get_business_settings('logo'))
+@php($footer_logo = \App\Helpers\Common::get_business_settings('footer_logo'))
+@php($small_logo = \App\Helpers\Common::get_business_settings('logo_small'))
+@php($company_email = \App\Helpers\Common::get_business_settings('company_email'))
+@php($company_name = \App\Helpers\Common::get_business_settings('company_name'))
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Translations | @yield('title')</title>
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+    <title>{{ $company_name ?? 'Translations' }} | @yield('title')</title>
 
     <!-- Add Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
@@ -15,15 +22,15 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <link rel="stylesheet" href="{{ asset ('public/frontend/css/main.css') }}">
-    <link rel="icon" href="{{ asset ('public/frontend/images/logosmall.png') }}">
-    <link rel="icon" type="image/png" href="{{ asset ('public/frontend/images/logosmall.png') }}" sizes="32x32">
-    <link rel="icon" type="image/png" href="{{ asset ('public/frontend/images/logosmall.png') }}" sizes="16x16">
+    <link rel="icon" type="image/x-icon" href="{{$small_logo ? asset ('public/storage/'. $small_logo) : asset ('public/frontend/images/logosmall.png') }}" sizes="32x32">
+    <link rel="icon" type="image/png" href="{{$small_logo ? asset ('public/storage/'. $small_logo) : asset ('public/frontend/images/logosmall.png') }}" sizes="16x16">
 
     @yield('css')
 
 </head>
 
 <body>
+    <input type="hidden" id="csrfToken" value="{{ csrf_token() }}">
 
     @include('layouts.frontend.header')
 

@@ -2,7 +2,7 @@
     <div class="layout layout--norow">
         <div class="footer__credits" style="margin-top: 50px;">
             <i class="icon ">
-                <img class="imagefooter" src="{{ asset ('public/frontend/images/logowhite.png') }}" alt>
+                <img class="imagefooter" src="{{$footer_logo ?  asset ('public/storage/'. $footer_logo) : asset ('public/frontend/images/logowhite.png') }}" alt>
             </i>
         </div>
 
@@ -19,9 +19,9 @@
         <div class="footer__settings settings" style="margin-top: 50px;">
             <p class="reset-dir">
                 <i class="fa fa-envelope" style="font-size:24px; color: #fff;"></i>
-                <a class="link link--noline" href="mailto:support@translationsx.com"
+                <a class="link link--noline" href="mailto:{{ $company_email ?? 'support@translationsx.com' }}"
                     style="color: #fff !important;">&nbsp;&nbsp;
-                    support@translationsx.com
+                    {{ $company_email ?? 'support@translationsx.com' }}
                 </a>
             </p>
             <p class="reset-dir footer__social">

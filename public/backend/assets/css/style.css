@@ -1,0 +1,68 @@
+:root {
+    --black: #000;
+    --blue: #625BF6;
+    --blue--darker: #5D6DB5;
+    --white: #fff;
+    --dark-blue: #002b5c;
+    --light-blue: #09c;
+    --red: #ed7a5b;
+    --yellow: #ebbf47;
+    --green: #66d4bd;
+    --purple: #d4a1ed;
+    --dark-grey: #768190;
+    --grey: #abb3bd;
+    --silver: #ccd4de;
+    --silver-24: rgba(204, 212, 222, 0.16);
+    --silver--darker: #abb3bd;
+    --light-grey: #f2f5f7;
+    --input-shadow: rgba(0, 0, 0, 0.16);
+    --dept-z200-shadow: rgba(0, 0, 0, 0.16);
+    --modal-shadow: rgba(0, 0, 0, 0.4);
+    --z-index-ground-1: 1;
+    --z-index-ground-2: 2;
+    --z-index-ground-3: 3;
+    --z-index-middle-1: 4;
+    --z-index-middle-2: 5;
+    --z-index-middle-3: 6;
+    --z-index-top-1: 7;
+    --z-index-top-2: 8;
+    --z-index-top-3: 9;
+    --z-index-over-the-top: 10;
+    --page-max-width: 1200px;
+    --page-border-spacing-desktop: 32px;
+    --page-border-spacing-mobile: 24px;
+    --page-border-spacing-small-mobile:8px;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    text-rendering: auto;
+    font-smoothing: antialiased;
+    -webkit-font-smoothing: antialiased !important;
+    -moz-font-smoothing: antialiased !important;
+    -moz-osx-font-smoothing:grayscale !important
+}
+
+.navigation {
+    font-family: 'Poppins', sans-serif;
+}
+
+.main-menu.menu-light .navigation li a {
+    color: var(--black);
+}
+
+.main-menu.menu-light .navigation > li.hover > a,
+.main-menu.menu-light .navigation > li:hover > a,
+.main-menu.menu-light .navigation > li.active > a {
+    background-color: var(--black);
+    color: #fff;
+}
+
+.main-menu.menu-light .navigation li.active {
+    border-left: 4px solid var(--blue);
+}
+
+.border-color-c1 {
+    border: 1px solid #00b5b8;
+}

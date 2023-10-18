@@ -1,6 +1,7 @@
 <header class="header--standard">
     <div class="layout layout--norow">
-        <a href="{{ route ('home') }}"><img style="width: 222px;" src="{{ asset ('public/frontend/images/logotop.png') }}" alt></a>
+        <a href="{{ route ('home') }}"><img style="width: 222px;"
+            src="{{$logo ?  asset ('public/storage/'. $logo) : asset ('public/frontend/images/logotop.png') }}" alt></a>
         <input id="input-hamburger" type="checkbox">
         <label for="input-hamburger" data-testid="toggle-hamburger-menu">
             <i class="icon  ">
