@@ -94,7 +94,7 @@
                                         </div>
                                     </div>
                                     <div class="col-md-4">
-                                        <button type="button" onclick="send_mail()" class="btn btn-primary btn-block">
+                                        <button type="button" onclick="send_mail()" class="btn btn-primary btn-block send_mail">
                                             {{ __('Send Test Mail') }}
                                         </button>
                                     </div>
@@ -124,9 +124,13 @@
         }
 
         function send_mail() {
+            var buttonDefault = $('.send_mail').text();
+            var button = $('.send_mail');
+
             if (ValidateEmail($('#test-email').val())) {
-                Swal.fire({
-                    title: '{{__('Are you sure?')}}?',
+                swal.fire({
+                    type: 'warning',
+                    title: "{{__('Are you sure?')}}?",
                     text: "{{__('A test email will be sent to your email')}}!",
                     showCancelButton: true,
                     confirmButtonColor: '#377dff',
@@ -139,6 +143,9 @@
                                 'X-CSRF-TOKEN': $('meta[name="_token"]').attr('content')
                             }
                         });
+                        
+                        button.attr('disabled',true);
+                        button.text('Please wait ...');
                         $.ajax({
                             url: "{{route('admin.business_settings.sendTestMail')}}",
                             method: 'POST',
@@ -152,6 +159,9 @@
                                     text: data.msg,
                                 });
                                 $('#test-email').val('');
+                                
+                                button.attr('disabled',false);
+                                button.text(buttonDefault);
                             },
                             error: function(xhr, status, error) {
                                 // Handle error
@@ -175,6 +185,9 @@
                                 } else {
                                     console.error(error);
                                 }
+                                
+                                button.attr('disabled',false);
+                                button.text(buttonDefault);
                             }
                         });
                     }
