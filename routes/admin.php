@@ -47,6 +47,8 @@ Route::group(['middleware' => ['web'], 'prefix' => 'admin', 'as' => 'admin.'], f
             Route::get('/mail-config', [BusinessSettingController::class, 'mailConfig'])->name('mailConfig');
             Route::post('/mail-config', [BusinessSettingController::class, 'mailConfigUpdate']);
             Route::post('/test-mail', [BusinessSettingController::class, 'sendTestMail'])->name('sendTestMail');
+            Route::get('/payment-method', [BusinessSettingController::class, 'paymentMethod'])->name('paymentMethod');
+            Route::post('/payment-method/{name}', [BusinessSettingController::class, 'paymentMethodUpdate'])->name('paymentMethodUpdate');
         });
 
     });

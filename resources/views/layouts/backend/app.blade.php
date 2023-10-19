@@ -21,6 +21,7 @@
 
     <!-- BEGIN: Vendor CSS-->
     <link rel="stylesheet" type="text/css" href="{{ asset ('public/backend/app-assets/vendors/css/vendors.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset ('public/backend/app-assets/vendors/css/forms/toggle/switchery.min.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset ('public/backend/app-assets/vendors/css/forms/icheck/icheck.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset ('public/backend/app-assets/vendors/css/forms/icheck/custom.css') }}">
     <!-- END: Vendor CSS-->
@@ -39,6 +40,7 @@
     <link rel="stylesheet" type="text/css" href="{{ asset ('public/backend/app-assets/css/pages/card-statistics.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset ('public/backend/app-assets/css/pages/vertical-timeline.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset ('public/backend/assets/css/dropify.min.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{ asset ('public/backend/app-assets/css/plugins/forms/switch.css')}}">
     <!-- END: Page CSS-->
 
     <!-- BEGIN: Custom CSS-->
@@ -80,12 +82,15 @@
 
     <!-- BEGIN: Page Vendor JS-->
     <script src="{{ asset('public/backend/app-assets/vendors/js/extensions/sweetalert2.all.min.js') }}"></script>
+    <script src="{{ asset('public/backend/app-assets/vendors/js/forms/toggle/bootstrap-checkbox.min.js') }}"></script>
+    <script src="{{ asset('public/backend/app-assets/vendors/js/forms/toggle/switchery.min.js') }}"></script>
     <!-- END: Page Vendor JS-->
 
     <!-- BEGIN: Theme JS-->
     <script src="{{ asset ('public/backend/app-assets/js/core/app-menu.js') }}"></script>
     <script src="{{ asset ('public/backend/app-assets/js/core/app.js') }}"></script>
     <script src="{{ asset ('public/backend/assets/js/dropify.min.js')}}"></script>
+    <script src="{{ asset ('public/backend/app-assets/js/scripts/forms/switch.js')}}"></script>
     <script src="{{ asset ('public/backend/assets/js/dropify-init.js?v1.1')}}"></script>
     <!-- END: Theme JS-->
 

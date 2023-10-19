@@ -5,19 +5,20 @@
 <div class="content-wrapper">
     <div class="content-header row">
         <div class="content-header-left col-md-6 col-12 mb-1">
-            <h3 class="content-header-title">{{ __('App Settings') }}</h3>
+            <h3 class="content-header-title">{{ __('3rd Party') }}</h3>
         </div>
         <div class="content-header-right breadcrumbs-right breadcrumbs-top col-md-6 col-12">
             <div class="breadcrumb-wrapper col-12">
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="{{ route('admin.dashboard') }}">{{ __('Home') }}</a></li>
-                    <li class="breadcrumb-item active">{{ __('App Settings') }}</li>
+                    <li class="breadcrumb-item active">{{ __('3rd Party') }}</li>
+                    <li class="breadcrumb-item active">{{ __('Mail Config') }}</li>
                 </ol>
             </div>
         </div>
     </div>
     <div class="content-body">
-        @include('backend.business_settings.top_nav')
+        @include('backend.business_settings.third_party_nav')
 
         @php
             $mailInfo = \App\Helpers\Common::get_business_settings('mail_config');
@@ -94,7 +95,7 @@
                                         </div>
                                     </div>
                                     <div class="col-md-4">
-                                        <button type="button" onclick="send_mail()" class="btn btn-primary btn-block send_mail">
+                                        <button type="button" class="btn btn-primary btn-block send_mail">
                                             {{ __('Send Test Mail') }}
                                         </button>
                                     </div>
@@ -143,7 +144,7 @@
                                 'X-CSRF-TOKEN': $('meta[name="_token"]').attr('content')
                             }
                         });
-                        
+
                         button.attr('disabled',true);
                         button.text('Please wait ...');
                         $.ajax({
@@ -159,7 +160,7 @@
                                     text: data.msg,
                                 });
                                 $('#test-email').val('');
-                                
+
                                 button.attr('disabled',false);
                                 button.text(buttonDefault);
                             },
@@ -185,7 +186,7 @@
                                 } else {
                                     console.error(error);
                                 }
-                                
+
                                 button.attr('disabled',false);
                                 button.text(buttonDefault);
                             }

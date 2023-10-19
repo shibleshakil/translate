@@ -46,6 +46,7 @@ class BusinessSettingController extends Controller
 
 
     public function generalInfoUpdate(Request $request){
+        abort(404);
         $validatedData = $request->validate([
             'company_name' => ['required'],
             'company_email' => ['required'],
@@ -133,6 +134,7 @@ class BusinessSettingController extends Controller
 
 
     public function mailConfigUpdate(Request $request){
+        abort(404);
         $validatedData = $request->validate([
             'MAIL_MAILER' => ['required'],
             'MAIL_HOST' => ['required'],
@@ -176,6 +178,7 @@ class BusinessSettingController extends Controller
 
 
     public function sendTestMail(Request $request){
+        abort(404);
         $validatedData = $request->validate([
             'email' => ['required'],
         ]);
@@ -202,6 +205,90 @@ class BusinessSettingController extends Controller
             ];
             return $data;
         }
+    }
+
+
+
+
+    public function paymentMethod(){
+        return view('backend.business_settings.paymentMethod');
+    }
+
+
+    public function paymentMethodUpdate(Request $request, $name)
+    {
+        abort(404);
+        if ($name == 'stripe') {
+            $payment = BusinessSetting::where('type', 'stripe')->first();
+            if (isset($payment) == false) {
+                DB::table('business_settings')->insert([
+                    'type' => 'stripe',
+                    'value' => json_encode([
+                        'status' => 1,
+                        'environment' => 'sandbox',
+                        'api_key' => '',
+                        'published_key' => ''
+                    ]),
+                    'updated_by' => auth('admin')->user()->id,
+                    'created_at' => date('Y-m-d H:i:s'),
+                    'updated_at' => date('Y-m-d H:i:s')
+                ]);
+            } else {
+                if ($request['status'] == 1) {
+                    $request->validate([
+                        'api_key' => 'required',
+                        'published_key' => 'required'
+                    ]);
+                }
+                DB::table('business_settings')->where(['type' => 'stripe'])->update([
+                    'type' => 'stripe',
+                    'value' => json_encode([
+                        'status' => $request['status'],
+                        'environment' => $request['environment'],
+                        'api_key' => $request['api_key'],
+                        'published_key' => $request['published_key']
+                    ]),
+                    'updated_by' => auth('admin')->user()->id,
+                    'updated_at' => date('Y-m-d H:i:s')
+                ]);
+            }
+        } elseif ($name == 'paypal') {
+            $payment = BusinessSetting::where('type', 'paypal')->first();
+            if (isset($payment) == false) {
+                DB::table('business_settings')->insert([
+                    'type' => 'paypal',
+                    'value' => json_encode([
+                        'status' => 1,
+                        'environment' => 'sandbox',
+                        'paypal_client_id' => '',
+                        'paypal_secret' => '',
+                    ]),
+                    'updated_by' => auth('admin')->user()->id,
+                    'created_at' => date('Y-m-d H:i:s'),
+                    'updated_at' => date('Y-m-d H:i:s')
+                ]);
+            } else {
+                if ($request['status'] == 1) {
+                    $request->validate([
+                        'paypal_client_id' => 'required',
+                        'paypal_secret' => 'required'
+                    ]);
+                }
+                DB::table('business_settings')->where(['type' => 'paypal'])->update([
+                    'type' => 'paypal',
+                    'value' => json_encode([
+                        'status' => $request['status'],
+                        'environment' => $request['environment'],
+                        'paypal_client_id' => $request['paypal_client_id'],
+                        'paypal_secret' => $request['paypal_secret'],
+                    ]),
+                    'updated_by' => auth('admin')->user()->id,
+                    'updated_at' => date('Y-m-d H:i:s')
+                ]);
+            }
+        }
+
+        return back()->with('success', __('Data updated successfully'));
     }
 
 

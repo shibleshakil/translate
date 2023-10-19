@@ -14,9 +14,12 @@ use App\Http\Controllers\Web\WebController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/', function (){
+    return redirect()->route('admin.auth.login');
+});
 
 Route::middleware(['maintenance'])->group(function () {
-    Route::get('/', [WebController::class, 'index'])->name('home');
+    Route::get('/home', [WebController::class, 'index'])->name('home');
     Route::get('/fast-translation', [WebController::class, 'fastTranslation'])->name('fastTranslation');
     Route::get('/content-localization', [WebController::class, 'contentLocalization'])->name('contentLocalization');
     Route::get('/website-localization', [WebController::class, 'websiteLocalization'])->name('websiteLocalization');

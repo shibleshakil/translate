@@ -7,9 +7,15 @@
                 </a>
             </li>
 
-            <li class="{{Request::is('admin/business-settings*') ? 'active' : 'nav-item' }}">
+            <li class="{{Request::is('admin/business-settings') ? 'active' : 'nav-item' }}">
                 <a href="{{ route('admin.business_settings.generalInfo') }}"><i class="feather icon-settings"></i>
                     <span class="menu-title">{{ __('Business Settings') }}</span>
+                </a>
+            </li>
+
+            <li class="{{(Request::is('admin/business-settings/mail-config') || Request::is('admin/business-settings/payment-method')) ? 'active' : 'nav-item' }}">
+                <a href="{{ route('admin.business_settings.mailConfig') }}"><i class="fa fa-key"></i>
+                    <span class="menu-title">{{ __('Third Party') }}</span>
                 </a>
             </li>
         </ul>

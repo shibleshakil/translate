@@ -8,11 +8,6 @@
                         {{ __('General') }}
                     </a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link {{Request::is('admin/business-settings/mail-config') ? 'active' : '' }}" href="{{ route('admin.business_settings.mailConfig') }}">
-                        {{ __('Mail Config') }}
-                    </a>
-                </li>
             </ul>
         </div>
     </div>
