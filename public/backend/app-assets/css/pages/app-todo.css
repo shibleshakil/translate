@@ -49,7 +49,7 @@
             background-color: transparent;
             border-radius: 0.25rem !important; }
             .todo-application .sidebar .todo-sidebar .todo-app-menu .sidebar-menu-list .list-group .list-group-item.active {
-              background-color: #00b5b8 !important;
+              background-color: #625BF6 !important;
               color: #fff; }
   .todo-application .todo-new-task-sidebar {
     /* todo-new-task-sidebar */
@@ -117,7 +117,7 @@
         color: #404e67 !important; }
       .todo-application .todo-new-task-sidebar .select2-assign-label + .select2-container .select2-selection__rendered .select2-selection__choice[title="Frontend"] {
         background-color: #E2ECFF !important;
-        color: #00b5b8 !important; }
+        color: #625BF6 !important; }
       .todo-application .todo-new-task-sidebar .select2-assign-label + .select2-container .select2-selection__rendered .select2-selection__choice[title="Backend"] {
         background-color: #D2FFE8 !important;
         color: #16d39a !important; }

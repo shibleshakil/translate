@@ -197,13 +197,13 @@ input:focus ~ .bg-black {
   background-color: #39fcff !important; }
 
 .btn-primary.btn-lighten-5 {
-  border-color: #008385 !important;
+  border-color: #5D6DB5 !important;
   background-color: #39fcff !important; }
   .btn-primary.btn-lighten-5:hover {
-    border-color: #008385 !important;
-    background-color: #006a6c !important; }
+    border-color: #5D6DB5 !important;
+    background-color: #5D6DB5 !important; }
   .btn-primary.btn-lighten-5:focus, .btn-primary.btn-lighten-5:active {
-    border-color: #006a6c !important;
+    border-color: #5D6DB5 !important;
     background-color: #005152 !important; }
 
 .btn-outline-primary.btn-outline-lighten-5 {
@@ -250,13 +250,13 @@ input:focus ~ .bg-primary {
   background-color: #1ffbff !important; }
 
 .btn-primary.btn-lighten-4 {
-  border-color: #008385 !important;
+  border-color: #5D6DB5 !important;
   background-color: #1ffbff !important; }
   .btn-primary.btn-lighten-4:hover {
-    border-color: #008385 !important;
-    background-color: #006a6c !important; }
+    border-color: #5D6DB5 !important;
+    background-color: #5D6DB5 !important; }
   .btn-primary.btn-lighten-4:focus, .btn-primary.btn-lighten-4:active {
-    border-color: #006a6c !important;
+    border-color: #5D6DB5 !important;
     background-color: #005152 !important; }
 
 .btn-outline-primary.btn-outline-lighten-4 {
@@ -303,13 +303,13 @@ input:focus ~ .bg-primary {
   background-color: #06fbff !important; }
 
 .btn-primary.btn-lighten-3 {
-  border-color: #008385 !important;
+  border-color: #5D6DB5 !important;
   background-color: #06fbff !important; }
   .btn-primary.btn-lighten-3:hover {
-    border-color: #008385 !important;
-    background-color: #006a6c !important; }
+    border-color: #5D6DB5 !important;
+    background-color: #5D6DB5 !important; }
   .btn-primary.btn-lighten-3:focus, .btn-primary.btn-lighten-3:active {
-    border-color: #006a6c !important;
+    border-color: #5D6DB5 !important;
     background-color: #005152 !important; }
 
 .btn-outline-primary.btn-outline-lighten-3 {
@@ -356,13 +356,13 @@ input:focus ~ .bg-primary {
   background-color: #00e7eb !important; }
 
 .btn-primary.btn-lighten-2 {
-  border-color: #008385 !important;
+  border-color: #5D6DB5 !important;
   background-color: #00e7eb !important; }
   .btn-primary.btn-lighten-2:hover {
-    border-color: #008385 !important;
-    background-color: #006a6c !important; }
+    border-color: #5D6DB5 !important;
+    background-color: #5D6DB5 !important; }
   .btn-primary.btn-lighten-2:focus, .btn-primary.btn-lighten-2:active {
-    border-color: #006a6c !important;
+    border-color: #5D6DB5 !important;
     background-color: #005152 !important; }
 
 .btn-outline-primary.btn-outline-lighten-2 {
@@ -403,63 +403,63 @@ input:focus ~ .bg-primary {
   background-color: #00e7eb; }
 
 .primary.lighten-1 {
-  color: #00ced2 !important; }
+  color: #5D6DB5 !important; }
 
 .bg-primary.bg-lighten-1 {
-  background-color: #00ced2 !important; }
+  background-color: #5D6DB5 !important; }
 
 .btn-primary.btn-lighten-1 {
-  border-color: #008385 !important;
-  background-color: #00ced2 !important; }
+  border-color: #5D6DB5 !important;
+  background-color: #5D6DB5 !important; }
   .btn-primary.btn-lighten-1:hover {
-    border-color: #008385 !important;
-    background-color: #006a6c !important; }
+    border-color: #5D6DB5 !important;
+    background-color: #5D6DB5 !important; }
   .btn-primary.btn-lighten-1:focus, .btn-primary.btn-lighten-1:active {
-    border-color: #006a6c !important;
+    border-color: #5D6DB5 !important;
     background-color: #005152 !important; }
 
 .btn-outline-primary.btn-outline-lighten-1 {
-  border-color: #00ced2 !important;
-  color: #00ced2 !important; }
+  border-color: #5D6DB5 !important;
+  color: #5D6DB5 !important; }
   .btn-outline-primary.btn-outline-lighten-1:hover {
-    background-color: #00ced2 !important; }
+    background-color: #5D6DB5 !important; }
 
 input:focus ~ .bg-primary {
-  box-shadow: 0 0 0 0.075rem #fff, 0 0 0 0.21rem #00ced2 !important; }
+  box-shadow: 0 0 0 0.075rem #fff, 0 0 0 0.21rem #5D6DB5 !important; }
 
 .border-primary.border-lighten-1 {
-  border: 1px solid #00ced2 !important; }
+  border: 1px solid #5D6DB5 !important; }
 
 .border-top-primary.border-top-lighten-1 {
-  border-top: 1px solid #00ced2 !important; }
+  border-top: 1px solid #5D6DB5 !important; }
 
 .border-bottom-primary.border-bottom-lighten-1 {
-  border-bottom: 1px solid #00ced2 !important; }
+  border-bottom: 1px solid #5D6DB5 !important; }
 
 .border-left-primary.border-left-lighten-1 {
-  border-left: 1px solid #00ced2 !important; }
+  border-left: 1px solid #5D6DB5 !important; }
 
 .border-right-primary.border-right-lighten-1 {
-  border-right: 1px solid #00ced2 !important; }
+  border-right: 1px solid #5D6DB5 !important; }
 
 .overlay-primary.overlay-lighten-1 {
-  background: #00ced2;
+  background: #5D6DB5;
   /* The Fallback */
   background: rgba(0, 206, 210, 0.8); }
 
 /* Scrumboard Application - kanban-item with coloured border */
 /* --------------------------------------------------------- */
 .kanban-container .kanban-board .kanban-item[data-border=primary]:before {
-  background-color: #00ced2; }
+  background-color: #5D6DB5; }
 
 .edit-kanban-item select option.bg-color_name {
-  background-color: #00ced2; }
+  background-color: #5D6DB5; }
 
 .primary {
-  color: #00b5b8 !important; }
+  color: #625BF6 !important; }
 
 .bg-primary {
-  background-color: #00b5b8 !important; }
+  background-color: #625BF6 !important; }
   .bg-primary .card-header,
   .bg-primary .card-footer {
     background-color: transparent; }
@@ -472,20 +472,20 @@ input:focus ~ .bg-primary {
     color: black !important; }
 
 .bullet.bullet-primary {
-  background-color: #00b5b8; }
+  background-color: #625BF6; }
 
 .bg-light-primary {
   background-color: rgba(0, 181, 184, 0.15); }
 
 .border-primary {
-  border-color: #00b5b8; }
+  border-color: #625BF6; }
 
 .bg-primary.badge-glow,
 .border-primary.badge-glow {
-  box-shadow: 0px 0px 10px #00b5b8; }
+  box-shadow: 0px 0px 10px #625BF6; }
 
 .overlay-primary {
-  background: #00b5b8;
+  background: #625BF6;
   /* The Fallback */
   background: rgba(0, 181, 184, 0.8); }
 
@@ -500,215 +500,215 @@ input:focus ~ .bg-primary {
       } */
 .btn-primary {
   border-color: !important;
-  background-color: #00b5b8 !important;
+  background-color: #625BF6 !important;
   color: #FFFFFF; }
   .btn-primary:hover {
-    border-color: #009c9f !important;
-    background-color: #00ced2 !important;
+    border-color: #625BF6 !important;
+    background-color: #5D6DB5 !important;
     color: #FFF !important; }
   .btn-primary:focus, .btn-primary:active {
-    border-color: #008385 !important;
-    background-color: #006a6c !important;
+    border-color: #5D6DB5 !important;
+    background-color: #5D6DB5 !important;
     color: #FFF !important; }
 
 .btn-outline-primary {
-  border-color: #00b5b8;
+  border-color: #625BF6;
   background-color: transparent;
-  color: #00b5b8; }
+  color: #625BF6; }
   .btn-outline-primary:hover {
-    background-color: #00b5b8;
+    background-color: #625BF6;
     color: #FFF !important; }
 
 .widget-timeline .timeline-items.timeline-icon-primary:before {
-  background-color: #00b5b8; }
+  background-color: #625BF6; }
 
 input[type="checkbox"].bg-primary + .custom-control-label:before, input[type="radio"].bg-primary + .custom-control-label:before {
-  background-color: #00b5b8 !important; }
+  background-color: #625BF6 !important; }
 
 input:focus ~ .bg-primary {
-  box-shadow: 0 0 0 0.075rem #fff, 0 0 0 0.21rem #00b5b8 !important; }
+  box-shadow: 0 0 0 0.075rem #fff, 0 0 0 0.21rem #625BF6 !important; }
 
 .border-primary {
-  border: 1px solid #00b5b8 !important; }
+  border: 1px solid #625BF6 !important; }
 
 .border-top-primary {
-  border-top: 1px solid #00b5b8; }
+  border-top: 1px solid #625BF6; }
 
 .border-bottom-primary {
-  border-bottom: 1px solid #00b5b8; }
+  border-bottom: 1px solid #625BF6; }
 
 .border-left-primary {
-  border-left: 1px solid #00b5b8; }
+  border-left: 1px solid #625BF6; }
 
 .border-right-primary {
-  border-right: 1px solid #00b5b8; }
+  border-right: 1px solid #625BF6; }
 
 /* Scrumboard Application - kanban-item with coloured border */
 /* --------------------------------------------------------- */
 .kanban-container .kanban-board .kanban-item[data-border=primary]:before {
-  background-color: #00b5b8; }
+  background-color: #625BF6; }
 
 .edit-kanban-item select option.bg-color_name {
-  background-color: #00b5b8; }
+  background-color: #625BF6; }
 
 .primary.darken-1 {
-  color: #009c9f !important; }
+  color: #625BF6 !important; }
 
 .bg-primary.bg-darken-1 {
-  background-color: #009c9f !important; }
+  background-color: #625BF6 !important; }
 
 .btn-primary.btn-darken-1 {
-  border-color: #008385 !important;
-  background-color: #009c9f !important; }
+  border-color: #5D6DB5 !important;
+  background-color: #625BF6 !important; }
   .btn-primary.btn-darken-1:hover {
-    border-color: #008385 !important;
-    background-color: #006a6c !important; }
+    border-color: #5D6DB5 !important;
+    background-color: #5D6DB5 !important; }
   .btn-primary.btn-darken-1:focus, .btn-primary.btn-darken-1:active {
-    border-color: #006a6c !important;
+    border-color: #5D6DB5 !important;
     background-color: #005152 !important; }
 
 .btn-outline-primary.btn-outline-darken-1 {
-  border-color: #009c9f !important;
-  color: #009c9f !important; }
+  border-color: #625BF6 !important;
+  color: #625BF6 !important; }
   .btn-outline-primary.btn-outline-darken-1:hover {
-    background-color: #009c9f !important; }
+    background-color: #625BF6 !important; }
 
 input:focus ~ .bg-primary {
-  box-shadow: 0 0 0 0.075rem #fff, 0 0 0 0.21rem #009c9f !important; }
+  box-shadow: 0 0 0 0.075rem #fff, 0 0 0 0.21rem #625BF6 !important; }
 
 .border-primary.border-darken-1 {
-  border: 1px solid #009c9f !important; }
+  border: 1px solid #625BF6 !important; }
 
 .border-top-primary.border-top-darken-1 {
-  border-top: 1px solid #009c9f !important; }
+  border-top: 1px solid #625BF6 !important; }
 
 .border-bottom-primary.border-bottom-darken-1 {
-  border-bottom: 1px solid #009c9f !important; }
+  border-bottom: 1px solid #625BF6 !important; }
 
 .border-left-primary.border-left-darken-1 {
-  border-left: 1px solid #009c9f !important; }
+  border-left: 1px solid #625BF6 !important; }
 
 .border-right-primary.border-right-darken-1 {
-  border-right: 1px solid #009c9f !important; }
+  border-right: 1px solid #625BF6 !important; }
 
 .overlay-primary.overlay-darken-1 {
-  background: #009c9f;
+  background: #625BF6;
   /* The Fallback */
   background: rgba(0, 156, 159, 0.8); }
 
 /* Scrumboard Application - kanban-item with coloured border */
 /* --------------------------------------------------------- */
 .kanban-container .kanban-board .kanban-item[data-border=primary]:before {
-  background-color: #009c9f; }
+  background-color: #625BF6; }
 
 .edit-kanban-item select option.bg-color_name {
-  background-color: #009c9f; }
+  background-color: #625BF6; }
 
 .primary.darken-2 {
-  color: #008385 !important; }
+  color: #5D6DB5 !important; }
 
 .bg-primary.bg-darken-2 {
-  background-color: #008385 !important; }
+  background-color: #5D6DB5 !important; }
 
 .btn-primary.btn-darken-2 {
-  border-color: #008385 !important;
-  background-color: #008385 !important; }
+  border-color: #5D6DB5 !important;
+  background-color: #5D6DB5 !important; }
   .btn-primary.btn-darken-2:hover {
-    border-color: #008385 !important;
-    background-color: #006a6c !important; }
+    border-color: #5D6DB5 !important;
+    background-color: #5D6DB5 !important; }
   .btn-primary.btn-darken-2:focus, .btn-primary.btn-darken-2:active {
-    border-color: #006a6c !important;
+    border-color: #5D6DB5 !important;
     background-color: #005152 !important; }
 
 .btn-outline-primary.btn-outline-darken-2 {
-  border-color: #008385 !important;
-  color: #008385 !important; }
+  border-color: #5D6DB5 !important;
+  color: #5D6DB5 !important; }
   .btn-outline-primary.btn-outline-darken-2:hover {
-    background-color: #008385 !important; }
+    background-color: #5D6DB5 !important; }
 
 input:focus ~ .bg-primary {
-  box-shadow: 0 0 0 0.075rem #fff, 0 0 0 0.21rem #008385 !important; }
+  box-shadow: 0 0 0 0.075rem #fff, 0 0 0 0.21rem #5D6DB5 !important; }
 
 .border-primary.border-darken-2 {
-  border: 1px solid #008385 !important; }
+  border: 1px solid #5D6DB5 !important; }
 
 .border-top-primary.border-top-darken-2 {
-  border-top: 1px solid #008385 !important; }
+  border-top: 1px solid #5D6DB5 !important; }
 
 .border-bottom-primary.border-bottom-darken-2 {
-  border-bottom: 1px solid #008385 !important; }
+  border-bottom: 1px solid #5D6DB5 !important; }
 
 .border-left-primary.border-left-darken-2 {
-  border-left: 1px solid #008385 !important; }
+  border-left: 1px solid #5D6DB5 !important; }
 
 .border-right-primary.border-right-darken-2 {
-  border-right: 1px solid #008385 !important; }
+  border-right: 1px solid #5D6DB5 !important; }
 
 .overlay-primary.overlay-darken-2 {
-  background: #008385;
+  background: #5D6DB5;
   /* The Fallback */
   background: rgba(0, 131, 133, 0.8); }
 
 /* Scrumboard Application - kanban-item with coloured border */
 /* --------------------------------------------------------- */
 .kanban-container .kanban-board .kanban-item[data-border=primary]:before {
-  background-color: #008385; }
+  background-color: #5D6DB5; }
 
 .edit-kanban-item select option.bg-color_name {
-  background-color: #008385; }
+  background-color: #5D6DB5; }
 
 .primary.darken-3 {
-  color: #006a6c !important; }
+  color: #5D6DB5 !important; }
 
 .bg-primary.bg-darken-3 {
-  background-color: #006a6c !important; }
+  background-color: #5D6DB5 !important; }
 
 .btn-primary.btn-darken-3 {
-  border-color: #008385 !important;
-  background-color: #006a6c !important; }
+  border-color: #5D6DB5 !important;
+  background-color: #5D6DB5 !important; }
   .btn-primary.btn-darken-3:hover {
-    border-color: #008385 !important;
-    background-color: #006a6c !important; }
+    border-color: #5D6DB5 !important;
+    background-color: #5D6DB5 !important; }
   .btn-primary.btn-darken-3:focus, .btn-primary.btn-darken-3:active {
-    border-color: #006a6c !important;
+    border-color: #5D6DB5 !important;
     background-color: #005152 !important; }
 
 .btn-outline-primary.btn-outline-darken-3 {
-  border-color: #006a6c !important;
-  color: #006a6c !important; }
+  border-color: #5D6DB5 !important;
+  color: #5D6DB5 !important; }
   .btn-outline-primary.btn-outline-darken-3:hover {
-    background-color: #006a6c !important; }
+    background-color: #5D6DB5 !important; }
 
 input:focus ~ .bg-primary {
-  box-shadow: 0 0 0 0.075rem #fff, 0 0 0 0.21rem #006a6c !important; }
+  box-shadow: 0 0 0 0.075rem #fff, 0 0 0 0.21rem #5D6DB5 !important; }
 
 .border-primary.border-darken-3 {
-  border: 1px solid #006a6c !important; }
+  border: 1px solid #5D6DB5 !important; }
 
 .border-top-primary.border-top-darken-3 {
-  border-top: 1px solid #006a6c !important; }
+  border-top: 1px solid #5D6DB5 !important; }
 
 .border-bottom-primary.border-bottom-darken-3 {
-  border-bottom: 1px solid #006a6c !important; }
+  border-bottom: 1px solid #5D6DB5 !important; }
 
 .border-left-primary.border-left-darken-3 {
-  border-left: 1px solid #006a6c !important; }
+  border-left: 1px solid #5D6DB5 !important; }
 
 .border-right-primary.border-right-darken-3 {
-  border-right: 1px solid #006a6c !important; }
+  border-right: 1px solid #5D6DB5 !important; }
 
 .overlay-primary.overlay-darken-3 {
-  background: #006a6c;
+  background: #5D6DB5;
   /* The Fallback */
   background: rgba(0, 106, 108, 0.8); }
 
 /* Scrumboard Application - kanban-item with coloured border */
 /* --------------------------------------------------------- */
 .kanban-container .kanban-board .kanban-item[data-border=primary]:before {
-  background-color: #006a6c; }
+  background-color: #5D6DB5; }
 
 .edit-kanban-item select option.bg-color_name {
-  background-color: #006a6c; }
+  background-color: #5D6DB5; }
 
 .primary.darken-4 {
   color: #005152 !important; }
@@ -717,13 +717,13 @@ input:focus ~ .bg-primary {
   background-color: #005152 !important; }
 
 .btn-primary.btn-darken-4 {
-  border-color: #008385 !important;
+  border-color: #5D6DB5 !important;
   background-color: #005152 !important; }
   .btn-primary.btn-darken-4:hover {
-    border-color: #008385 !important;
-    background-color: #006a6c !important; }
+    border-color: #5D6DB5 !important;
+    background-color: #5D6DB5 !important; }
   .btn-primary.btn-darken-4:focus, .btn-primary.btn-darken-4:active {
-    border-color: #006a6c !important;
+    border-color: #5D6DB5 !important;
     background-color: #005152 !important; }
 
 .btn-outline-primary.btn-outline-darken-4 {
@@ -770,13 +770,13 @@ input:focus ~ .bg-primary {
   background-color: #BDFDFF !important; }
 
 .btn-primary.btn-accent-1 {
-  border-color: #008385 !important;
+  border-color: #5D6DB5 !important;
   background-color: #BDFDFF !important; }
   .btn-primary.btn-accent-1:hover {
-    border-color: #008385 !important;
-    background-color: #006a6c !important; }
+    border-color: #5D6DB5 !important;
+    background-color: #5D6DB5 !important; }
   .btn-primary.btn-accent-1:focus, .btn-primary.btn-accent-1:active {
-    border-color: #006a6c !important;
+    border-color: #5D6DB5 !important;
     background-color: #005152 !important; }
 
 .btn-outline-primary.btn-outline-accent-1 {
@@ -823,13 +823,13 @@ input:focus ~ .bg-primary {
   background-color: #8AFBFF !important; }
 
 .btn-primary.btn-accent-2 {
-  border-color: #008385 !important;
+  border-color: #5D6DB5 !important;
   background-color: #8AFBFF !important; }
   .btn-primary.btn-accent-2:hover {
-    border-color: #008385 !important;
-    background-color: #006a6c !important; }
+    border-color: #5D6DB5 !important;
+    background-color: #5D6DB5 !important; }
   .btn-primary.btn-accent-2:focus, .btn-primary.btn-accent-2:active {
-    border-color: #006a6c !important;
+    border-color: #5D6DB5 !important;
     background-color: #005152 !important; }
 
 .btn-outline-primary.btn-outline-accent-2 {
@@ -876,13 +876,13 @@ input:focus ~ .bg-primary {
   background-color: #57FAFF !important; }
 
 .btn-primary.btn-accent-3 {
-  border-color: #008385 !important;
+  border-color: #5D6DB5 !important;
   background-color: #57FAFF !important; }
   .btn-primary.btn-accent-3:hover {
-    border-color: #008385 !important;
-    background-color: #006a6c !important; }
+    border-color: #5D6DB5 !important;
+    background-color: #5D6DB5 !important; }
   .btn-primary.btn-accent-3:focus, .btn-primary.btn-accent-3:active {
-    border-color: #006a6c !important;
+    border-color: #5D6DB5 !important;
     background-color: #005152 !important; }
 
 .btn-outline-primary.btn-outline-accent-3 {
@@ -929,13 +929,13 @@ input:focus ~ .bg-primary {
   background-color: #3DF9FF !important; }
 
 .btn-primary.btn-accent-4 {
-  border-color: #008385 !important;
+  border-color: #5D6DB5 !important;
   background-color: #3DF9FF !important; }
   .btn-primary.btn-accent-4:hover {
-    border-color: #008385 !important;
-    background-color: #006a6c !important; }
+    border-color: #5D6DB5 !important;
+    background-color: #5D6DB5 !important; }
   .btn-primary.btn-accent-4:focus, .btn-primary.btn-accent-4:active {
-    border-color: #006a6c !important;
+    border-color: #5D6DB5 !important;
     background-color: #005152 !important; }
 
 .btn-outline-primary.btn-outline-accent-4 {

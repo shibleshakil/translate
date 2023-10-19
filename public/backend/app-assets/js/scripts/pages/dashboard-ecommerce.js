@@ -15,7 +15,7 @@ $(window).on("load", function(){
     /********************************************
     *               PRODUCTS SALES              *
     ********************************************/
-    
+
     var months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
     Morris.Area({
         element: 'products-sales',
@@ -95,7 +95,7 @@ $(window).on("load", function(){
         ymax: 300,
         resize: true,
         pointSize: 0,
-        pointStrokeColors:['#00B5B8', '#FA8E57', '#F25E75'],
+        pointStrokeColors:['#625BF6', '#FA8E57', '#F25E75'],
         smooth: true,
         gridLineColor: '#E4E7ED',
         numLines: 6,
@@ -103,9 +103,9 @@ $(window).on("load", function(){
         lineWidth: 0,
         fillOpacity: 0.9,
         hideHover: 'auto',
-        lineColors: ['#00B5B8', '#FA8E57', '#F25E75']
+        lineColors: ['#625BF6', '#FA8E57', '#F25E75']
     });
-    
+
     /********************************************
     *               Monthly Sales               *
     ********************************************/
@@ -127,10 +127,10 @@ $(window).on("load", function(){
         numLines: 5,
         gridtextSize: 14,
         resize: true,
-        barColors: ['#00B5B8'],
+        barColors: ['#625BF6'],
         hideHover: 'auto',
     });
-    
+
     /************************************************************
     *               Social Cards Content Slider                 *
     ************************************************************/

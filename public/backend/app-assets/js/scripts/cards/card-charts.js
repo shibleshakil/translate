@@ -420,7 +420,7 @@
         numLines: 5,
         gridtextSize: 14,
         resize: true,
-        barColors: ['#00B5B8'],
+        barColors: ['#625BF6'],
         hideHover: 'auto',
     });
 

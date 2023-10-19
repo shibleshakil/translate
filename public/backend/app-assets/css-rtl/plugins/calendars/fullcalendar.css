@@ -41,28 +41,28 @@ a.btn.disabled, fieldset:disabled a.btn {
 
 .btn-primary {
   color : #FFFFFF;
-  background-color : #00B5B8;
-  border-color : #00B5B8;
+  background-color : #625BF6;
+  border-color : #625BF6;
 }
 .btn-primary:hover {
   color : #FFFFFF;
   background-color : #008F92;
-  border-color : #008385;
+  border-color : #5D6DB5;
 }
 .btn-primary:focus, .btn-primary.focus {
   color : #FFFFFF;
   background-color : #008F92;
-  border-color : #008385;
+  border-color : #5D6DB5;
   box-shadow : 0 0 0 0.2rem rgba(38, 192, 195, 0.5);
 }
 .btn-primary.disabled, .btn-primary:disabled {
   color : #FFFFFF;
-  background-color : #00B5B8;
-  border-color : #00B5B8;
+  background-color : #625BF6;
+  border-color : #625BF6;
 }
 .btn-primary:not(:disabled):not(.disabled):active, .btn-primary:not(:disabled):not(.disabled).active, .show > .btn-primary.dropdown-toggle {
   color : #FFFFFF;
-  background-color : #008385;
+  background-color : #5D6DB5;
   border-color : #007678;
 }
 .btn-primary:not(:disabled):not(.disabled):active:focus, .btn-primary:not(:disabled):not(.disabled).active:focus, .show > .btn-primary.dropdown-toggle:focus {
@@ -280,25 +280,25 @@ a.btn.disabled, fieldset:disabled a.btn {
 }
 
 .btn-outline-primary, .fc button {
-  color : #00B5B8;
-  border-color : #00B5B8;
+  color : #625BF6;
+  border-color : #625BF6;
 }
 .btn-outline-primary:hover, .fc button:hover {
   color : #FFFFFF;
-  background-color : #00B5B8;
-  border-color : #00B5B8;
+  background-color : #625BF6;
+  border-color : #625BF6;
 }
 .btn-outline-primary:focus, .fc button:focus, .btn-outline-primary.focus, .fc button.focus {
   box-shadow : 0 0 0 0.2rem rgba(0, 181, 184, 0.5);
 }
 .btn-outline-primary.disabled, .fc button.disabled, .btn-outline-primary:disabled, .fc button:disabled {
-  color : #00B5B8;
+  color : #625BF6;
   background-color : transparent;
 }
 .btn-outline-primary:not(:disabled):not(.disabled):active, .fc button:not(:disabled):not(.disabled):active, .btn-outline-primary:not(:disabled):not(.disabled).active, .fc button:not(:disabled):not(.disabled).active, .show > .btn-outline-primary.dropdown-toggle, .fc .show > button.dropdown-toggle {
   color : #FFFFFF;
-  background-color : #00B5B8;
-  border-color : #00B5B8;
+  background-color : #625BF6;
+  border-color : #625BF6;
 }
 .btn-outline-primary:not(:disabled):not(.disabled):active:focus, .fc button:not(:disabled):not(.disabled):active:focus, .btn-outline-primary:not(:disabled):not(.disabled).active:focus, .fc button:not(:disabled):not(.disabled).active:focus, .show > .btn-outline-primary.dropdown-toggle:focus, .fc .show > button.dropdown-toggle:focus {
   box-shadow : 0 0 0 0.2rem rgba(0, 181, 184, 0.5);
@@ -481,11 +481,11 @@ a.btn.disabled, fieldset:disabled a.btn {
 
 .btn-link {
   font-weight : 400;
-  color : #009C9F;
+  color : #625BF6;
   text-decoration : none;
 }
 .btn-link:hover {
-  color : #008385;
+  color : #5D6DB5;
   text-decoration : none;
 }
 .btn-link:focus, .btn-link.focus {
@@ -522,7 +522,7 @@ input[type='submit'].btn-block, input[type='reset'].btn-block, input[type='butto
 }
 
 .fc-unthemed .fc-content, .fc-unthemed .fc-divider, .fc-unthemed .fc-popover, .fc-unthemed .fc-row, .fc-unthemed tbody, .fc-unthemed td, .fc-unthemed th, .fc-unthemed thead {
-  border-color : #00CED2;
+  border-color : #5D6DB5;
 }
 
 th.fc-widget-header, .fc-basic-view td.fc-day-number, .fc-basic-view td.fc-week-number span {
@@ -551,8 +551,8 @@ th.fc-widget-header, .fc-basic-view td.fc-day-number, .fc-basic-view td.fc-week-
 }
 
 .fc-event {
-  background : #00B5B8;
-  border : 1px solid #009C9F;
+  background : #625BF6;
+  border : 1px solid #625BF6;
 }
 .fc-event span {
   font-size : 1rem;
@@ -565,7 +565,7 @@ th.fc-widget-header, .fc-basic-view td.fc-day-number, .fc-basic-view td.fc-week-
 
 .fc-unthemed .fc-today {
   color : #FFFFFF;
-  background : #00B5B8;
+  background : #625BF6;
 }
 
 .fc-unthemed .fc-divider, .fc-unthemed .fc-popover .fc-header {
@@ -654,8 +654,8 @@ th.fc-widget-header, .fc-basic-view td.fc-day-number, .fc-basic-view td.fc-week-
 }
 
 .fc-button:not(:disabled).fc-button-active {
-  background-color : #008385;
-  border-color : #00B5B8;
+  background-color : #5D6DB5;
+  border-color : #625BF6;
 }
 .fc-button:not(:disabled).fc-button-active:focus {
   outline : none;

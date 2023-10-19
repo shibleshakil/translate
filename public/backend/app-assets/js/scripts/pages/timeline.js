@@ -34,7 +34,7 @@ $(window).on("load", function () {
         $danger = '#ff7588', //$danger
         $orange = '#ffa87d', //$warning
         $green = '#16d39a', //$success
-        $cyan = '#00b5b8'; //$primary
+        $cyan = '#625BF6'; //$primary
 
     var $themeColor = [$cyan, $green, $orange, $blue, $danger]
     // columnBasicChart for timeline center's campaign report section

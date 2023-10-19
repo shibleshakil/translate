@@ -169,7 +169,7 @@
          regions: [
             {
                values: visitorData,
-               scale: ["#E0F6F6", "#00B5B8"],
+               scale: ["#E0F6F6", "#625BF6"],
                normalizeFunction: "polynomial"
             }
          ]
@@ -239,7 +239,7 @@
       gridtextSize: 14,
       lineWidth: 0,
       fillOpacity: 0.8,
-      lineColors: ["#00B5B8"],
+      lineColors: ["#625BF6"],
       hideHover: "auto"
    });
 

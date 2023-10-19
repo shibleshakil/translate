@@ -73,47 +73,47 @@
   fill: #00e7eb; }
 
 .climacon-primary.climacon-lighten-1 .climacon_component-stroke {
-  fill: #00ced2; }
+  fill: #5D6DB5; }
 
 .bs-callout-primary {
   display: block;
-  border-color: #00b5b8 !important;
+  border-color: #625BF6 !important;
   background-color: #5cfcff;
   border-radius: 0.25rem;
   color: black; }
   .bs-callout-primary h1, .bs-callout-primary h2, .bs-callout-primary h3, .bs-callout-primary h4, .bs-callout-primary h5, .bs-callout-primary h6 {
     margin-top: 0;
-    color: #00b5b8; }
+    color: #625BF6; }
   .bs-callout-primary p:last-child {
     margin-bottom: 0; }
   .bs-callout-primary code, .bs-callout-primary .highlight {
     background-color: #fff; }
   .bs-callout-primary.callout-transparent {
     display: block;
-    border-color: #00b5b8 !important;
+    border-color: #625BF6 !important;
     background-color: transparent;
     border-radius: 0.25rem;
     color: black; }
     .bs-callout-primary.callout-transparent h1, .bs-callout-primary.callout-transparent h2, .bs-callout-primary.callout-transparent h3, .bs-callout-primary.callout-transparent h4, .bs-callout-primary.callout-transparent h5, .bs-callout-primary.callout-transparent h6 {
       margin-top: 0;
-      color: #00b5b8; }
+      color: #625BF6; }
     .bs-callout-primary.callout-transparent p:last-child {
       margin-bottom: 0; }
     .bs-callout-primary.callout-transparent code, .bs-callout-primary.callout-transparent .highlight {
       background-color: #fff; }
   .bs-callout-primary .callout-arrow-left:before {
-    border-left-color: #00b5b8; }
+    border-left-color: #625BF6; }
   .bs-callout-primary .callout-arrow-right:before {
-    border-right-color: #00b5b8; }
+    border-right-color: #625BF6; }
 
 .climacon-primary.climacon-darken-1 .climacon_component-stroke {
-  fill: #009c9f; }
+  fill: #625BF6; }
 
 .climacon-primary.climacon-darken-2 .climacon_component-stroke {
-  fill: #008385; }
+  fill: #5D6DB5; }
 
 .climacon-primary.climacon-darken-3 .climacon_component-stroke {
-  fill: #006a6c; }
+  fill: #5D6DB5; }
 
 .climacon-primary.climacon-darken-4 .climacon_component-stroke {
   fill: #005152; }

@@ -21,14 +21,14 @@
 }
 
 .tooltip-bg-primary .tooltip-inner {
-  background-color : #00B5B8;
+  background-color : #625BF6;
 }
 .tooltip-bg-primary .tooltip-inner:before {
-  border-top-color : #00B5B8 !important;
+  border-top-color : #625BF6 !important;
 }
 
 .tooltip-text-primary .tooltip-inner {
-  color : #00B5B8;
+  color : #625BF6;
 }
 
 .tooltip-bg-secondary .tooltip-inner {

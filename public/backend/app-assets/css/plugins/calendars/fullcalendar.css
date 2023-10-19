@@ -30,25 +30,25 @@ fieldset:disabled a.btn {
 
 .btn-primary {
   color: #fff;
-  background-color: #00b5b8;
-  border-color: #00b5b8; }
+  background-color: #625BF6;
+  border-color: #625BF6; }
   .btn-primary:hover {
     color: #fff;
     background-color: #008f92;
-    border-color: #008385; }
+    border-color: #5D6DB5; }
   .btn-primary:focus, .btn-primary.focus {
     color: #fff;
     background-color: #008f92;
-    border-color: #008385;
+    border-color: #5D6DB5;
     box-shadow: 0 0 0 0.2rem rgba(38, 192, 195, 0.5); }
   .btn-primary.disabled, .btn-primary:disabled {
     color: #fff;
-    background-color: #00b5b8;
-    border-color: #00b5b8; }
+    background-color: #625BF6;
+    border-color: #625BF6; }
   .btn-primary:not(:disabled):not(.disabled):active, .btn-primary:not(:disabled):not(.disabled).active,
   .show > .btn-primary.dropdown-toggle {
     color: #fff;
-    background-color: #008385;
+    background-color: #5D6DB5;
     border-color: #007678; }
     .btn-primary:not(:disabled):not(.disabled):active:focus, .btn-primary:not(:disabled):not(.disabled).active:focus,
     .show > .btn-primary.dropdown-toggle:focus {
@@ -237,23 +237,23 @@ fieldset:disabled a.btn {
       box-shadow: 0 0 0 0.2rem rgba(61, 73, 94, 0.5); }
 
 .btn-outline-primary, .fc button {
-  color: #00b5b8;
-  border-color: #00b5b8; }
+  color: #625BF6;
+  border-color: #625BF6; }
   .btn-outline-primary:hover, .fc button:hover {
     color: #fff;
-    background-color: #00b5b8;
-    border-color: #00b5b8; }
+    background-color: #625BF6;
+    border-color: #625BF6; }
   .btn-outline-primary:focus, .fc button:focus, .btn-outline-primary.focus, .fc button.focus {
     box-shadow: 0 0 0 0.2rem rgba(0, 181, 184, 0.5); }
   .btn-outline-primary.disabled, .fc button.disabled, .btn-outline-primary:disabled, .fc button:disabled {
-    color: #00b5b8;
+    color: #625BF6;
     background-color: transparent; }
   .btn-outline-primary:not(:disabled):not(.disabled):active, .fc button:not(:disabled):not(.disabled):active, .btn-outline-primary:not(:disabled):not(.disabled).active, .fc button:not(:disabled):not(.disabled).active,
   .show > .btn-outline-primary.dropdown-toggle,
   .fc .show > button.dropdown-toggle {
     color: #fff;
-    background-color: #00b5b8;
-    border-color: #00b5b8; }
+    background-color: #625BF6;
+    border-color: #625BF6; }
     .btn-outline-primary:not(:disabled):not(.disabled):active:focus, .fc button:not(:disabled):not(.disabled):active:focus, .btn-outline-primary:not(:disabled):not(.disabled).active:focus, .fc button:not(:disabled):not(.disabled).active:focus,
     .show > .btn-outline-primary.dropdown-toggle:focus,
     .fc .show > button.dropdown-toggle:focus {
@@ -408,10 +408,10 @@ fieldset:disabled a.btn {
 
 .btn-link {
   font-weight: 400;
-  color: #009c9f;
+  color: #625BF6;
   text-decoration: none; }
   .btn-link:hover {
-    color: #008385;
+    color: #5D6DB5;
     text-decoration: none; }
   .btn-link:focus, .btn-link.focus {
     text-decoration: none;
@@ -442,7 +442,7 @@ input[type="button"].btn-block {
   width: 100%; }
 
 .fc-unthemed .fc-content, .fc-unthemed .fc-divider, .fc-unthemed .fc-popover, .fc-unthemed .fc-row, .fc-unthemed tbody, .fc-unthemed td, .fc-unthemed th, .fc-unthemed thead {
-  border-color: #00ced2; }
+  border-color: #5D6DB5; }
 
 th.fc-widget-header, .fc-basic-view td.fc-day-number, .fc-basic-view td.fc-week-number span {
   padding: 10px; }
@@ -465,8 +465,8 @@ th.fc-widget-header, .fc-basic-view td.fc-day-number, .fc-basic-view td.fc-week-
   padding: 4px 8px; }
 
 .fc-event {
-  background: #00b5b8;
-  border: 1px solid #009c9f; }
+  background: #625BF6;
+  border: 1px solid #625BF6; }
   .fc-event span {
     font-size: 1rem;
     color: #FFF; }
@@ -476,7 +476,7 @@ th.fc-widget-header, .fc-basic-view td.fc-day-number, .fc-basic-view td.fc-week-
 
 .fc-unthemed .fc-today {
   color: #FFF;
-  background: #00b5b8; }
+  background: #625BF6; }
 
 .fc-unthemed .fc-divider, .fc-unthemed .fc-popover .fc-header {
   background: #E4EBF1; }
@@ -548,8 +548,8 @@ th.fc-widget-header, .fc-basic-view td.fc-day-number, .fc-basic-view td.fc-week-
     background: none; }
 
 .fc-button:not(:disabled).fc-button-active {
-  background-color: #008385;
-  border-color: #00b5b8; }
+  background-color: #5D6DB5;
+  border-color: #625BF6; }
   .fc-button:not(:disabled).fc-button-active:focus {
     outline: none;
     box-shadow: none; }

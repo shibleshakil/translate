@@ -9,14 +9,14 @@
 (function (window, document, $) {
   'use strict';
   // colors for charts
-  var $primary = "#00b5b8",
+  var $primary = "#625BF6",
     $secondary = "#2c3648",
     $success = "#0f8e67",
     $info = "#179bad",
     $warning = "#ffb997",
     $danger = "#ff8f9e"
 
-  var $themeColor = [$info, $success, $warning, $primary, $danger, $secondary]
+  var $themeColor = [$primary, $success, $warning, $info, $danger, $secondary]
 
 
   /*****************************************************
@@ -664,7 +664,7 @@
         columnWidth: '23%',
         endingShape: 'flat',
         colors: {
-          backgroundBarColors: '#444',
+          backgroundBarColors: '#625BF6',
           backgroundBarOpacity: 0.1,
         },
         distributed: true
@@ -994,7 +994,7 @@
   );
   info_tracking_total_stats_Chart.render();
 
-  
+
   // perfect scrollbar for latest update card
 
   if ($('.latest-update-tracking').length > 0) {

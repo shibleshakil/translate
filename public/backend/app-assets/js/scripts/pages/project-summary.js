@@ -12,7 +12,7 @@ var $blue = '#2dcee3', //$info
    $danger = '#ff7588', //$danger
    $orange = '#ffa87d', //$warning
    $green = '#16d39a', //$success
-   $cyan = '#00b5b8'; //$primary
+   $cyan = '#625BF6'; //$primary
 
 var $themeColor = [$cyan, $green, $orange, $blue, $danger];
 
@@ -114,7 +114,7 @@ var radial_bar_multiple_chart_option = {
    },
    series: [89, 78, 67, 44],
    labels: ['Critical', 'High', 'Medium', 'Low'],
- 
+
  }
 
   var radial_bar_multiple_chart = new ApexCharts(

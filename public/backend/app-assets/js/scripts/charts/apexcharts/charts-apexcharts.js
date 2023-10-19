@@ -7,7 +7,7 @@
     Author URL: http://www.themeforest.net/user/pixinvent
 ==========================================================================================*/
 // custom colors declaration
-var $primary = "#00b5b8",
+var $primary = "#625BF6",
   $secondary = "#2c3648",
   $success = "#0f8e67",
   $info = "#179bad",

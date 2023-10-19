@@ -544,7 +544,7 @@ html [type="button"],
   background-color: #cccccc; }
 
 .btn-primary ~ .dropdown-menu .dropdown-item.active {
-  background-color: #00b5b8; }
+  background-color: #625BF6; }
 
 .btn-success ~ .dropdown-menu .dropdown-item.active {
   background-color: #16d39a; }
@@ -893,7 +893,7 @@ html [type="button"],
     display: flex; }
 
 .bg-mega {
-  background: linear-gradient(to right, #00b5b8, #16d39a);
+  background: linear-gradient(to right, #625BF6, #16d39a);
   border-radius: 0.5rem; }
 
 .navigation-main .mega-dropdown-menu,
@@ -923,7 +923,7 @@ html [type="button"],
         .navigation-main .mega-dropdown-menu ul li a:hover,
         .navbar-nav .mega-dropdown-menu ul li a:hover {
           text-decoration: none;
-          color: #00b5b8; }
+          color: #625BF6; }
         .navigation-main .mega-dropdown-menu ul li a:focus,
         .navbar-nav .mega-dropdown-menu ul li a:focus {
           text-decoration: none;
@@ -1291,7 +1291,7 @@ html [type="button"],
 .badge {
   color: #fff;
   font-weight: 400;
-  background-color: #00b5b8; }
+  background-color: #625BF6; }
   .badge[class*='badge-'] [class*='icon-'] {
     line-height: 1; }
     .badge[class*='badge-'] [class*='icon-'] ~ span {
@@ -1335,11 +1335,11 @@ html [type="button"],
     background-color: #2c3648; }
 
 .badge-primary {
-  background-color: #00b5b8; }
+  background-color: #625BF6; }
   .badge-primary.badge-glow {
-    box-shadow: 0px 0px 10px #00b5b8; }
+    box-shadow: 0px 0px 10px #625BF6; }
   .badge-primary[href]:hover, .badge-primary[href]:focus {
-    background-color: #008385; }
+    background-color: #5D6DB5; }
 
 .badge-success {
   background-color: #16d39a; }
@@ -1477,14 +1477,14 @@ html [type="button"],
     background-color: #ffffff;
     color: #55595c; }
     .nav.nav-pills.nav-pill-with-active-bordered .nav-item a.nav-link.active {
-      border: 1px solid #00b5b8;
-      color: #00b5b8; }
+      border: 1px solid #625BF6;
+      color: #625BF6; }
   .nav.nav-pills.nav-active-bordered-pill .nav-item a.nav-link {
     color: #55595c; }
     .nav.nav-pills.nav-active-bordered-pill .nav-item a.nav-link.active {
-      border: 1px solid #00b5b8;
+      border: 1px solid #625BF6;
       border-radius: 0.25rem;
-      color: #00b5b8;
+      color: #625BF6;
       background-color: #ffffff; }
   .nav.nav-pills.nav-pill-toolbar.nav-stacked .nav-item ~ .nav-item a.nav-link {
     border-left: 1px solid #d3d3d3;
