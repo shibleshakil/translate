@@ -12401,15 +12401,16 @@ footer {
     color: #333;
   }
 
-  input[type="text"],input[type="email"],input[type="password"],input[type="date"],
+  /* input[type="text"],input[type="file"],input[type="email"],input[type="password"],input[type="date"],input[type="number"], */
+  input,
   select,
   textarea {
     width: 100%;
     padding: 10px;
-    border: 1px solid #f5f5f5;
-    border-radius: 15px;
-    font-size: 16px;
-    color: #555;
+    border: 1px solid #f5f5f5 !important;
+    border-radius: 15px !important;
+    font-size: 16px !important;
+    color: #555 !important;
   }
 
   /* Style the submit button */
@@ -12520,4 +12521,114 @@ a.button:hover {
 
 a:hover{
     text-decoration: none;
+}
+
+.language_combination{
+    position: relative;
+    border: 1px solid #f5f5f5 !important;
+    border-radius: 15px !important;
+}
+
+.language_combination select {
+    width: 50%;
+    border: none !important;
+}
+
+.lang-combine-2{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: absolute;
+    right: 0;
+    top: 0;
+    /* background-color: #fff;
+    background-color: var(--white);
+    box-shadow: -8px 0 12px #fff;
+    box-shadow: -8px 0 12px var(--white); */
+    border-top-left-radius: 0 !important;
+    border-bottom-left-radius: 0 !important;
+}
+
+.lang-combine-1{
+    border-top-right-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+}
+
+
+select {
+	background-image: linear-gradient(45deg, transparent 50%, gray 50%), linear-gradient(135deg, gray 50%, transparent 50%), linear-gradient(to right, #ccc, #ccc);
+	background-position: calc(100% - 20px) calc(1em + 2px), calc(100% - 15px) calc(1em + 2px), calc(100% - 2.5em) 0.5em;
+	background-size: 5px 5px, 5px 5px, 0px 1.5em;
+	background-repeat: no-repeat;
+}
+
+select:focus {
+	background-image:
+		linear-gradient(45deg, green 50%, transparent 50%),
+		linear-gradient(135deg, transparent 50%, green 50%),
+		linear-gradient(to right, #ccc, #ccc);
+	background-position:
+		calc(100% - 15px) 1em,
+		calc(100% - 20px) 1em,
+		calc(100% - 2.5em) 0.5em;
+	background-size:
+		5px 5px,
+		5px 5px,
+		0px 1.5em;
+	background-repeat: no-repeat;
+	border-color: #000;
+	outline: 0;
+}
+
+
+.phone::-webkit-inner-spin-button,
+.phone::-webkit-outer-spin-button {
+	-webkit-appearance: none !important;
+	margin: 0 !important;
+}
+
+.phone {
+	-moz-appearance: textfield !important;
+}
+
+.form [class *=layout__col] {
+    padding: 0 15px;
+}
+
+
+.reg-form {
+    margin: 0 auto;
+    margin-bottom: 2rem;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+
+.px-25{
+    padding-left: 25px !important;
+    padding-right: 25px !important;
+}
+
+.py-7{
+    padding-top: 7px !important;
+    padding-bottom: 7px !important;
+}
+
+.from-step .layout__row{
+    justify-content: normal !important;
+}
+.language_combination_table{
+    width: 100%;
+}
+table.language_combination_table th, table.language_combination_table td {
+    padding: 8px;
+    border: 1px solid #abb3bd;
+}
+.required-error{
+    border: 1px solid var(--red) !important;
+}
+
+.checkboxsas label {
+    margin-bottom: 0px;
 }

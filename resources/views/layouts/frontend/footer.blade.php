@@ -92,17 +92,17 @@
 
     </div>
 
-    <div class="contentCentered" bis_skin_checked="1">
-        <div class="row" bis_skin_checked="1">
-            <div class="legalLinks" bis_skin_checked="1">
+    <div class="contentCentered" >
+        <div class="row" >
+            <div class="legalLinks" >
                 <a href="{{ route ('terms-and-conditions') }}">Terms and Conditions</a>
             </div>
 
-            <div class="legalLinks" bis_skin_checked="1">
+            <div class="legalLinks" >
                 <a href="{{ route ('privacy-policy') }}">Privacy Policy</a>
             </div>
 
-            <div class="legalLinks" bis_skin_checked="1">
+            <div class="legalLinks" >
                 <a href="{{ route ('cookie-policy') }}">Cookie Policy</a>
             </div>
         </div>

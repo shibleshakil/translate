@@ -4,8 +4,11 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\AccountController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\Auth\LoginController;
+use App\Http\Controllers\Admin\QuoteSettingController;
 use App\Http\Controllers\Admin\Auth\PasswordController;
+use App\Http\Controllers\Admin\Quote\SectorsController;
 use App\Http\Controllers\Admin\BusinessSettingController;
+use App\Http\Controllers\Admin\Quote\LanguagesController;
 
 Route::group(['middleware' => ['web'], 'prefix' => 'admin', 'as' => 'admin.'], function () {
 
@@ -39,6 +42,34 @@ Route::group(['middleware' => ['web'], 'prefix' => 'admin', 'as' => 'admin.'], f
             Route::post('update', [AccountController::class, 'updatePassword']);
         });
 
+
+        Route::group(['prefix' => 'quote-settings', 'as' => 'quote-settings.'], function () {
+            Route::get('/', [QuoteSettingController::class, 'quoteSetting'])->name('index');
+            Route::post('/', [QuoteSettingController::class, 'quoteSettingUpdate']);
+
+            Route::group(['prefix' => 'languages', 'as' => 'languages.'], function () {
+                Route::get('/', [LanguagesController::class, 'index'])->name('index');
+                Route::get('/create', [LanguagesController::class, 'create'])->name('create');
+                Route::post('/store', [LanguagesController::class, 'store'])->name('store');
+                Route::get('/edit/{id}', [LanguagesController::class, 'edit'])->name('edit');
+                Route::post('/update', [LanguagesController::class, 'update'])->name('update');
+                Route::delete('/delete/{id}', [LanguagesController::class, 'delete'])->name('delete');
+                Route::put('/restore/{id}', [LanguagesController::class, 'restore'])->name('restore');
+
+            });
+
+            Route::group(['prefix' => 'sectors', 'as' => 'sectors.'], function () {
+                Route::get('/', [SectorsController::class, 'index'])->name('index');
+                Route::get('/create', [SectorsController::class, 'create'])->name('create');
+                Route::post('/store', [SectorsController::class, 'store'])->name('store');
+                Route::get('/edit/{id}', [SectorsController::class, 'edit'])->name('edit');
+                Route::post('/update', [SectorsController::class, 'update'])->name('update');
+                Route::delete('/delete/{id}', [SectorsController::class, 'delete'])->name('delete');
+                Route::put('/restore/{id}', [SectorsController::class, 'restore'])->name('restore');
+
+            });
+
+        });
 
         Route::group(['prefix' => 'business-settings', 'as' => 'business_settings.'], function () {
             Route::get('/maintenance-mode', [BusinessSettingController::class, 'maintenanceMode'])->name('maintenanceMode');

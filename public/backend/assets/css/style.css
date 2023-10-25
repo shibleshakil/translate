@@ -66,3 +66,7 @@ body {
 .border-color-c1 {
     border: 1px solid #625BF6;
 }
+
+.table > tbody > tr > td {
+    vertical-align: middle;
+}

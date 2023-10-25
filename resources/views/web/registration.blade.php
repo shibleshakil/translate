@@ -1,0 +1,718 @@
+@extends('layouts.frontend.app')
+@section('title', 'Registration')
+
+@section('css')
+
+@endsection
+
+@section('content')
+    <section class="section--overflow" id="our-services">
+        <div class="layout">
+            <div class="layout__row   ">
+                <div class="layout__col-12 layout__col-xs-12 ">
+                    <div class="hero-text hero-text--center ">
+                        <h3>Join the TranslationsX Family
+                        </h3>
+                        <p>At TranslationsX, every voice matters. Whether you’re a client seeking expert linguistic
+                            services or a language professional ready to offer your skills, we've crafted a space for
+                            collaboration, growth, and excellence. Become a member of our thriving community today.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <form id="wizard-form" class="reg-form form layout" style="margin-bottom: 2rem;">
+        <from-step class="from-step section--overflow" data-step="1">
+            <!-- Step 1: Personal Details -->
+            <h3>Personal Information</h3>
+            <div class="layout__row">
+                <div class="layout__col-6 layout__col-sm-12 layout__col-xs-12 form-group">
+                    <label for="first_name">First Name</label>
+                    <input type="text" id="first_name" name="first_name" class="form-control"
+                        placeholder="Your First Name" required>
+                </div>
+                <div class="layout__col-6 layout__col-sm-12 layout__col-xs-12 form-group">
+                    <label for="last_name">Last Name</label>
+                    <input type="text" id="last_name" name="last_name" class="form-control"
+                        placeholder="Your Last Name" required>
+                </div>
+                <div class="layout__col-6 layout__col-sm-12 layout__col-xs-12 form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" class="form-control"
+                        placeholder="Your Email Address.." required>
+                </div>
+                <div class="layout__col-6 layout__col-sm-12 layout__col-xs-12 form-group">
+                    <label for="phone_number">Phone number</label>
+                    <input type="number" id="phone_number" name="phone_number" class="form-control phone"
+                    placeholder="Ex: " required>
+                </div>
+                <div class="layout__col-6 layout__col-sm-12 layout__col-xs-12 form-group">
+                    <label for="country">Country</label>
+                    <select name="country" id="country" class="form-control ">
+                        <option value="">Select</option>
+                        <option value="Australia">Australia</option>
+                        <option value="Bangladesh">Bangladesh</option>
+                        <option value="India">India</option>
+                        <option value="Japan">Japan</option>
+                    </select>
+                </div>
+                <div class="layout__col-6 layout__col-sm-12 layout__col-xs-12 form-group">
+                    <label for="city">City of Residence</label>
+                    <select name="city" id="city" class="form-control ">
+                        <option value="">Select</option>
+                        <option value="Sydney">Sydney</option>
+                        <option value="Dhaka">Dhaka</option>
+                        <option value="Mumbai">Mumbai</option>
+                        <option value="Tokyo">Tokyo</option>
+                    </select>
+                </div>
+                <div class="layout__col-6 layout__col-sm-12 layout__col-xs-12 form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" class="form-control"
+                        placeholder="Password">
+                </div>
+                <div class="layout__col-6 layout__col-sm-12 layout__col-xs-12 form-group">
+                    <label for="password_confirmation">Confirm Password</label>
+                    <input type="password" id="password_confirmation" name="password_confirmation" class="form-control"
+                        placeholder="Password">
+                </div>
+                <div class="layout__col-6 layout__col-sm-12 layout__col-xs-12 form-group">
+                    <label for="dob">Date of Birth</label>
+                    <input type="date" id="dob" name="dob" class="form-control">
+                </div>
+            </div>
+            <div class="layout__row">
+                <div class="layout__col-6 layout__col-sm-12 layout__col-xs-12 form-group">
+                    <label>
+                        <input type="checkbox" value="1" id="accept_terms" name="accept_terms" >
+                        Agree to the Privacy Policy and Conditions
+                    </label>
+                </div>
+            </div>
+        </from-step>
+        <from-step class="from-step section--overflow" data-step="2">
+            <!-- Step 2: Professional Details -->
+            <h3>Professional Information</h3>
+            <div class="layout__row">
+                <div class="layout__col-6 layout__col-sm-12 layout__col-xs-12 form-group">
+                    <label for="experience_expertise">Experience and Expertise</label>
+                    <select name="experience_expertise" id="experience_expertise" class="form-control ">
+                        <option value="">Select</option>
+                        <option value="Without prior experience." selected>Without prior experience.</option>
+                        <option value="Has academic language studies but lacks professional exposure">Has academic language studies but lacks professional exposure</option>
+                        <option value="Possesses professional background in a different field">Possesses professional background in a different field</option>
+                        <option value="A seasoned language professional in translation & interpreting.">A seasoned language professional in translation & interpreting.</option>
+                    </select>
+                </div>
+                <div class="layout__col-6 layout__col-sm-12 layout__col-xs-12 form-group">
+                    <label for="professional_Experience">Years of Professional Experience</label>
+                    <select name="professional_Experience" id="professional_Experience" class="form-control ">
+                        <option value="">Select</option>
+                        <option value="Fewer than 12 months." selected>Fewer than 12 months.</option>
+                        <option value="Between 1 and 5 years.">Between 1 and 5 years.</option>
+                        <option value="Between 6 and 15 years.">Between 6 and 15 years.</option>
+                    </select>
+                </div>
+                <div class="layout__col-6 layout__col-sm-12 layout__col-xs-12 form-group">
+                    <label for="linguistic_service">Linguistic Services</label>
+                    <select name="linguistic_service" id="linguistic_service" class="form-control ">
+                        <option value="">Select</option>
+                        <option value="Translation" selected>Translation</option>
+                        <option value="Interpreting">Interpreting</option>
+                        <option value="Transcription">Transcription</option>
+                        <option value="Sworn or legally certified translations">Sworn or legally certified translations</option>
+                    </select>
+                </div>
+                <div class="layout__col-6 layout__col-sm-12 layout__col-xs-12 form-group">
+                    <label for="native_language">Native Language</label>
+                    <select name="native_language" id="native_language" class="form-control ">
+                        <option value="">Select</option>
+                        <option value="English">English</option>
+                        <option value="Bengali">Bengali</option>
+                        <option value="Spanish">Spanish</option>
+                        <option value="French">French</option>
+                    </select>
+                </div>
+                <div class="layout__col-6 layout__col-sm-12 layout__col-xs-12 form-group">
+                    <label for="rate_per_word">Desired rates per word </label>
+                    <input type="number" id="rate_per_word" name="rate_per_word" class="form-control"
+                        placeholder="Set desired rates per word ">
+                </div>
+                <div class="layout__col-6 layout__col-sm-12 layout__col-xs-12 form-group">
+                    <label for="rate_per_minute">Desired rates per audio minute </label>
+                    <input type="number" id="rate_per_minute" name="rate_per_minute" class="form-control"
+                        placeholder="Set desired rates per audio minute ">
+                </div>
+            </div>
+            <div class="layout__row">
+                <div class="layout__col-12 layout__col-sm-12 layout__col-xs-12 form-group">
+                    <label for="">Add Language Combinations</label>
+                    <table class="language_combination_table">
+                        <thead>
+                            <tr>
+                                <th width="40%">From Language</th>
+                                <th width="40%">To Language</th>
+                                <th width="20%">
+                                    <button type="button" class="button button--compact px-25 py-7" onclick="addLangCombination(this)" >Add More</button>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody class="lang_combination_list">
+                            <tr>
+                                <td>
+                                    <select name="from_language[]" id="from_language" class="form-control">
+                                        <option value="">From Language</option>
+                                        <option value="English">English</option>
+                                        <option value="Bengali">Bengali</option>
+                                        <option value="Spanish">Spanish</option>
+                                        <option value="French">French</option>
+                                    </select>
+                                </td>
+                                <td>
+                                    <select name="to_language[]" id="to_language" class="form-control">
+                                        <option value="">To Language</option>
+                                        <option value="English">English</option>
+                                        <option value="Bengali">Bengali</option>
+                                        <option value="Spanish">Spanish</option>
+                                        <option value="French">French</option>
+                                    </select>
+                                </td>
+                                <td>
+                                    <button type="button" class="button button--compact button--secondary px-25 py-7" disabled onclick="removeLangCombination(this)">Remove</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    {{-- <div class="language_combination" style="margin-bottom: 8px;">
+                        <select name="from_language" id="from_language" class="form-control lang-combine-1">
+                            <option value="">From Language</option>
+                            <option value="English">English</option>
+                            <option value="Bengali">Bengali</option>
+                            <option value="Spanish">Spanish</option>
+                            <option value="French">French</option>
+                        </select>
+                        <select name="to_language" id="to_language" class="form-control lang-combine-2">
+                            <option value="">To Language</option>
+                            <option value="English">English</option>
+                            <option value="Bengali">Bengali</option>
+                            <option value="Spanish">Spanish</option>
+                            <option value="French">French</option>
+                        </select>
+                    </div>
+                    <div class="language_combination" style="margin-bottom: 8px;">
+                        <select name="from_language_more" id="from_language_more" class="form-control lang-combine-1">
+                            <option value="">From Language</option>
+                            <option value="English">English</option>
+                            <option value="Bengali">Bengali</option>
+                            <option value="Spanish">Spanish</option>
+                            <option value="French">French</option>
+                        </select>
+                        <select name="to_language_more" id="to_language_more" class="form-control lang-combine-2">
+                            <option value="">To Language</option>
+                            <option value="English">English</option>
+                            <option value="Bengali">Bengali</option>
+                            <option value="Spanish">Spanish</option>
+                            <option value="French">French</option>
+                        </select>
+                    </div> --}}
+                </div>
+            </div>
+
+            <div class="layout__row">
+                <div class="layout__col-6 layout__col-sm-12 layout__col-xs-12 form-group">
+                    <label for="daily_translation_capacity">Daily Translation Capacity</label>
+                    <select name="daily_translation_capacity" id="daily_translation_capacity" class="form-control ">
+                        <option value="">Select</option>
+                        <option value="500 - 1000" selected>500 - 1000</option>
+                        <option value="1500 - 3000">1500 - 3000</option>
+                        <option value="+4000">+4000</option>
+                    </select>
+                </div>
+                <div class="layout__col-6 layout__col-sm-12 layout__col-xs-12 form-group">
+                    <label for="specialized_subject">Specialised Subject Fields (Choose 3)</label>
+                    <select name="specialized_subject" id="specialized_subject" class="form-control ">
+                        <option value="">Select</option>
+                        <option value="Accounting & Finance" selected>Accounting & Finance</option>
+                        <option value="Adwords Campaigns">Adwords Campaigns</option>
+                        <option value="Aerospace / Defence">Aerospace / Defence</option>
+                        <option value="Architecture">Architecture</option>
+                        <option value="Art">Art</option>
+                        <option value="Automotive">Automotive</option>
+                        <option value="Certificates, Diplomas, Licences , Cv's, Etc">Certificates, Diplomas, Licences , Cv's, Etc</option>
+                        <option value="Chemical">Chemical</option>
+                    </select>
+                </div>
+            </div>
+        </from-step>
+        <from-step class="from-step section--overflow" data-step="3">
+            <!-- Step 3: Education -->
+            <input type="hidden" id="eduCount" value="1">
+            <h3>Educational Information</h3>
+            <div class="layout__row edu_div" id="edu_1">
+                <div class="layout__col-6 layout__col-sm-12 layout__col-xs-12 form-group">
+                    <label for="education_level_1">Education Level</label>
+                    <select name="education_level[]" id="education_level_1" class="form-control">
+                        <option value="">Select</option>
+                        <option value="1">Secondary</option>
+                        <option value="2">Higher Secondary</option>
+                        <option value="3">Diploma</option>
+                        <option value="4">Bachelor/Honors</option>
+                        <option value="5">Masters</option>
+                        <option value="6">PhD (Doctor of Philosophy)</option>
+                    </select>
+                </div>
+                <div class="layout__col-6 layout__col-sm-12 layout__col-xs-12 form-group">
+                    <label for="degree_title_1">Exam/Degree Title</label>
+                    <select name="degree_title[]" id="degree_title_1" class="form-control">
+                        <option value="">Select</option>
+                        <option value="Bachelor of Science (BSc)">Bachelor of Science (BSc)</option>
+                        <option value="Bachelor of Arts (BA)">Bachelor of Arts (BA)</option>
+                        <option value="Bachelor of Commerce (BCom)">Bachelor of Commerce (BCom)</option>
+                        <option value="Bachelor of Commerce (Pass)">Bachelor of Commerce (Pass)</option>
+                        <option value="Bachelor of Business Administration (BBA)">Bachelor of Business Administration (BBA)</option>
+                        <option value="Bachelor of Medicine and Bachelor of Surgery(MBBS)">Bachelor of Medicine and Bachelor of Surgery(MBBS)</option>
+                        <option value="Bachelor of Dental Surgery (BDS)">Bachelor of Dental Surgery (BDS)</option>
+                        <option value="Bachelor of Law (LLB)">Bachelor of Law (LLB)</option>
+                    </select>
+                </div>
+                <div class="layout__col-6 layout__col-sm-12 layout__col-xs-12 form-group">
+                    <label for="major_1">Concentration/ Major/Group</label>
+                    <input type="text" id="major_1" name="major[]" class="form-control"
+                    placeholder="Ex: Computer Science & Engineering">
+                </div>
+                <div class="layout__col-6 layout__col-sm-12 layout__col-xs-12 form-group">
+                    <label for="institute_1">Institution Name</label>
+                    <input type="text" id="institute_1" name="institute[]" class="form-control"
+                    placeholder="Ex: MIT">
+                </div>
+                <div class="layout__col-6 layout__col-sm-12 layout__col-xs-12 form-group">
+                    <label for="result_1">Result</label>
+                    <input type="text" id="result_1" name="result[]" class="form-control"
+                    placeholder="Ex: 3.75">
+                </div>
+                <div class="layout__col-6 layout__col-sm-12 layout__col-xs-12 form-group">
+                    <label for="passing_year_1">Passing Year</label>
+                    <select name="passing_year[]" id="passing_year_1" class="form-control">
+                        <option value="">Select</option>
+                        <option value="2028">2028</option>
+                        <option value="2027">2027</option>
+                        <option value="2026">2026</option>
+                        <option value="2025">2025</option>
+                        <option value="2024">2024</option>
+                        <option value="2023">2023</option>
+                        <option value="2022">2022</option>
+                        <option value="2021">2021</option>
+                        <option value="2020" selected="">2020</option>
+                        <option value="2019">2019</option>
+                        <option value="2018">2018</option>
+                        <option value="2017">2017</option>
+                        <option value="2016">2016</option>
+                        <option value="2015">2015</option>
+                    </select>
+                </div>
+
+
+            </div>
+            <button type="button" class="button button--compact px-25 py-7 add_more_education">Add More Education</button>
+        </from-step>
+        <from-step class="from-step section--overflow" data-step="4">
+            <!-- Step 4: Professional Experience -->
+            <h3>Experience</h3>
+            <input type="hidden" id="expCount" value="1">
+            <div class="layout__row" id="exp_1">
+                <div class="layout__col-6 layout__col-sm-12 layout__col-xs-12 form-group">
+                    <label for="">Designation</label>
+                    <input type="text" id="designation_1" name="designation[]" class="form-control"
+                    placeholder="Ex: Software Engineer">
+                </div>
+                <div class="layout__col-6 layout__col-sm-12 layout__col-xs-12 form-group">
+                    <label for="">Company name</label>
+                    <input type="text" id="company_1" name="company[]" class="form-control"
+                    placeholder="Ex: Meta">
+                </div>
+                <div class="layout__col-12 layout__col-sm-12 layout__col-xs-12">
+                    <label for="">Employment Period</label>
+                    <div class="layout__row">
+                        <div class="layout__col-6 layout__col-sm-12 layout__col-xs-12 form-group">
+                            <input type="date" id="from_date_1" name="from_date[]" class="form-control mb-1">
+                            <label >
+                                <input type="checkbox" value="1" name="currently[]" name="currently_1">
+                                Currently Working
+                            </label>
+                        </div>
+                        <div class="layout__col-6 layout__col-sm-12 layout__col-xs-12 form-group">
+                            <input type="date" id="to_date_1" name="to_date[]" class="form-control">
+                        </div>
+                    </div>
+                </div>
+                <div class="layout__col-12 layout__col-sm-12 layout__col-xs-12 form-group">
+                    <label for="">Responsibilities</label>
+                    <textarea name="responsibilities[]" id="responsibilities_1" cols="30" rows="3"></textarea>
+                </div>
+            </div>
+            <button type="button" class="button button--compact px-25 py-7" onclick="addMoreExp(this)">Add More Experience</button>
+        </from-step>
+        <from-step class="from-step section--overflow" data-step="5">
+            <!-- Step 5: Linguistic References -->
+            <h3>Tools & Software</h3>
+            <div class="layout__row">
+                <div class="layout__col-6 layout__col-sm-12 layout__col-xs-12 form-group">
+                    <h5>CAT Tools</h5>
+                    <div class="checkboxsas">
+                        <label>
+                            <input type="checkbox" value="SDL" name="cat_tools[]">
+                            SDL
+                        </label>
+                    </div>
+                    <div class="checkboxsas">
+                        <label>
+                            <input type="checkbox" value="MemeQ" name="cat_tools[]">
+                            MemeQ
+                        </label>
+                    </div>
+                    <div class="checkboxsas">
+                        <label>
+                            <input type="checkbox" value="Memsource" name="cat_tools[]">
+                            Memsource
+                        </label>
+                    </div>
+                    <div class="checkboxsas">
+                        <label>
+                            <input type="checkbox" value="Metacat" name="cat_tools[]">
+                            Metacat
+                        </label>
+                    </div>
+                    <div class="checkboxsas">
+                        <label>
+                            <input type="checkbox" value="Other" name="cat_tools[]">
+                            Other
+                        </label>
+                    </div>
+                </div>
+                <div class="layout__col-6 layout__col-sm-12 layout__col-xs-12 form-group">
+                    <h5>Desktop Publishing Software</h5>
+                    <div class="checkboxsas">
+                        <label>
+                            <input type="checkbox" value="Adobe InDesign" name="desktop_publishing_sofware[]">
+                            Adobe InDesign
+                        </label>
+                    </div>
+                    <div class="checkboxsas">
+                        <label>
+                            <input type="checkbox" value="Adobe Illustrator" name="desktop_publishing_sofware[]">
+                            Adobe Illustrator
+                        </label>
+                    </div>
+                    <div class="checkboxsas">
+                        <label>
+                            <input type="checkbox" value="Adobe Photoshop" name="desktop_publishing_sofware[]">
+                            Adobe Photoshop
+                        </label>
+                    </div>
+                    <div class="checkboxsas">
+                        <label>
+                            <input type="checkbox" value="AutoCAD" name="desktop_publishing_sofware[]">
+                            AutoCAD
+                        </label>
+                    </div>
+                    <div class="checkboxsas">
+                        <label>
+                            <input type="checkbox" value="Frame Maker" name="desktop_publishing_sofware[]">
+                            Frame Maker
+                        </label>
+                    </div>
+                    <div class="checkboxsas">
+                        <label>
+                            <input type="checkbox" value="Other" name="desktop_publishing_sofware[]">
+                            Other
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </from-step>
+        <from-step class="from-step section--overflow" data-step="6">
+            <!-- Step 6: Other Info -->
+            <h3>Others</h3>
+            <div class="layout__row">
+                <div class="layout__col-6 layout__col-sm-12 layout__col-xs-12 form-group">
+                    <label for="image">Upload Image</label>
+                    <input type="file" id="image" name="image" class="form-control" accept=".png,.jpeg,.jpg">
+                </div>
+                <div class="layout__col-6 layout__col-sm-12 layout__col-xs-12 form-group">
+                    <label for="cv">Upload CV</label>
+                    <input type="file" id="cv" name="cv" class="form-control" accept=".pdf,.docx">
+                </div>
+            </div>
+        </from-step>
+
+        <div class="layout__row">
+            <div class="layout__col-12 layout__col-sm-12 layout__col-xs-12 wizard-buttons text-right">
+                <button type="button" class="button button--compact button--secondary prev-button px-25 py-7">Previous</button>
+                <button type="button" class="button button--compact next-button px-25 py-7">Next</button>
+                <button type="button" class="button button--compact submit-button px-25 py-7">Submit</button>
+            </div>
+        </div>
+    </form>
+
+@endsection
+
+@section('script')
+    <script type="text/javascript">
+        $(function () {
+            $(".select2").select2();
+        });
+
+        $(document).ready(function() {
+            // Initialize variables
+            var currentStep = 1;
+            var totalSteps = $("from-step").length;
+            $(".reg-form").on("submit", function(event) {
+                event.preventDefault();
+            });
+
+            // Hide all sections except the first one
+            $("from-step").not('[data-step="1"]').hide();
+
+            // Handle Next button click
+            $(".next-button").click(function() {
+                if (currentStep < totalSteps) {
+                    currentStep++;
+                    $("from-step").hide();
+                    $("from-step[data-step='" + currentStep + "']").show();
+                }
+
+                // Show or hide the buttons based on the step
+                updateButtons();
+            });
+            // $(".next-button").click(function() {
+            //     var nextStep = currentStep + 1;
+            //     if (validateStep(currentStep)) {
+            //         currentStep = nextStep;
+            //         $("from-step").hide();
+            //         $("from-step[data-step='" + currentStep + "']").show();
+            //         updateButtons();
+            //     }
+            // });
+            $(".reg-form").on("input", "input, select, textarea", function() {
+                var $field = $(this);
+                if ($field.val() !== "") {
+                    $field.removeClass("required-error");
+                }
+            });
+
+            function validateStep(step) {
+                console.log(step);
+                var $currentSection = $("from-step[data-step='" + step + "']");
+                var requiredFields = $currentSection.find("[required]");
+                var valid = true;
+
+                requiredFields.each(function() {
+                    var $field = $(this);
+                    if ($field.val() === "") {
+                        $field.addClass("required-error");
+                        valid = false;
+                    } else {
+                        $field.removeClass("required-error");
+                    }
+                });
+
+                return valid;
+            }
+
+            // Handle Previous button click
+            $(".prev-button").click(function() {
+                if (currentStep > 1) {
+                    currentStep--;
+                    $("from-step").hide();
+                    $("from-step[data-step='" + currentStep + "']").show();
+                }
+
+                // Show or hide the buttons based on the step
+                updateButtons();
+            });
+
+            // Function to show or hide buttons
+            function updateButtons() {
+                if (currentStep === 1) {
+                    $(".prev-button").prop("disabled", true);
+                } else {
+                    $(".prev-button").prop("disabled", false);
+                }
+
+                if (currentStep === totalSteps) {
+                    $(".next-button").hide();
+                    $(".submit-button").show();
+                    $(".submit-button").prop("disabled", false);
+                } else {
+                    $(".next-button").show();
+                    $(".submit-button").hide();
+                    $(".submit-button").prop("disabled", true);
+                }
+            }
+
+            // Initialize button state
+            updateButtons();
+
+            $(".add_more_education").click(function(){
+                var eduCount = $("#eduCount").val() + 1;
+                $("#eduCount").val(eduCount);
+
+                var new_edu = '<div class="layout__row edu_div" id="edu_'+eduCount+'">'+
+                    '<div class="layout__col-6 layout__col-sm-12 layout__col-xs-12 form-group">'+
+                        '<label for="education_level_'+eduCount+'">Education Level</label>'+
+                        '<select name="education_level[]" id="education_level_'+eduCount+'" class="form-control">'+
+                            '<option value="">Select</option>'+
+                            '<option value="1">Secondary</option>'+
+                            '<option value="2">Higher Secondary</option>'+
+                            '<option value="3">Diploma</option>'+
+                            '<option value="4">Bachelor/Honors</option>'+
+                            '<option value="5">Masters</option>'+
+                            '<option value="6">PhD (Doctor of Philosophy)</option>'+
+                        '</select>'+
+                    '</div>'+
+                    '<div class="layout__col-6 layout__col-sm-12 layout__col-xs-12 form-group">'+
+                        '<label for="degree_title_'+eduCount+'">Exam/Degree Title</label>'+
+                        '<select name="degree_title[]" id="degree_title_'+eduCount+'" class="form-control">'+
+                            '<option value="">Select</option>'+
+                            '<option value="Bachelor of Science (BSc)">Bachelor of Science (BSc)</option>'+
+                            '<option value="Bachelor of Arts (BA)">Bachelor of Arts (BA)</option>'+
+                            '<option value="Bachelor of Commerce (BCom)">Bachelor of Commerce (BCom)</option>'+
+                            '<option value="Bachelor of Commerce (Pass)">Bachelor of Commerce (Pass)</option>'+
+                            '<option value="Bachelor of Business Administration (BBA)">Bachelor of Business Administration (BBA)</option>'+
+                            '<option value="Bachelor of Medicine and Bachelor of Surgery(MBBS)">Bachelor of Medicine and Bachelor of Surgery(MBBS)</option>'+
+                            '<option value="Bachelor of Dental Surgery (BDS)">Bachelor of Dental Surgery (BDS)</option>'+
+                            '<option value="Bachelor of Law (LLB)">Bachelor of Law (LLB)</option>'+
+                        '</select>'+
+                    '</div>'+
+                    '<div class="layout__col-6 layout__col-sm-12 layout__col-xs-12 form-group">'+
+                        '<label for="major_'+eduCount+'">Concentration/ Major/Group</label>'+
+                        '<input type="text" id="major_'+eduCount+'" name="major[]" class="form-control"'+
+                        'placeholder="Ex: Computer Science & Engineering">'+
+                    '</div>'+
+                    '<div class="layout__col-6 layout__col-sm-12 layout__col-xs-12 form-group">'+
+                        '<label for="institute_'+eduCount+'">Institution Name</label>'+
+                        '<input type="text" id="institute_'+eduCount+'" name="institute[]" class="form-control"'+
+                        'placeholder="Ex: MIT">'+
+                    '</div>'+
+                    '<div class="layout__col-6 layout__col-sm-12 layout__col-xs-12 form-group">'+
+                        '<label for="result_'+eduCount+'">Result</label>'+
+                        '<input type="text" id="result_'+eduCount+'" name="result[]" class="form-control"'+
+                        'placeholder="Ex: 3.75">'+
+                    '</div>'+
+                    '<div class="layout__col-6 layout__col-sm-12 layout__col-xs-12 form-group">'+
+                        '<label for="passing_year_'+eduCount+'">Passing Year</label>'+
+                        '<select name="passing_year[]" id="passing_year_'+eduCount+'" class="form-control">'+
+                            '<option value="">Select</option>'+
+                            '<option value="2028">2028</option>'+
+                            '<option value="2027">2027</option>'+
+                            '<option value="2026">2026</option>'+
+                            '<option value="2025">2025</option>'+
+                            '<option value="2024">2024</option>'+
+                            '<option value="2023">2023</option>'+
+                            '<option value="2022">2022</option>'+
+                            '<option value="2021">2021</option>'+
+                            '<option value="2020" selected="">2020</option>'+
+                            '<option value="2019">2019</option>'+
+                            '<option value="2018">2018</option>'+
+                            '<option value="2017">2017</option>'+
+                            '<option value="2016">2016</option>'+
+                            '<option value="2015">2015</option>'+
+                        '</select>'+
+                    '</div>'+
+                    '<div class="layout__col-12 layout__col-sm-12 layout__col-xs-12 text-right">'+
+                    '<button type="button" class="button button--compact button--secondary px-25 py-7" onclick="remove_edu(this)" data-edu="'+eduCount+'">Remove</button>'+
+                    '</div>'+
+                '</div>';
+
+                $(".add_more_education").before(new_edu);
+            });
+        });
+
+        function remove_edu(ed) {
+            var target = $(ed).data('edu');
+            $("#edu_"+target).remove();
+        }
+
+        function addLangCombination(lc) {
+            var new_combination = '<tr>'+
+                '<td>'+
+                    '<select name="from_language[]" id="from_language" class="form-control">'+
+                        '<option value="">From Language</option>'+
+                        '<option value="English">English</option>'+
+                        '<option value="Bengali">Bengali</option>'+
+                        '<option value="Spanish">Spanish</option>'+
+                        '<option value="French">French</option>'+
+                    '</select>'+
+                '</td>'+
+                '<td>'+
+                    '<select name="to_language[]" id="to_language" class="form-control">'+
+                        '<option value="">To Language</option>'+
+                        '<option value="English">English</option>'+
+                        '<option value="Bengali">Bengali</option>'+
+                        '<option value="Spanish">Spanish</option>'+
+                        '<option value="French">French</option>'+
+                    '</select>'+
+                '</td>'+
+                '<td>'+
+                    '<button type="button" class="button button--compact button--secondary px-25 py-7" onclick="removeLangCombination(this)">Remove</button>'+
+                '</td>'+
+            '</tr>';
+
+            $(".lang_combination_list").append(new_combination);
+        }
+
+        function removeLangCombination(rlc){
+            $(rlc).closest("tr").remove();
+        }
+
+        function addMoreExp(me) {
+            var expCount = $("#expCount").val() + 1;
+            $("#expCount").val(expCount);
+
+            var new_exp = '<div class="layout__row" id="exp_'+expCount+'">'+
+                '<div class="layout__col-6 layout__col-sm-12 layout__col-xs-12 form-group">'+
+                    '<label for="">Designation</label>'+
+                    '<input type="text" id="designation_'+expCount+'" name="designation[]" class="form-control"'+
+                    'placeholder="Ex: Software Engineer">'+
+                '</div>'+
+                '<div class="layout__col-6 layout__col-sm-12 layout__col-xs-12 form-group">'+
+                    '<label for="">Company name</label>'+
+                    '<input type="text" id="company_'+expCount+'" name="company[]" class="form-control"'+
+                    'placeholder="Ex: Meta">'+
+                '</div>'+
+                '<div class="layout__col-12 layout__col-sm-12 layout__col-xs-12">'+
+                    '<label for="">Employment Period</label>'+
+                    '<div class="layout__row">'+
+                        '<div class="layout__col-6 layout__col-sm-12 layout__col-xs-12 form-group">'+
+                            '<input type="date" id="from_date_'+expCount+'" name="from_date[]" class="form-control mb-'+expCount+'">'+
+                            '<label >'+
+                                '<input type="checkbox" value="'+expCount+'" name="currently[]" name="currently_'+expCount+'">'+
+                                'Currently Working'+
+                            '</label>'+
+                        '</div>'+
+                        '<div class="layout__col-6 layout__col-sm-12 layout__col-xs-12 form-group">'+
+                            '<input type="date" id="to_date_'+expCount+'" name="to_date[]" class="form-control">'+
+                        '</div>'+
+                    '</div>'+
+                '</div>'+
+                '<div class="layout__col-12 layout__col-sm-12 layout__col-xs-12 form-group">'+
+                    '<label for="">Responsibilities</label>'+
+                    '<textarea name="responsibilities[]" id="responsibilities_'+expCount+'" cols="30" rows="3"></textarea>'+
+                '</div>'+
+                '<div class="layout__col-12 layout__col-sm-12 layout__col-xs-12 text-right">'+
+                    '<button type="button" class="button button--compact button--secondary px-25 py-7" onclick="remove_exp(this)" data-exp="'+expCount+'">Remove</button>'+
+                '</div>'+
+            '</div>';
+
+            $(me).before(new_exp);
+        }
+
+        function remove_exp(exp) {
+            var target = $(exp).data('exp');
+            $("#exp_"+target).remove();
+        }
+
+
+    </script>
+@endsection

@@ -22,12 +22,12 @@
         </div>
     </section>
     <section class="section--overflow">
-        <div class="layout" bis_skin_checked="1">
-            <div class="layout__row" bis_skin_checked="1">
+        <div class="layout" >
+            <div class="layout__row" >
                 <div class="layout__col-7 layout__col-md-6 layout__col-sm-12 layout__col-xs-12 pt-0"
-                    bis_skin_checked="1">
-                    <div class="layout__row" bis_skin_checked="1">
-                        <div class="layout__col-6 layout__col-sm-12 layout__col-xs-12 form-group" bis_skin_checked="1">
+                    >
+                    <div class="layout__row" >
+                        <div class="layout__col-6 layout__col-sm-12 layout__col-xs-12 form-group" >
                             <label for="from">From</label>
                             <select name="from" id="from" class="form-control select2">
                                 <option value="">Select</option>
@@ -41,7 +41,7 @@
                                 <option value="Catalan">Catalan</option>
                             </select>
                         </div>
-                        <div class="layout__col-6 layout__col-sm-12 layout__col-xs-12 form-group" bis_skin_checked="1">
+                        <div class="layout__col-6 layout__col-sm-12 layout__col-xs-12 form-group" >
                             <label for="to">To</label>
                             <select name="to" id="to" class="form-select select2">
                                 <option value="">Select</option>
@@ -56,13 +56,13 @@
                             </select>
                         </div>
 
-                        <div class="layout__col-6 layout__col-sm-12 layout__col-xs-12 form-group" bis_skin_checked="1">
+                        <div class="layout__col-6 layout__col-sm-12 layout__col-xs-12 form-group" >
                             <label for="delivery_date">Delivery Date</label>
                             <input type="date" id="delivery_date" name="delivery_date" class="form-control"
                                 placeholder="Your Email Address..">
                         </div>
 
-                        <div class="layout__col-6 layout__col-sm-12 layout__col-xs-12 form-group" bis_skin_checked="1">
+                        <div class="layout__col-6 layout__col-sm-12 layout__col-xs-12 form-group" >
                             <label for="subject">Subject</label>
                             <select name="subject" id="subject" class="form-control select2">
                                 <option value="">Select</option>
@@ -77,15 +77,15 @@
                             </select>
                         </div>
                     </div>
-                    <div class="layout__row" bis_skin_checked="1">
+                    <div class="layout__row" >
 
-                        <div class="layout__col-12 layout__col-sm-12 layout__col-xs-12 form-group" bis_skin_checked="1">
+                        <div class="layout__col-12 layout__col-sm-12 layout__col-xs-12 form-group" >
                             <label for="word_count">Word Count</label>
-                            <div class="word-count-or-upload" bis_skin_checked="1">
+                            <div class="word-count-or-upload" >
                                 <input type="text" name="word_count" id="word_count" placeholder="Word count" value="1000" style="height: 40px">
-                                <div class="word-count-or-upload__upload" bis_skin_checked="1">
+                                <div class="word-count-or-upload__upload" >
                                     <span class="word-count-or-upload__or">or</span>
-                                    <div class="word-count-or-upload__button-wrapper" bis_skin_checked="1">
+                                    <div class="word-count-or-upload__button-wrapper" >
                                         <button type="button" class="button--compact button--secondary" id="file-upload-btn">Upload files</button>
                                     </div>
                                 </div>
@@ -97,49 +97,49 @@
                     </div>
                 </div>
                 <div class="layout__col-5 layout__col-md-6 layout__col-sm-12 layout__col-xs-12 "
-                    style="background-color: #eee; border-radius: 0.25rem" bis_skin_checked="1">
+                    style="background-color: #eee; border-radius: 0.25rem" >
                     <h5>Quote Summary</h5>
-                    <div class="layout__row" bis_skin_checked="1">
-                        <div class="layout__col-5 py-1" bis_skin_checked="1">
+                    <div class="layout__row" >
+                        <div class="layout__col-5 py-1" >
                             <p id="">From</p>
                         </div>
-                        <div class="layout__col-7 py-1" bis_skin_checked="1">
+                        <div class="layout__col-7 py-1" >
                             <p id="from_lang">Arabic</p>
                         </div>
-                        <div class="layout__col-5 py-1" bis_skin_checked="1">
+                        <div class="layout__col-5 py-1" >
                             <p id="">To</p>
                         </div>
-                        <div class="layout__col-7 py-1" bis_skin_checked="1">
+                        <div class="layout__col-7 py-1" >
                             <p id="to_lang">English</p>
                         </div>
-                        <div class="layout__col-5 pt-1" bis_skin_checked="1">
+                        <div class="layout__col-5 pt-1" >
                             <p id="">Subject</p>
                         </div>
-                        <div class="layout__col-7 pt-1" bis_skin_checked="1">
+                        <div class="layout__col-7 pt-1" >
                             <p id="selected_subject">Accounting & Finance</p>
                         </div>
                     </div>
 
                     <h5>Pricing ($0.10 / word)</h5>
-                    <div class="layout__row   " bis_skin_checked="1">
-                        <div class="layout__col-5 pt-1" bis_skin_checked="1">
+                    <div class="layout__row   " >
+                        <div class="layout__col-5 pt-1" >
                             <p id="total_word">100 Words</p>
                         </div>
-                        <div class="layout__col-7 pt-1" bis_skin_checked="1">
+                        <div class="layout__col-7 pt-1" >
                             <p id="total_price">$9.50</p>
                         </div>
                     </div>
 
                     <h5>Estimated Delivery <small>(2000 words / day)</small></h5>
-                    <div class="layout__row" bis_skin_checked="1">
-                        <div class="layout__col-5 pt-1" bis_skin_checked="1">
+                    <div class="layout__row" >
+                        <div class="layout__col-5 pt-1" >
                             <p id="">Translation</p>
                         </div>
-                        <div class="layout__col-7 pt-1" bis_skin_checked="1">
+                        <div class="layout__col-7 pt-1" >
                             <p id="estimate_date">Thursday, October 05</p>
                         </div>
 
-                        <div class="layout__col-12 layout__col-sm-12 layout__col-xs-12 form-group mb-0" bis_skin_checked="1"
+                        <div class="layout__col-12 layout__col-sm-12 layout__col-xs-12 form-group mb-0"
                             style="display: grid; align-items: end;">
                             <button class="btn button--secondary check price" type="button">Place Order</button>
                         </div>
@@ -206,8 +206,8 @@
                         truncated_name = file_name;
                     }
 
-                    const new_file_row = '<div class="layout__row pb-2 align-items-center" bis_skin_checked="1">'+
-                        '<div class="layout__col-11 py-0" bis_skin_checked="1">'+
+                    const new_file_row = '<div class="layout__row pb-2 align-items-center" >'+
+                        '<div class="layout__col-11 py-0" >'+
                             '<span>'+truncated_name+'</span>'+
                             '<span class="float-right">'+
                                 '<span class="small" style="">'+
@@ -215,7 +215,7 @@
                                 '</span>'+
                             '</span>'+
                         '</div>'+
-                        '<div class="layout__col-1 py-0" bis_skin_checked="1">'+
+                        '<div class="layout__col-1 py-0" >'+
                             '<small class="float-right" style="">'+
                                 '<button class="close" onclick="deleteEfile(this)">'+
                                     '<i class="fa fa-trash" style="font-size: 15px; padding: 5px; color:red"></i>'+
@@ -223,7 +223,7 @@
                                 '</button>'+
                             '</small>'+
                         '</div>'+
-                        '<div class="layout__col-12 py-1" bis_skin_checked="1" id="pro_div_'+randomString+'">'+
+                        '<div class="layout__col-12 py-1" id="pro_div_'+randomString+'">'+
                         '</div>'+
                     '</div>';
 

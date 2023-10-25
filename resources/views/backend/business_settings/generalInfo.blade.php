@@ -30,8 +30,6 @@
             $companyPhone = \App\Helpers\Common::get_business_settings('company_phone');
             $companyAddress = \App\Helpers\Common::get_business_settings('company_address');
             $copyRight = \App\Helpers\Common::get_business_settings('copy_right_text');
-            $price_per_word = \App\Helpers\Common::get_business_settings('price_per_word');
-            $delivery_words_per_day = \App\Helpers\Common::get_business_settings('delivery_words_per_day');
         @endphp
 
         <section id="general-info">
@@ -131,35 +129,6 @@
                     </div>
                 </div>
 
-                <div class="card rounded">
-                    <div class="card-content collapse show">
-                        <div class="card-body">
-                            <div class="form-body">
-                                <h4 class="form-section"><i class="feather icon-briefcase"></i>
-                                    {{ __('Business Information') }}
-                                </h4>
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <label for="price_per_word">{{ 'Price per word' }}</label>
-                                            <input type="number" id="price_per_word" class="form-control"
-                                                placeholder="Ex: $0.1" name="price_per_word"
-                                                value="{{ $price_per_word }}" min="0" step="any">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <label for="delivery_words_per_day">{{ 'Estimated Delivery (words / day)' }}</label>
-                                            <input type="number" id="delivery_words_per_day" class="form-control"
-                                                placeholder="Ex: 20000" name="delivery_words_per_day"
-                                                value="{{ $delivery_words_per_day }}" min="0">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
                 <div class="d-flex justify-content-end">
                     <button type="submit" class="btn btn-primary px-4 submit-btn">{{__('Submit')}}</button>
                 </div>

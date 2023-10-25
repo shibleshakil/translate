@@ -7,6 +7,11 @@ use Illuminate\Http\Request;
 
 class WebController extends Controller
 {
+    public function __construct()
+    {
+        abort(404);
+    }
+
     public function index(){
         return view('web.index');
     }

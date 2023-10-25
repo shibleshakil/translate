@@ -21,6 +21,7 @@
 
     <!-- BEGIN: Vendor CSS-->
     <link rel="stylesheet" type="text/css" href="{{ asset ('public/backend/app-assets/vendors/css/vendors.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset ('public/backend/app-assets/vendors/css/tables/datatable/datatables.min.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset ('public/backend/app-assets/vendors/css/forms/toggle/switchery.min.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset ('public/backend/app-assets/vendors/css/forms/icheck/icheck.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset ('public/backend/app-assets/vendors/css/forms/icheck/custom.css') }}">
@@ -81,9 +82,11 @@
     <!-- BEGIN Vendor JS-->
 
     <!-- BEGIN: Page Vendor JS-->
+    <script src="{{ asset('public/backend/app-assets/vendors/js/tables/datatable/datatables.min.js') }}"></script>
     <script src="{{ asset('public/backend/app-assets/vendors/js/extensions/sweetalert2.all.min.js') }}"></script>
     <script src="{{ asset('public/backend/app-assets/vendors/js/forms/toggle/bootstrap-checkbox.min.js') }}"></script>
     <script src="{{ asset('public/backend/app-assets/vendors/js/forms/toggle/switchery.min.js') }}"></script>
+    <script src="{{ asset('public/backend/app-assets/vendors/js/forms/select/select2.full.min.js') }}"></script>
     <!-- END: Page Vendor JS-->
 
     <!-- BEGIN: Theme JS-->
@@ -91,9 +94,20 @@
     <script src="{{ asset ('public/backend/app-assets/js/core/app.js') }}"></script>
     <script src="{{ asset ('public/backend/assets/js/dropify.min.js')}}"></script>
     <script src="{{ asset ('public/backend/app-assets/js/scripts/forms/switch.js')}}"></script>
+    <script src="{{ asset ('public/backend/assets/js/datatable.js?v1.1')}}"></script>
     <script src="{{ asset ('public/backend/assets/js/dropify-init.js?v1.1')}}"></script>
+    <script src="{{ asset ('public/backend/assets/js/scripts.js?v1.1')}}"></script>
     <!-- END: Theme JS-->
+    <script type="text/javascript">
+        $(function () {
+            $(".form").submit( function (){
+                $(".submit-btn").attr("disabled", true);
+                return true;
+            });
 
+            $(".select2").select2();
+        })
+    </script>
     <!-- BEGIN: Page JS-->
     @yield('script')
     <!-- END: Page JS-->

@@ -21,7 +21,7 @@
         integrity="sha512-nMNlpuaDPrqlEls3IX/Q56H36qvBASwb3ipuo3MxeWbsQB1881ox0cRv7UPTgBlriqoynt35KjEwgGUeUXIPnw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <link rel="stylesheet" href="{{ asset ('public/frontend/css/main.css') }}">
+    <link rel="stylesheet" href="{{ asset ('public/frontend/css/main.css?v1.1') }}">
     <link rel="icon" type="image/x-icon" href="{{$small_logo ? asset ('public/storage/'. $small_logo) : asset ('public/frontend/images/logosmall.png') }}" sizes="32x32">
     <link rel="icon" type="image/png" href="{{$small_logo ? asset ('public/storage/'. $small_logo) : asset ('public/frontend/images/logosmall.png') }}" sizes="16x16">
 
