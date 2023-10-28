@@ -16,7 +16,7 @@
             <div class="breadcrumb-wrapper col-12">
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="{{ route('admin.dashboard') }}">{{ __('Home') }}</a></li>
-                    <li class="breadcrumb-item">{{ __('Quote Settings') }}</li>
+                    <li class="breadcrumb-item">{{ __('Settings') }}</li>
                     <li class="breadcrumb-item active">{{ __('Sectors') }}</li>
                 </ol>
             </div>
@@ -53,7 +53,7 @@
                                                         <td>
                                                             @if ($data->trashed())
                                                                 <button type="button" class="btn btn-outline-warning" title="Resotre"
-                                                                    onclick="restoreData('{{ route('admin.quote-settings.sectors.restore', [$data->id]) }}')">
+                                                                    onclick="restoreData('{{ route('admin.settings.sectors.restore', [$data->id]) }}')">
                                                                     <i class="feather icon-rotate-ccw"></i>
                                                                 </button>
                                                             @else
@@ -62,7 +62,7 @@
                                                                     <i class="feature icon-pencil"></i>
                                                                 </a>
                                                                 <button type="button" class="btn btn-outline-danger" title="Trash"
-                                                                    onclick="deleteData('{{ route('admin.quote-settings.sectors.delete', [$data->id]) }}')">
+                                                                    onclick="deleteData('{{ route('admin.settings.sectors.delete', [$data->id]) }}')">
                                                                     <i class="feather icon-trash"></i>
                                                                 </button>
                                                             @endif
@@ -92,7 +92,7 @@
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-                <form action="{{ route ('admin.quote-settings.sectors.store') }}" method="post" class="form" enctype="multipart/form-data">@csrf
+                <form action="{{ route ('admin.settings.sectors.store') }}" method="post" class="form" enctype="multipart/form-data">@csrf
                     <div class="modal-body">
                         <fieldset>
                             <div class="from-group">
@@ -121,7 +121,7 @@
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-                <form action="{{ route ('admin.quote-settings.sectors.update') }}" method="post" class="form" enctype="multipart/form-data">@csrf
+                <form action="{{ route ('admin.settings.sectors.update') }}" method="post" class="form" enctype="multipart/form-data">@csrf
                     <div class="modal-body">
                         <input type="hidden" id="id" name="id">
                         <fieldset>

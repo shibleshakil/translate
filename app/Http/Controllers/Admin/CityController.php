@@ -1,31 +1,31 @@
 <?php
 
-namespace App\Http\Controllers\Admin\Quote;
+namespace App\Http\Controllers\Admin;
 
-use App\Models\Language;
+use App\Models\City;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
 
-class LanguagesController extends Controller
+class CityController extends Controller
 {
     public function index() {
-        $datas = Language::withTrashed()->get()->reverse();
+        $datas = City::withTrashed()->get()->reverse();
         $sl = 0;
 
-        return view('backend.quote_settings.languages', compact('datas', 'sl'));
+        return view('backend.quote_settings.cities', compact('datas', 'sl'));
     }
 
 
     public function store(Request $request) {
         $validatedData = $request->validate([
-            'title' => ['required', 'string', 'unique:languages,title,'.$request->id .',id'],
+            'title' => ['required', 'string', 'unique:cities,title,'.$request->id .',id'],
         ]);
 
         DB::beginTransaction();
 
         try {
-            $data = new Language;
+            $data = new City;
             $data->title = $request->title;
             $data->save();
             DB::commit();
@@ -42,21 +42,13 @@ class LanguagesController extends Controller
 
     public function update(Request $request) {
         $validatedData = $request->validate([
-            'title' => ['required', 'string', 'unique:languages,title,'.$request->id .',id'],
+            'title' => ['required', 'string', 'unique:cities,title,'.$request->id .',id'],
         ]);
 
         DB::beginTransaction();
 
         try {
-            $data = Language::findorFail($request->id);
-            if ($data->id == 27) {
-                DB::rollback();
-                return $res = [
-                    'type'=> 'error',
-                    'title'=> __('Error'),
-                    'msg'=> __('Data not found!')
-                ];
-            }
+            $data = City::findorFail($request->id);
             $data->title = $request->title;
             $data->save();
             DB::commit();
@@ -75,8 +67,8 @@ class LanguagesController extends Controller
         DB::beginTransaction();
 
         try {
-            $data = Language::find($id);
-            if (!$data || $data->id == 27) {
+            $data = City::find($id);
+            if (!$data) {
                 DB::rollback();
                 return $res = [
                     'type'=> 'error',
@@ -111,8 +103,8 @@ class LanguagesController extends Controller
         DB::beginTransaction();
 
         try {
-            $data = Language::onlyTrashed()->find($id);
-            if (!$data || $data->id == 27) {
+            $data = City::onlyTrashed()->find($id);
+            if (!$data) {
                 DB::rollback();
                 return $res = [
                     'type'=> 'error',
@@ -142,5 +134,5 @@ class LanguagesController extends Controller
         }
 
     }
-
 }
+

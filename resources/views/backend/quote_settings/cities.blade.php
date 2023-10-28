@@ -1,6 +1,6 @@
 @extends('layouts.backend.app')
 
-@section('title', 'Languages')
+@section('title', 'Cities')
 
 @section('content')
 <div class="content-wrapper">
@@ -8,7 +8,7 @@
         <div class="content-header-left col-md-6 col-12 mb-1">
             <h3 class="content-header-title">
                 <a href="#" data-toggle="modal" data-target="#addModal" class="btn btn-primary">
-                    {{ __('Add Languages') }} <i class="feature icon-plus"></i>
+                    {{ __('Add City') }} <i class="feature icon-plus"></i>
                 </a>
             </h3>
         </div>
@@ -17,7 +17,7 @@
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="{{ route('admin.dashboard') }}">{{ __('Home') }}</a></li>
                     <li class="breadcrumb-item">{{ __('Settings') }}</li>
-                    <li class="breadcrumb-item active">{{ __('Languages') }}</li>
+                    <li class="breadcrumb-item active">{{ __('Cities') }}</li>
                 </ol>
             </div>
         </div>
@@ -29,7 +29,7 @@
                     @include('partials.session_message')
                     <div class="card rounded">
                         <div class="card-header">
-                            <h4 class="card-title">Languages</h4>
+                            <h4 class="card-title">Cities</h4>
                         </div>
                         <div class="card-content collapse show">
                             <div class="card-body card-dashboard">
@@ -38,7 +38,7 @@
                                         <thead>
                                             <tr>
                                                 <th>Sl</th>
-                                                <th>Language</th>
+                                                <th>City</th>
                                                 <th>Status</th>
                                                 <th>Action</th>
                                             </tr>
@@ -51,24 +51,20 @@
                                                         <td>{{ $data->title}}</td>
                                                         <td>{{ $data->trashed() ? 'In Trash' : 'Active' }}</td>
                                                         <td>
-                                                            @if ($data->id == 27)
-                                                                Default
+                                                            @if ($data->trashed())
+                                                                <button type="button" class="btn btn-outline-warning" title="Resotre"
+                                                                    onclick="restoreData('{{ route('admin.settings.cities.restore', [$data->id]) }}')">
+                                                                    <i class="feather icon-rotate-ccw"></i>
+                                                                </button>
                                                             @else
-                                                                @if ($data->trashed())
-                                                                    <button type="button" class="btn btn-outline-warning" title="Resotre"
-                                                                        onclick="restoreData('{{ route('admin.settings.languages.restore', [$data->id]) }}')">
-                                                                        <i class="feather icon-rotate-ccw"></i>
-                                                                    </button>
-                                                                @else
-                                                                    <a href="#" data-toggle="modal" data-target="#editModal" class="btn btn-outline-primary"
-                                                                    data-target-id="{{$data->id}}" data-title="{{$data->title}}">
-                                                                        <i class="feature icon-pencil"></i>
-                                                                    </a>
-                                                                    <button type="button" class="btn btn-outline-danger" title="Trash"
-                                                                        onclick="deleteData('{{ route('admin.settings.languages.delete', [$data->id]) }}')">
-                                                                        <i class="feather icon-trash"></i>
-                                                                    </button>
-                                                                @endif
+                                                                <a href="#" data-toggle="modal" data-target="#editModal" class="btn btn-outline-primary"
+                                                                data-target-id="{{$data->id}}" data-title="{{$data->title}}">
+                                                                    <i class="feature icon-pencil"></i>
+                                                                </a>
+                                                                <button type="button" class="btn btn-outline-danger" title="Trash"
+                                                                    onclick="deleteData('{{ route('admin.settings.cities.delete', [$data->id]) }}')">
+                                                                    <i class="feather icon-trash"></i>
+                                                                </button>
                                                             @endif
                                                         </td>
                                                     </tr>
@@ -91,17 +87,17 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h4 class="modal-title" id="myModalLabel18"> Add New Language</h4>
+                    <h4 class="modal-title" id="myModalLabel18"> Add New City</h4>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-                <form action="{{ route ('admin.settings.languages.store') }}" method="post" class="form" enctype="multipart/form-data">@csrf
+                <form action="{{ route ('admin.settings.cities.store') }}" method="post" class="form" enctype="multipart/form-data">@csrf
                     <div class="modal-body">
                         <fieldset>
                             <div class="from-group">
                                 <label for="title">Title</label>
-                                <input type="text" class="form-control" id="title" name="title" value="{{ old('title') }}" placeholder="Ex: English">
+                                <input type="text" class="form-control" id="title" name="title" value="{{ old('title') }}" placeholder="Ex: London">
                             </div>
                         </fieldset>
                     </div>
@@ -120,18 +116,18 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h4 class="modal-title" id="myModalLabel18"> Update Language</h4>
+                    <h4 class="modal-title" id="myModalLabel18"> Update City</h4>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-                <form action="{{ route ('admin.settings.languages.update') }}" method="post" class="form" enctype="multipart/form-data">@csrf
+                <form action="{{ route ('admin.settings.cities.update') }}" method="post" class="form" enctype="multipart/form-data">@csrf
                     <div class="modal-body">
                         <input type="hidden" id="id" name="id">
                         <fieldset>
                             <div class="from-group">
                                 <label for="title">Title</label>
-                                <input type="text" class="form-control" id="etitle" name="title" value="{{ old('title') }}" placeholder="Ex: English">
+                                <input type="text" class="form-control" id="etitle" name="title" value="{{ old('title') }}" placeholder="Ex: London">
                             </div>
                         </fieldset>
                     </div>

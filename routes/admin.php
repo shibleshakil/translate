@@ -1,7 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Admin\CityController;
 use App\Http\Controllers\Admin\AccountController;
+use App\Http\Controllers\Admin\PricingController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\Auth\LoginController;
 use App\Http\Controllers\Admin\QuoteSettingController;
@@ -43,9 +45,31 @@ Route::group(['middleware' => ['web'], 'prefix' => 'admin', 'as' => 'admin.'], f
         });
 
 
-        Route::group(['prefix' => 'quote-settings', 'as' => 'quote-settings.'], function () {
-            Route::get('/', [QuoteSettingController::class, 'quoteSetting'])->name('index');
-            Route::post('/', [QuoteSettingController::class, 'quoteSettingUpdate']);
+        Route::group(['prefix' => 'settings', 'as' => 'settings.'], function () {
+            Route::get('/quote-settings', [QuoteSettingController::class, 'quoteSetting'])->name('quote-settings');
+            Route::post('/quote-settings', [QuoteSettingController::class, 'quoteSettingUpdate']);
+
+            Route::group(['prefix' => 'cities', 'as' => 'cities.'], function () {
+                Route::get('/', [CityController::class, 'index'])->name('index');
+                Route::get('/create', [CityController::class, 'create'])->name('create');
+                Route::post('/store', [CityController::class, 'store'])->name('store');
+                Route::get('/edit/{id}', [CityController::class, 'edit'])->name('edit');
+                Route::post('/update', [CityController::class, 'update'])->name('update');
+                Route::delete('/delete/{id}', [CityController::class, 'delete'])->name('delete');
+                Route::put('/restore/{id}', [CityController::class, 'restore'])->name('restore');
+
+            });
+
+            Route::group(['prefix' => 'pricing', 'as' => 'pricing.'], function () {
+                Route::get('/', [PricingController::class, 'index'])->name('index');
+                Route::get('/create', [PricingController::class, 'create'])->name('create');
+                Route::post('/store', [PricingController::class, 'store'])->name('store');
+                Route::get('/edit/{id}', [PricingController::class, 'edit'])->name('edit');
+                Route::post('/update', [PricingController::class, 'update'])->name('update');
+                Route::delete('/delete/{id}', [PricingController::class, 'delete'])->name('delete');
+                Route::put('/restore/{id}', [PricingController::class, 'restore'])->name('restore');
+
+            });
 
             Route::group(['prefix' => 'languages', 'as' => 'languages.'], function () {
                 Route::get('/', [LanguagesController::class, 'index'])->name('index');

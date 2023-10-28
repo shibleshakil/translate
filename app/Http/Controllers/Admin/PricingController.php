@@ -1,32 +1,48 @@
 <?php
 
-namespace App\Http\Controllers\Admin\Quote;
+namespace App\Http\Controllers\Admin;
 
+use App\Models\Sector;
+use App\Models\Pricing;
 use App\Models\Language;
 use Illuminate\Http\Request;
+use Illuminate\Validation\Rule;
 use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
 
-class LanguagesController extends Controller
+class PricingController extends Controller
 {
     public function index() {
-        $datas = Language::withTrashed()->get()->reverse();
+        $languages = Language::where('id', '!=', 27)->orderBy('title')->get();
+        $sectors = Sector::orderBy('title')->get();
+        $datas = Pricing::withTrashed()->get()->reverse();
         $sl = 0;
 
-        return view('backend.quote_settings.languages', compact('datas', 'sl'));
+        return view('backend.quote_settings.pricing', compact('languages','sectors','datas', 'sl'));
     }
 
 
     public function store(Request $request) {
         $validatedData = $request->validate([
-            'title' => ['required', 'string', 'unique:languages,title,'.$request->id .',id'],
+            'language_id' => ['required', 'unique:pricings,language_id,'. $request->id . ',id,sector_id,' . $request->sector_id,],
+            'sector_id' => ['required', Rule::unique('pricings')->where(function ($query) use ($request) {
+                    return $query->where('language_id', $request->language_id);
+                })->ignore($request->id, 'id'),
+            ],
+            'client_rate' => ['required'],
+            'client_min_price' => ['required'],
+            'professionals_rate' => ['required'],
         ]);
 
         DB::beginTransaction();
 
         try {
-            $data = new Language;
-            $data->title = $request->title;
+            $data = new Pricing;
+            $data->language_id = $request->language_id;
+            $data->sector_id = $request->sector_id;
+            $data->client_rate = $request->client_rate;
+            $data->client_min_price = $request->client_min_price;
+            $data->professionals_rate = $request->professionals_rate;
             $data->save();
             DB::commit();
 
@@ -42,22 +58,25 @@ class LanguagesController extends Controller
 
     public function update(Request $request) {
         $validatedData = $request->validate([
-            'title' => ['required', 'string', 'unique:languages,title,'.$request->id .',id'],
+            'language_id' => ['required', 'unique:pricings,language_id,'. $request->id . ',id,sector_id,' . $request->sector_id,],
+            'sector_id' => ['required', Rule::unique('pricings')->where(function ($query) use ($request) {
+                    return $query->where('language_id', $request->language_id);
+                })->ignore($request->id, 'id'),
+            ],
+            'client_rate' => ['required'],
+            'client_min_price' => ['required'],
+            'professionals_rate' => ['required'],
         ]);
 
         DB::beginTransaction();
 
         try {
-            $data = Language::findorFail($request->id);
-            if ($data->id == 27) {
-                DB::rollback();
-                return $res = [
-                    'type'=> 'error',
-                    'title'=> __('Error'),
-                    'msg'=> __('Data not found!')
-                ];
-            }
-            $data->title = $request->title;
+            $data = Pricing::findorFail($request->id);
+            $data->language_id = $request->language_id;
+            $data->sector_id = $request->sector_id;
+            $data->client_rate = $request->client_rate;
+            $data->client_min_price = $request->client_min_price;
+            $data->professionals_rate = $request->professionals_rate;
             $data->save();
             DB::commit();
 
@@ -75,8 +94,8 @@ class LanguagesController extends Controller
         DB::beginTransaction();
 
         try {
-            $data = Language::find($id);
-            if (!$data || $data->id == 27) {
+            $data = Pricing::find($id);
+            if (!$data) {
                 DB::rollback();
                 return $res = [
                     'type'=> 'error',
@@ -111,8 +130,8 @@ class LanguagesController extends Controller
         DB::beginTransaction();
 
         try {
-            $data = Language::onlyTrashed()->find($id);
-            if (!$data || $data->id == 27) {
+            $data = Pricing::onlyTrashed()->find($id);
+            if (!$data) {
                 DB::rollback();
                 return $res = [
                     'type'=> 'error',
@@ -142,5 +161,4 @@ class LanguagesController extends Controller
         }
 
     }
-
 }

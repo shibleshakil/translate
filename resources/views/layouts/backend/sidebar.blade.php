@@ -7,20 +7,27 @@
                 </a>
             </li>
 
-            <li class="{{Request::is('admin/quote-settings*') ? 'active' : 'nav-item'}}">
+            <li class="{{Request::is('admin/settings*') ? 'active' : 'nav-item'}}">
                 <a href="#"><i class="feather icon-align-left"></i>
-                    <span class="menu-title">Quotation Settings</span>
+                    <span class="menu-title">Settings</span>
                 </a>
                 <ul class="menu-content">
-                    <li class="{{Request::is('admin/quote-settings') ? 'active' : ''}}">
-                        <a class="menu-item" href="{{ route ('admin.quote-settings.index') }}">Quotation Settings</a>
+                    {{-- <li class="{{Request::is('admin/settings/quote-settings') ? 'active' : ''}}">
+                        <a class="menu-item" href="{{ route ('admin.settings.quote-settings') }}">Quotation Settings</a>
+                    </li> --}}
+                    <li class="{{Request::is('admin/settings/languages*') ? 'active' : ''}}">
+                        <a class="menu-item" href="{{ route ('admin.settings.languages.index') }}">Languages</a>
                     </li>
-                    <li class="{{Request::is('admin/quote-settings/languages*') ? 'active' : ''}}">
-                        <a class="menu-item" href="{{ route ('admin.quote-settings.languages.index') }}">Languages</a>
+                    <li class="{{Request::is('admin/settings/sectors*') ? 'active' : ''}}">
+                        <a class="menu-item" href="{{ route ('admin.settings.sectors.index') }}">Sectors</a>
                     </li>
-                    <li class="{{Request::is('admin/quote-settings/sectors*') ? 'active' : ''}}">
-                        <a class="menu-item" href="{{ route ('admin.quote-settings.sectors.index') }}">Sectors</a>
+                    <li class="{{Request::is('admin/settings/cities*') ? 'active' : ''}}">
+                        <a class="menu-item" href="{{ route ('admin.settings.cities.index') }}">City of Residence</a>
                     </li>
+                    <li class="{{Request::is('admin/settings/pricing*') ? 'active' : ''}}">
+                        <a class="menu-item" href="{{ route ('admin.settings.pricing.index') }}">Pricing</a>
+                    </li>
+
                 </ul>
             </li>
 

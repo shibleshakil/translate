@@ -24,7 +24,7 @@
         @endphp
 
         <section id="general-info">
-            <form class="form" action="{{ route('admin.quote-settings.index') }}" method="post"
+            <form class="form" action="{{ route('admin.settings.quote-settings') }}" method="post"
             enctype="multipart/form-data">@csrf
             @include('partials.session_message')
                 <div class="card rounded">
