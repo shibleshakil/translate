@@ -70,3 +70,10 @@ body {
 .table > tbody > tr > td {
     vertical-align: middle;
 }
+
+.status-table td select{
+    padding: 4px;
+    border-radius: 4px;
+    width: 100%;
+    border: 1px solid #ccd6e6;
+}

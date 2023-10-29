@@ -34,11 +34,13 @@
                         <div class="card-content collapse show">
                             <div class="card-body card-dashboard">
                                 <div class="table-responsive">
-                                    <table class="table table-striped table-bordered zero-configuration">
+                                    <table class="table table-striped table-bordered zero-configuration status-table">
                                         <thead>
                                             <tr>
                                                 <th>Sl</th>
                                                 <th>Language</th>
+                                                <th>Professionals Status</th>
+                                                <th>Quote Status</th>
                                                 <th>Status</th>
                                                 <th>Action</th>
                                             </tr>
@@ -49,6 +51,26 @@
                                                     <tr>
                                                         <td>{{ ++$sl }}</td>
                                                         <td>{{ $data->title}}</td>
+                                                        <td>
+                                                            <select name="status" id="status" class=""
+                                                            data-url="{{ route('admin.settings.languages.professionalStatus', $data->id) }}" 
+                                                            onChange="statusChange(this)">
+                                                                <option value="1" {{ $data->professional == "1" ? "selected" : "" }}>
+                                                                    {{ __('Active') }}</option>
+                                                                <option value="0" {{ $data->professional == "0" ? "selected" : "" }} >
+                                                                    {{ __('Deactive') }}</option>
+                                                            </select>
+                                                        </td>
+                                                        <td>
+                                                            <select name="status" id="status" class=""
+                                                            data-url="{{ route('admin.settings.languages.quoteStatus', $data->id) }}" 
+                                                            onChange="statusChange(this)">
+                                                                <option value="1" {{ $data->quote == "1" ? "selected" : "" }}>
+                                                                    {{ __('Active') }}</option>
+                                                                <option value="0" {{ $data->quote == "0" ? "selected" : "" }} >
+                                                                    {{ __('Deactive') }}</option>
+                                                            </select>
+                                                        </td>
                                                         <td>{{ $data->trashed() ? 'In Trash' : 'Active' }}</td>
                                                         <td>
                                                             @if ($data->id == 27)
@@ -99,7 +121,7 @@
                 <form action="{{ route ('admin.settings.languages.store') }}" method="post" class="form" enctype="multipart/form-data">@csrf
                     <div class="modal-body">
                         <fieldset>
-                            <div class="from-group">
+                            <div class="form-group">
                                 <label for="title">Title</label>
                                 <input type="text" class="form-control" id="title" name="title" value="{{ old('title') }}" placeholder="Ex: English">
                             </div>
@@ -129,7 +151,7 @@
                     <div class="modal-body">
                         <input type="hidden" id="id" name="id">
                         <fieldset>
-                            <div class="from-group">
+                            <div class="form-group">
                                 <label for="title">Title</label>
                                 <input type="text" class="form-control" id="etitle" name="title" value="{{ old('title') }}" placeholder="Ex: English">
                             </div>

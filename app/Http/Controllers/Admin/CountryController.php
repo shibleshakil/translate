@@ -2,37 +2,40 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Models\City;
 use App\Models\Country;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
 
-class CityController extends Controller
+class CountryController extends Controller
 {
     public function index() {
-        $countries = Country::withTrashed()->orderBy('nicename')->get();
-        $datas = City::withTrashed()->get()->reverse();
+        $datas = Country::withTrashed()->get()->reverse();
         $sl = 0;
 
-        return view('backend.quote_settings.cities', compact('countries', 'datas', 'sl'));
+        return view('backend.quote_settings.countries', compact('datas', 'sl'));
     }
 
 
     public function store(Request $request) {
         $validatedData = $request->validate([
-            'title' => ['required', 'string', 'unique:cities,title,'.$request->id .',id,country_id,'.$request->country],
-            'country' => ['required', 'exists:countries,id'],
-            'zip_code' => ['nullable'],
+            'nicename' => ['required', 'string', 'unique:countries,nicename,'.$request->id .',id,iso,'.$request->iso],
+            'iso' => ['required'],
+            'iso3' => ['nullable'],
+            'numcode' => ['nullable'],
+            'phonecode' => ['nullable'],
         ]);
 
         DB::beginTransaction();
 
         try {
-            $data = new City;
-            $data->country_id = $request->country;
-            $data->title = $request->title;
-            $data->zip_code = $request->zip_code;
+            $data = new Country;
+            $data->name = strtoupper($request->nicename);
+            $data->nicename = $request->nicename;
+            $data->iso = $request->iso;
+            $data->iso3 = $request->iso3;
+            $data->numcode = $request->numcode;
+            $data->phonecode = $request->phonecode;
             $data->save();
             DB::commit();
 
@@ -48,18 +51,23 @@ class CityController extends Controller
 
     public function update(Request $request) {
         $validatedData = $request->validate([
-            'title' => ['required', 'string', 'unique:cities,title,'.$request->id .',id,country_id,'.$request->country],
-            'country' => ['required', 'exists:countries,id'],
-            'zip_code' => ['nullable'],
+            'nicename' => ['required', 'string', 'unique:countries,nicename,'.$request->id .',id,iso,'.$request->iso],
+            'iso' => ['required', 'max:2'],
+            'iso3' => ['nullable', 'max:3'],
+            'numcode' => ['nullable', 'max:3'],
+            'phonecode' => ['nullable', 'max:3'],
         ]);
 
         DB::beginTransaction();
 
         try {
-            $data = City::findorFail($request->id);
-            $data->country_id = $request->country;
-            $data->title = $request->title;
-            $data->zip_code = $request->zip_code;
+            $data = Country::findorFail($request->id);
+            $data->name = strtoupper($request->nicename);
+            $data->nicename = $request->nicename;
+            $data->iso = $request->iso;
+            $data->iso3 = $request->iso3;
+            $data->numcode = $request->numcode;
+            $data->phonecode = $request->phonecode;
             $data->save();
             DB::commit();
 
@@ -77,7 +85,7 @@ class CityController extends Controller
         DB::beginTransaction();
 
         try {
-            $data = City::find($id);
+            $data = Country::find($id);
             if (!$data) {
                 DB::rollback();
                 return $res = [
@@ -113,7 +121,7 @@ class CityController extends Controller
         DB::beginTransaction();
 
         try {
-            $data = City::onlyTrashed()->find($id);
+            $data = Country::onlyTrashed()->find($id);
             if (!$data) {
                 DB::rollback();
                 return $res = [
@@ -145,4 +153,3 @@ class CityController extends Controller
 
     }
 }
-

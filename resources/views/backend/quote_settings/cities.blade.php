@@ -39,6 +39,8 @@
                                             <tr>
                                                 <th>Sl</th>
                                                 <th>City</th>
+                                                <th>Zip Code</th>
+                                                <th>Country</th>
                                                 <th>Status</th>
                                                 <th>Action</th>
                                             </tr>
@@ -49,6 +51,8 @@
                                                     <tr>
                                                         <td>{{ ++$sl }}</td>
                                                         <td>{{ $data->title}}</td>
+                                                        <td>{{ $data->zip_code}}</td>
+                                                        <td>{{ $data->country->name ?? ''}}</td>
                                                         <td>{{ $data->trashed() ? 'In Trash' : 'Active' }}</td>
                                                         <td>
                                                             @if ($data->trashed())
@@ -58,7 +62,8 @@
                                                                 </button>
                                                             @else
                                                                 <a href="#" data-toggle="modal" data-target="#editModal" class="btn btn-outline-primary"
-                                                                data-target-id="{{$data->id}}" data-title="{{$data->title}}">
+                                                                data-target-id="{{$data->id}}" data-title="{{$data->title}}"
+                                                                data-country="{{$data->country_id}}" data-zip_code="{{$data->zip_code}}">
                                                                     <i class="feature icon-pencil"></i>
                                                                 </a>
                                                                 <button type="button" class="btn btn-outline-danger" title="Trash"
@@ -95,9 +100,29 @@
                 <form action="{{ route ('admin.settings.cities.store') }}" method="post" class="form" enctype="multipart/form-data">@csrf
                     <div class="modal-body">
                         <fieldset>
-                            <div class="from-group">
-                                <label for="title">Title</label>
+                            <div class="form-group">
+                                <label for="country">Country <span class="text-danger"></span></label>
+                                <select name="country" id="country" class="select2 form-control" style="width: 100%;">
+                                    <option value="">Select</option>
+                                    @foreach ($countries as $country)
+                                        <option value="{{ $country->id }}" 
+                                        {{ (old('country') == $country->id) ? 'selected' : '' }} >
+                                        {{ $country->nicename }}</option>
+                                    @endforeach
+                                </select>
+                            </div>
+                        </fieldset>
+                        <fieldset>
+                            <div class="form-group">
+                                <label for="title">City Name <span class="text-danger">*</span></label>
                                 <input type="text" class="form-control" id="title" name="title" value="{{ old('title') }}" placeholder="Ex: London">
+                            </div>
+                        </fieldset>
+                        <fieldset>
+                            <div class="form-group">
+                                <label for="zip_code">Zip code</label>
+                                <input type="text" class="form-control" id="zip_code" name="zip_code" value="{{ old('zip_code') }}" 
+                                placeholder="Ex: 1001">
                             </div>
                         </fieldset>
                     </div>
@@ -125,9 +150,29 @@
                     <div class="modal-body">
                         <input type="hidden" id="id" name="id">
                         <fieldset>
-                            <div class="from-group">
-                                <label for="title">Title</label>
+                            <div class="form-group">
+                                <label for="country">Country <span class="text-danger"></span></label>
+                                <select name="country" id="ecountry" class="select2 form-control" style="width: 100%;">
+                                    <option value="">Select</option>
+                                    @foreach ($countries as $country)
+                                        <option value="{{ $country->id }}" 
+                                        {{ (old('country') == $country->id) ? 'selected' : '' }} >
+                                        {{ $country->nicename }}</option>
+                                    @endforeach
+                                </select>
+                            </div>
+                        </fieldset>
+                        <fieldset>
+                            <div class="form-group">
+                                <label for="title">City Name <span class="text-danger">*</span></label>
                                 <input type="text" class="form-control" id="etitle" name="title" value="{{ old('title') }}" placeholder="Ex: London">
+                            </div>
+                        </fieldset>
+                        <fieldset>
+                            <div class="form-group">
+                                <label for="zip_code">Zip code</label>
+                                <input type="text" class="form-control" id="ezip_code" name="zip_code" value="{{ old('zip_code') }}" 
+                                placeholder="Ex: 1001">
                             </div>
                         </fieldset>
                     </div>
@@ -150,9 +195,13 @@
             $("#editModal").on("show.bs.modal", function (e) {
                 var id = $(e.relatedTarget).data('target-id');
                 var title = $(e.relatedTarget).data('title');
+                var country = $(e.relatedTarget).data('country');
+                var zip_code = $(e.relatedTarget).data('zip_code');
 
                 $('.modal-body #id').val(id);
                 $('.modal-body #etitle').val(title);
+                $('.modal-body #ecountry').val(country).change();
+                $('.modal-body #ezip_code').val(zip_code);
 
             });
         });

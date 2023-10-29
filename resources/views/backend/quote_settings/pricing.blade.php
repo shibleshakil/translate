@@ -106,7 +106,7 @@
                 <form action="{{ route ('admin.settings.pricing.store') }}" method="post" class="form" enctype="multipart/form-data">@csrf
                     <div class="modal-body">
                         <fieldset>
-                            <div class="from-group">
+                            <div class="form-group">
                                 <label for="client_rate">Language</label>
                                 <select name="language_id" id="language_id" class="select2 form-control" style="width: 100%">
                                     <option value="">Select</option>
@@ -117,7 +117,7 @@
                             </div>
                         </fieldset>
                         <fieldset>
-                            <div class="from-group">
+                            <div class="form-group">
                                 <label for="client_rate">Sector</label>
                                 <select name="sector_id" id="sector_id" class="select2 form-control" style="width: 100%">
                                     <option value="">Select</option>
@@ -128,21 +128,21 @@
                             </div>
                         </fieldset>
                         <fieldset>
-                            <div class="from-group">
+                            <div class="form-group">
                                 <label for="client_rate">Client Quotation Rate (£)</label>
                                 <input type="number" class="form-control phone" id="title" name="client_rate"
                                 value="{{ old('client_rate') }}" placeholder="Ex: 0.8" min="0" step="any">
                             </div>
                         </fieldset>
                         <fieldset>
-                            <div class="from-group">
+                            <div class="form-group">
                                 <label for="client_min_price">Client Quotation Min Price (£)</label>
                                 <input type="number" class="form-control phone" id="title" name="client_min_price"
                                 value="{{ old('client_min_price') }}" placeholder="Ex: 20" min="0" step="any">
                             </div>
                         </fieldset>
                         <fieldset>
-                            <div class="from-group">
+                            <div class="form-group">
                                 <label for="professionals_rate">Professionals Rate (£)</label>
                                 <input type="number" class="form-control phone" id="title" name="professionals_rate"
                                 value="{{ old('professionals_rate') }}" placeholder="Ex: 0.4" min="0" step="any">
@@ -174,7 +174,7 @@
                     <div class="modal-body">
                         <input type="hidden" id="id" name="id">
                         <fieldset>
-                            <div class="from-group">
+                            <div class="form-group">
                                 <label for="client_rate">Language</label>
                                 <select name="language_id" id="elanguage_id" class="select2 form-control" style="width: 100%">
                                     <option value="">Select</option>
@@ -185,7 +185,7 @@
                             </div>
                         </fieldset>
                         <fieldset>
-                            <div class="from-group">
+                            <div class="form-group">
                                 <label for="client_rate">Sector</label>
                                 <select name="sector_id" id="esector_id" class="select2 form-control" style="width: 100%">
                                     <option value="">Select</option>
@@ -196,21 +196,21 @@
                             </div>
                         </fieldset>
                         <fieldset>
-                            <div class="from-group">
+                            <div class="form-group">
                                 <label for="client_rate">Client Quotation Rate (£)</label>
                                 <input type="number" class="form-control phone" id="eclient_rate" name="client_rate"
                                 value="{{ old('client_rate') }}" placeholder="Ex: 0.8" min="0" step="any">
                             </div>
                         </fieldset>
                         <fieldset>
-                            <div class="from-group">
+                            <div class="form-group">
                                 <label for="client_min_price">Client Quotation Min Price (£)</label>
                                 <input type="number" class="form-control phone" id="eclient_min_price" name="client_min_price"
                                 value="{{ old('client_min_price') }}" placeholder="Ex: 20" min="0" step="any">
                             </div>
                         </fieldset>
                         <fieldset>
-                            <div class="from-group">
+                            <div class="form-group">
                                 <label for="professionals_rate">Professionals Rate (£)</label>
                                 <input type="number" class="form-control phone" id="eprofessionals_rate" name="professionals_rate"
                                 value="{{ old('professionals_rate') }}" placeholder="Ex: 0.4" min="0" step="any">

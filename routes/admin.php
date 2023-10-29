@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\CityController;
 use App\Http\Controllers\Admin\AccountController;
+use App\Http\Controllers\Admin\CountryController;
 use App\Http\Controllers\Admin\PricingController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\Auth\LoginController;
@@ -49,6 +50,17 @@ Route::group(['middleware' => ['web'], 'prefix' => 'admin', 'as' => 'admin.'], f
             Route::get('/quote-settings', [QuoteSettingController::class, 'quoteSetting'])->name('quote-settings');
             Route::post('/quote-settings', [QuoteSettingController::class, 'quoteSettingUpdate']);
 
+            Route::group(['prefix' => 'countries', 'as' => 'countries.'], function () {
+                Route::get('/', [CountryController::class, 'index'])->name('index');
+                Route::get('/create', [CountryController::class, 'create'])->name('create');
+                Route::post('/store', [CountryController::class, 'store'])->name('store');
+                Route::get('/edit/{id}', [CountryController::class, 'edit'])->name('edit');
+                Route::post('/update', [CountryController::class, 'update'])->name('update');
+                Route::delete('/delete/{id}', [CountryController::class, 'delete'])->name('delete');
+                Route::put('/restore/{id}', [CountryController::class, 'restore'])->name('restore');
+
+            });
+
             Route::group(['prefix' => 'cities', 'as' => 'cities.'], function () {
                 Route::get('/', [CityController::class, 'index'])->name('index');
                 Route::get('/create', [CityController::class, 'create'])->name('create');
@@ -79,6 +91,8 @@ Route::group(['middleware' => ['web'], 'prefix' => 'admin', 'as' => 'admin.'], f
                 Route::post('/update', [LanguagesController::class, 'update'])->name('update');
                 Route::delete('/delete/{id}', [LanguagesController::class, 'delete'])->name('delete');
                 Route::put('/restore/{id}', [LanguagesController::class, 'restore'])->name('restore');
+                Route::post('/professional/status/{id}', [LanguagesController::class, 'professionalStatus'])->name('professionalStatus');
+                Route::post('/quote/status/{id}', [LanguagesController::class, 'quoteStatus'])->name('quoteStatus');
 
             });
 
@@ -101,6 +115,8 @@ Route::group(['middleware' => ['web'], 'prefix' => 'admin', 'as' => 'admin.'], f
             Route::post('/', [BusinessSettingController::class, 'generalInfoUpdate']);
             Route::get('/mail-config', [BusinessSettingController::class, 'mailConfig'])->name('mailConfig');
             Route::post('/mail-config', [BusinessSettingController::class, 'mailConfigUpdate']);
+            Route::get('/sms-config', [BusinessSettingController::class, 'smsConfig'])->name('smsConfig');
+            Route::post('/sms-config/{name}', [BusinessSettingController::class, 'smsConfigUpdate'])->name('smsConfigUpdate');
             Route::post('/test-mail', [BusinessSettingController::class, 'sendTestMail'])->name('sendTestMail');
             Route::get('/payment-method', [BusinessSettingController::class, 'paymentMethod'])->name('paymentMethod');
             Route::post('/payment-method/{name}', [BusinessSettingController::class, 'paymentMethodUpdate'])->name('paymentMethodUpdate');

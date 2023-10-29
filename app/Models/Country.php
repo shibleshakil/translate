@@ -6,13 +6,13 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
-class City extends Model
+class Country extends Model
 {
     use HasFactory, SoftDeletes;
 
     protected $dates = ['deleted_at'];
 
-    /**
+        /**
 
      * Write code on Method
 
@@ -22,14 +22,7 @@ class City extends Model
 
      */
 
-    protected $fillable = [
-
-        'title', 'country_id', 'zip_code'
-
+     protected $fillable = [
+        'iso', 'name', 'nicename', 'iso3', 'numcode', 'phonecode'
     ];
-
-
-    public function country(){
-        return $this->belongsTo(Country::class, 'country_id', 'id');
-    }
 }

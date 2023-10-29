@@ -95,7 +95,7 @@
                 <form action="{{ route ('admin.settings.sectors.store') }}" method="post" class="form" enctype="multipart/form-data">@csrf
                     <div class="modal-body">
                         <fieldset>
-                            <div class="from-group">
+                            <div class="form-group">
                                 <label for="title">Title</label>
                                 <input type="text" class="form-control" id="title" name="title" value="{{ old('title') }}" placeholder="Ex: English">
                             </div>
@@ -125,7 +125,7 @@
                     <div class="modal-body">
                         <input type="hidden" id="id" name="id">
                         <fieldset>
-                            <div class="from-group">
+                            <div class="form-group">
                                 <label for="title">Title</label>
                                 <input type="text" class="form-control" id="etitle" name="title" value="{{ old('title') }}" placeholder="Ex: English">
                             </div>

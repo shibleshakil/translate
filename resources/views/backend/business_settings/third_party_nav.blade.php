@@ -9,6 +9,11 @@
                     </a>
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link {{Request::is('admin/business-settings/sms-config') ? 'active' : '' }}" href="{{ route('admin.business_settings.smsConfig') }}">
+                        {{ __('SMS Config') }}
+                    </a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link {{Request::is('admin/business-settings/payment-method') ? 'active' : '' }}" href="{{ route('admin.business_settings.paymentMethod') }}">
                         {{ __('Payment Method') }}
                     </a>

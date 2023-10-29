@@ -176,6 +176,32 @@ class BusinessSettingController extends Controller
         }
     }
 
+    public function smsConfig(){
+        return view('backend.business_settings.smsConfig');
+    }
+
+
+    public function smsConfigUpdate(Request $request, $name){
+        if ($name == 'twilio_sms') {
+            DB::table('business_settings')->updateOrInsert(['type' => 'twilio_sms'], [
+                'type' => 'twilio_sms',
+                'value' => json_encode([
+                    'status' => $request['status'],
+                    'sid' => $request['sid'],
+                    'messaging_service_sid' => $request['messaging_service_sid'],
+                    'token' => $request['token'],
+                    'from' => $request['from'],
+                    'otp_template' => $request['otp_template'],
+                ]),
+                'updated_by' => auth('admin')->user()->id,
+                'created_at' => now(),
+                'updated_at' => now(),
+            ]);
+        }
+
+        return back()->with('success', __('Data updated successfully'));
+    }
+
 
     public function sendTestMail(Request $request){
         abort(404);

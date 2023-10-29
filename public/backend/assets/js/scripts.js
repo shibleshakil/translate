@@ -115,3 +115,56 @@ function blockBlodyOnAjaxRequest() {
     });
 }
 
+
+function statusChange(cur) {
+    Swal.fire({
+        title: "Are you sure?",
+        text: "You want to change the status!",
+        type: "warning",
+        showCancelButton: true,
+        confirmButtonColor: "#3085d6",
+        cancelButtonColor: "#d33",
+        confirmButtonText: "Yes, change it!",
+        confirmButtonClass: "btn btn-success mr-10",
+        cancelButtonClass: "btn btn-danger ml-1",
+        buttonsStyling: false,
+    }).then(function (result) {
+        if (result.value) {
+            let url = $(cur).attr('data-url');
+            let status = $(cur).val();
+            statusUpdate(url, status)
+        } else if (result.dismiss === Swal.DismissReason.cancel) {
+            Swal.fire({
+                title: "Cancelled",
+                text: "Your imaginary file is safe 🙂",
+                type: "error",
+                confirmButtonClass: "btn btn-success"
+            }).then(function () {
+                location.reload();
+            });
+        }
+    });
+}
+
+
+function statusUpdate(url, status) {
+    $.ajax({
+        url: url,
+        type: "POST",
+        data: {
+            "_token": $('#csrfToken').val(),
+            status:status,
+        },
+        dataType: "json",
+        success: function (res) {
+            Swal.fire({
+                title: res.title,
+                text: res.msg,
+                type: res.type,
+                confirmButtonClass: "btn btn-success"
+            }).then(function () {
+                location.reload();
+            });
+        }
+    });
+}

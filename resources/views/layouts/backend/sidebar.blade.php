@@ -3,7 +3,7 @@
         <ul class="navigation navigation-main" id="main-menu-navigation" data-menu="menu-navigation">
             <li class="{{Request::is('admin') ? 'active' : 'nav-item' }}">
                 <a href="{{ route ('admin.dashboard') }}">
-                    <i class="feather icon-mail"></i><span class="menu-title">Dashboard</span>
+                    <i class="feather icon-home"></i><span class="menu-title">Dashboard</span>
                 </a>
             </li>
 
@@ -20,6 +20,9 @@
                     </li>
                     <li class="{{Request::is('admin/settings/sectors*') ? 'active' : ''}}">
                         <a class="menu-item" href="{{ route ('admin.settings.sectors.index') }}">Sectors</a>
+                    </li>
+                    <li class="{{Request::is('admin/settings/countries*') ? 'active' : ''}}">
+                        <a class="menu-item" href="{{ route ('admin.settings.countries.index') }}">Country</a>
                     </li>
                     <li class="{{Request::is('admin/settings/cities*') ? 'active' : ''}}">
                         <a class="menu-item" href="{{ route ('admin.settings.cities.index') }}">City of Residence</a>

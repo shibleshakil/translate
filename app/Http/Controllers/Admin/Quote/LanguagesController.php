@@ -143,4 +143,78 @@ class LanguagesController extends Controller
 
     }
 
+
+    public function professionalStatus(Request $request, $id){
+        DB::beginTransaction();
+
+        try {
+            $data = Language::withTrashed()->find($id);
+            if (!$data) {
+                DB::rollback();
+                return $res = [
+                    'type'=> 'error',
+                    'title'=> __('Error'),
+                    'msg'=> __('Data not found!')
+                ];
+            }
+
+            $data->professional = $request->status;
+            $data->save();
+
+            DB::commit();
+
+            return $res = [
+                'type' => 'success',
+                'title' => __('Changed!'),
+                'msg' => __('Status changed successfully!'),
+            ];
+
+        } catch (\Throwable $th) {
+
+            DB::rollback();
+            return $res = [
+                'type'=> 'error',
+                'title'=> __('Error'),
+                'msg'=> __('An Error Occured! Try Again')
+            ];
+        }
+
+    }
+    public function quoteStatus(Request $request, $id){
+        DB::beginTransaction();
+
+        try {
+            $data = Language::withTrashed()->find($id);
+            if (!$data) {
+                DB::rollback();
+                return $res = [
+                    'type'=> 'error',
+                    'title'=> __('Error'),
+                    'msg'=> __('Data not found!')
+                ];
+            }
+
+            $data->quote = $request->status;
+            $data->save();
+
+            DB::commit();
+
+            return $res = [
+                'type' => 'success',
+                'title' => __('Changed!'),
+                'msg' => __('Status changed successfully!'),
+            ];
+
+        } catch (\Throwable $th) {
+
+            DB::rollback();
+            return $res = [
+                'type'=> 'error',
+                'title'=> __('Error'),
+                'msg'=> __('An Error Occured! Try Again')
+            ];
+        }
+
+    }
+
 }

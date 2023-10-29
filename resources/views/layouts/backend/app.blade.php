@@ -46,7 +46,7 @@
     <!-- END: Page CSS-->
 
     <!-- BEGIN: Custom CSS-->
-    <link rel="stylesheet" type="text/css" href="{{ asset ('public/backend/assets/css/style.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset ('public/backend/assets/css/style.css?v1.0') }}">
     <!-- END: Custom CSS-->
 
 </head>
@@ -97,7 +97,7 @@
     <script src="{{ asset ('public/backend/app-assets/js/scripts/forms/switch.js')}}"></script>
     <script src="{{ asset ('public/backend/assets/js/datatable.js?v1.1')}}"></script>
     <script src="{{ asset ('public/backend/assets/js/dropify-init.js?v1.1')}}"></script>
-    <script src="{{ asset ('public/backend/assets/js/scripts.js?v1.1')}}"></script>
+    <script src="{{ asset ('public/backend/assets/js/scripts.js?v1.2')}}"></script>
     <!-- END: Theme JS-->
     <script type="text/javascript">
         $(function () {

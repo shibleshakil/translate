@@ -13,11 +13,9 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('cities', function (Blueprint $table) {
-            $table->id();
-            $table->string('title');
-            $table->timestamps();
-            $table->softDeletes();
+        Schema::table('languages', function (Blueprint $table) {
+            $table->tinyInteger('professional')->default(1)->after('title');
+            $table->tinyInteger('quote')->default(1)->after('professional');
         });
     }
 
@@ -28,6 +26,8 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('cities');
+        Schema::table('languages', function (Blueprint $table) {
+            //
+        });
     }
 };
