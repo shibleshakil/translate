@@ -21,6 +21,15 @@
                     <li class="{{Request::is('admin/settings/sectors*') ? 'active' : ''}}">
                         <a class="menu-item" href="{{ route ('admin.settings.sectors.index') }}">Sectors</a>
                     </li>
+                    <li class="{{Request::is('admin/settings/experience-and-expertise*') ? 'active' : ''}}">
+                        <a class="menu-item" href="{{ route ('admin.settings.experience-and-expertise.index') }}">Experience and Expertise</a>
+                    </li>
+                    <li class="{{Request::is('admin/settings/linguistic-service*') ? 'active' : ''}}">
+                        <a class="menu-item" href="{{ route ('admin.settings.linguistic-service.index') }}">Linguistic Services</a>
+                    </li>
+                    <li class="{{Request::is('admin/settings/cat-tools*') ? 'active' : ''}}">
+                        <a class="menu-item" href="{{ route ('admin.settings.cat-tools.index') }}">CAT Tools</a>
+                    </li>
                     <li class="{{Request::is('admin/settings/countries*') ? 'active' : ''}}">
                         <a class="menu-item" href="{{ route ('admin.settings.countries.index') }}">Country</a>
                     </li>

@@ -5,6 +5,7 @@ use App\Http\Controllers\Admin\CityController;
 use App\Http\Controllers\Admin\AccountController;
 use App\Http\Controllers\Admin\CountryController;
 use App\Http\Controllers\Admin\PricingController;
+use App\Http\Controllers\Admin\CatToolsController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\Auth\LoginController;
 use App\Http\Controllers\Admin\QuoteSettingController;
@@ -12,6 +13,8 @@ use App\Http\Controllers\Admin\Auth\PasswordController;
 use App\Http\Controllers\Admin\Quote\SectorsController;
 use App\Http\Controllers\Admin\BusinessSettingController;
 use App\Http\Controllers\Admin\Quote\LanguagesController;
+use App\Http\Controllers\Admin\LinguisticServiceController;
+use App\Http\Controllers\Admin\ExperienceAndExpertiseController;
 
 Route::group(['middleware' => ['web'], 'prefix' => 'admin', 'as' => 'admin.'], function () {
 
@@ -104,6 +107,39 @@ Route::group(['middleware' => ['web'], 'prefix' => 'admin', 'as' => 'admin.'], f
                 Route::post('/update', [SectorsController::class, 'update'])->name('update');
                 Route::delete('/delete/{id}', [SectorsController::class, 'delete'])->name('delete');
                 Route::put('/restore/{id}', [SectorsController::class, 'restore'])->name('restore');
+
+            });
+
+            Route::group(['prefix' => 'linguistic-service', 'as' => 'linguistic-service.'], function () {
+                Route::get('/', [LinguisticServiceController::class, 'index'])->name('index');
+                Route::get('/create', [LinguisticServiceController::class, 'create'])->name('create');
+                Route::post('/store', [LinguisticServiceController::class, 'store'])->name('store');
+                Route::get('/edit/{id}', [LinguisticServiceController::class, 'edit'])->name('edit');
+                Route::post('/update', [LinguisticServiceController::class, 'update'])->name('update');
+                Route::delete('/delete/{id}', [LinguisticServiceController::class, 'delete'])->name('delete');
+                Route::put('/restore/{id}', [LinguisticServiceController::class, 'restore'])->name('restore');
+
+            });
+
+            Route::group(['prefix' => 'experience-and-expertise', 'as' => 'experience-and-expertise.'], function () {
+                Route::get('/', [ExperienceAndExpertiseController::class, 'index'])->name('index');
+                Route::get('/create', [ExperienceAndExpertiseController::class, 'create'])->name('create');
+                Route::post('/store', [ExperienceAndExpertiseController::class, 'store'])->name('store');
+                Route::get('/edit/{id}', [ExperienceAndExpertiseController::class, 'edit'])->name('edit');
+                Route::post('/update', [ExperienceAndExpertiseController::class, 'update'])->name('update');
+                Route::delete('/delete/{id}', [ExperienceAndExpertiseController::class, 'delete'])->name('delete');
+                Route::put('/restore/{id}', [ExperienceAndExpertiseController::class, 'restore'])->name('restore');
+
+            });
+
+            Route::group(['prefix' => 'cat-tools', 'as' => 'cat-tools.'], function () {
+                Route::get('/', [CatToolsController::class, 'index'])->name('index');
+                Route::get('/create', [CatToolsController::class, 'create'])->name('create');
+                Route::post('/store', [CatToolsController::class, 'store'])->name('store');
+                Route::get('/edit/{id}', [CatToolsController::class, 'edit'])->name('edit');
+                Route::post('/update', [CatToolsController::class, 'update'])->name('update');
+                Route::delete('/delete/{id}', [CatToolsController::class, 'delete'])->name('delete');
+                Route::put('/restore/{id}', [CatToolsController::class, 'restore'])->name('restore');
 
             });
 
