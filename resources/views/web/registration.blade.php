@@ -32,31 +32,31 @@
             <h3>Provide Personal Details and Skills</h3>
             <div class="layout__row">
                 <div class="layout__col-6 layout__col-sm-12 layout__col-xs-12 form-group">
-                    <label for="first_name">First Name</label>
+                    <label for="first_name">First Name <span class="text-danger">*</span></label>
                     <input type="text" id="first_name" name="first_name" class="form-control"
                         placeholder="Your First Name" required>
                 </div>
                 <div class="layout__col-6 layout__col-sm-12 layout__col-xs-12 form-group">
-                    <label for="last_name">Last Name</label>
+                    <label for="last_name">Last Name <span class="text-danger">*</span></label>
                     <input type="text" id="last_name" name="last_name" class="form-control"
                         placeholder="Your Last Name" required>
                 </div>
                 <div class="layout__col-6 layout__col-sm-12 layout__col-xs-12 form-group">
-                    <label for="email">Email Address</label>
+                    <label for="email">Email Address <span class="text-danger">*</span></label>
                     <input type="email" id="email" name="email" class="form-control"
                         placeholder="Your Email Address.." required>
                 </div>
                 <div class="layout__col-6 layout__col-sm-12 layout__col-xs-12 form-group">
-                    <label for="password">Choose a Password</label>
+                    <label for="password">Choose a Password <span class="text-danger">*</span></label>
                     <input type="password" id="password" name="password" class="form-control"
-                        placeholder="Password">
+                        placeholder="Password" required>
                 </div>
             </div>
             <div class="layout__row">
                 <div class="layout__col-6 layout__col-sm-12 layout__col-xs-12 form-group">
                     <label>
-                        <input type="checkbox" value="1" id="accept_terms" name="accept_terms" >
-                        Agree to the Privacy Policy and Conditions
+                        <input type="checkbox" value="1" id="accept_terms" name="accept_terms" required>
+                        Agree to the Privacy Policy and Conditions <span class="text-danger">*</span>
                     </label>
                 </div>
             </div>
@@ -129,7 +129,7 @@
 
         <fieldset class="from-step section--overflow" data-step="6">
             <!-- Step 6: Other Info -->
-            <h3>Upload CV (Optional)</h3>
+            <h3>Upload CV</h3>
             <div class="layout__row">
                 <div class="layout__col-6 layout__col-sm-12 layout__col-xs-12 form-group">
                     <label for="cv">Upload a PDF or docx file</label>
@@ -238,7 +238,7 @@
 
         <fieldset class="from-step section--overflow" data-step="12">
             <!-- Step 12: Other Info -->
-            <h3>Add More Language Combinations (Optional)</h3>
+            <h3>Add More Language Combinations</h3>
             <div class="layout__row">
                 <div class="layout__col-12 layout__col-sm-12 layout__col-xs-12 form-group">
                     <label for="">Add more additional language combinations if needed</label>
@@ -266,9 +266,15 @@
 
         <fieldset class="from-step section--overflow" data-step="13">
             <!-- Step 13: Other Info -->
-            <input type="hidden" id="eduCount" value="1">
+            {{-- <input type="hidden" id="eduCount" value="1"> --}}
             <h3>Education</h3>
-            <div class="layout__row edu_div" id="edu_1">
+            <div class="layout__row">
+                <div class="layout__col-12 layout__col-sm-12 layout__col-xs-12 form-group">
+                    <label for="specialized_subject">ALl Education Information</label>
+                    <textarea name="education" id="education" cols="30" rows="10" placeholder="Your Education information"></textarea>
+                </div>
+            </div>
+            {{-- <div class="layout__row edu_div" id="edu_1">
                 <div class="layout__col-6 layout__col-sm-12 layout__col-xs-12 form-group">
                     <label for="education_level_1">Education Level</label>
                     <select name="education_level[]" id="education_level_1" class="form-control">
@@ -333,7 +339,7 @@
 
 
             </div>
-            <button type="button" class="button button--compact px-25 py-7 add_more_education">Add More Education</button>
+            <button type="button" class="button button--compact px-25 py-7 add_more_education">Add More Education</button> --}}
         </fieldset>
 
         <fieldset class="from-step section--overflow" data-step="14">
@@ -376,7 +382,7 @@
 
         <fieldset class="from-step section--overflow" data-step="15">
             <!-- Step 15: Other Info -->
-            <h3>Linguistic References (Optional)</h3>
+            <h3>Linguistic References</h3>
             <input type="hidden" id="refCount" value="1">
             <div class="layout__row" id="ref_1">
                 <div class="layout__col-6 layout__col-sm-12 layout__col-xs-12 form-group">
@@ -385,23 +391,23 @@
                     placeholder="Ex: John Doe">
                 </div>
                 <div class="layout__col-6 layout__col-sm-12 layout__col-xs-12 form-group">
-                    <label for="">Phone Number</label>
-                    <input type="number" id="ref_phone_1" name="ref_phone[]" class="form-control phone"
-                    placeholder="Ex: +125868459">
-                </div>
-                <div class="layout__col-6 layout__col-sm-12 layout__col-xs-12 form-group">
                     <label for="">Email</label>
                     <input type="email" id="ref_email_1" name="ref_email[]" class="form-control"
                     placeholder="Ex: JohnDoe@example.com">
                 </div>
                 <div class="layout__col-6 layout__col-sm-12 layout__col-xs-12 form-group">
-                    <label for="">Designation</label>
-                    <input type="text" id="ref_designation_1" name="ref_designation[]" class="form-control"
+                    <label for="">Phone Number</label>
+                    <input type="number" id="ref_phone_1" name="ref_phone[]" class="form-control phone"
+                    placeholder="Ex: +125868459">
+                </div>
+                <div class="layout__col-6 layout__col-sm-12 layout__col-xs-12 form-group">
+                    <label for="">Capacity</label>
+                    <input type="text" id="ref_capacity_1" name="ref_capacity[]" class="form-control"
                     placeholder="Ex: Software Engineer">
                 </div>
                 <div class="layout__col-6 layout__col-sm-12 layout__col-xs-12 form-group">
-                    <label for="">Institute name</label>
-                    <input type="text" id="ref_institute_1" name="ref_institute[]" class="form-control"
+                    <label for="">Company</label>
+                    <input type="text" id="ref_company_1" name="ref_company[]" class="form-control"
                     placeholder="Ex: Meta">
                 </div>
             </div>
@@ -410,7 +416,7 @@
 
         <fieldset class="from-step section--overflow" data-step="16">
             <!-- Step 16: Other Info -->
-            <h3>CAT Tools (Optional)</h3>
+            <h3>CAT Tools</h3>
             <div class="layout__row">
                 <div class="layout__col-6 layout__col-sm-12 layout__col-xs-12 form-group">
                     <label for="">Mark all CAT tools used</label>
@@ -450,7 +456,7 @@
 
         <fieldset class="from-step section--overflow" data-step="17">
             <!-- Step 17: Other Info -->
-            <h3>Desktop Publishing Software (Optional)</h3>
+            <h3>Desktop Publishing Software</h3>
             <div class="layout__row">
                 <div class="layout__col-6 layout__col-sm-12 layout__col-xs-12 form-group">
                     <label for="">Mark all desktop publishing software used </label>
@@ -798,23 +804,23 @@
                     'placeholder="Ex: John Doe">'+
                 '</div>'+
                 '<div class="layout__col-6 layout__col-sm-12 layout__col-xs-12 form-group">'+
-                    '<label for="">Phone Number</label>'+
-                    '<input type="number" id="ref_phone_'+refCount+'" name="ref_phone[]" class="form-control phone"'+
-                    'placeholder="Ex: +125868459">'+
-                '</div>'+
-                '<div class="layout__col-6 layout__col-sm-12 layout__col-xs-12 form-group">'+
                     '<label for="">Email</label>'+
                     '<input type="email" id="ref_email_'+refCount+'" name="ref_email[]" class="form-control"'+
                     'placeholder="Ex: JohnDoe@example.com">'+
                 '</div>'+
                 '<div class="layout__col-6 layout__col-sm-12 layout__col-xs-12 form-group">'+
-                    '<label for="">Designation</label>'+
-                    '<input type="text" id="ref_designation_'+refCount+'" name="ref_designation[]" class="form-control"'+
+                    '<label for="">Phone Number</label>'+
+                    '<input type="number" id="ref_phone_'+refCount+'" name="ref_phone[]" class="form-control phone"'+
+                    'placeholder="Ex: +125868459">'+
+                '</div>'+
+                '<div class="layout__col-6 layout__col-sm-12 layout__col-xs-12 form-group">'+
+                    '<label for="">Capacity</label>'+
+                    '<input type="text" id="ref_capacity_'+refCount+'" name="ref_capacity[]" class="form-control"'+
                     'placeholder="Ex: Software Engineer">'+
                 '</div>'+
                 '<div class="layout__col-6 layout__col-sm-12 layout__col-xs-12 form-group">'+
-                    '<label for="">Institute name</label>'+
-                    '<input type="text" id="ref_institute_'+refCount+'" name="ref_institute[]" class="form-control"'+
+                    '<label for="">Company</label>'+
+                    '<input type="text" id="ref_company_'+refCount+'" name="ref_company[]" class="form-control"'+
                     'placeholder="Ex: Meta">'+
                 '</div>'+
                 '<div class="layout__col-12 layout__col-sm-12 layout__col-xs-12 text-right form-group">'+
