@@ -46,7 +46,7 @@ class BusinessSettingController extends Controller
 
 
     public function generalInfoUpdate(Request $request){
-        abort(404);
+
         $validatedData = $request->validate([
             'company_name' => ['required'],
             'company_email' => ['required'],
@@ -134,7 +134,7 @@ class BusinessSettingController extends Controller
 
 
     public function mailConfigUpdate(Request $request){
-        abort(404);
+
         $validatedData = $request->validate([
             'MAIL_MAILER' => ['required'],
             'MAIL_HOST' => ['required'],
@@ -204,7 +204,7 @@ class BusinessSettingController extends Controller
 
 
     public function sendTestMail(Request $request){
-        abort(404);
+
         $validatedData = $request->validate([
             'email' => ['required'],
         ]);
@@ -243,7 +243,7 @@ class BusinessSettingController extends Controller
 
     public function paymentMethodUpdate(Request $request, $name)
     {
-        abort(404);
+
         if ($name == 'stripe') {
             $payment = BusinessSetting::where('type', 'stripe')->first();
             if (isset($payment) == false) {
