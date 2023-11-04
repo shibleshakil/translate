@@ -126,30 +126,32 @@
                     <li class="dropdown dropdown-user nav-item">
                         <a class="dropdown-toggle nav-link dropdown-user-link" href="#" data-toggle="dropdown">
                             <div class="avatar avatar-online">
-                                <img src="{{ asset('public/backend/app-assets/images/portrait/small/avatar-s-1.png') }}"
+                                <img src="{{ auth('user')->user()->image
+                                ? asset('public/storage/' . auth('user')->user()->image)
+                                : asset('public/backend/app-assets/images/portrait/small/avatar-s-1.png') }}"
                                     alt="avatar"><i></i>
                             </div>
-                            <span class="user-name">{{ auth('user')->user()->name ?? '' }}</span>
+                            <span class="user-name">{{ auth('user')->user()->fname ?? '' }}</span>
                         </a>
-                        <!-- <div class="dropdown-menu dropdown-menu-right">
+                        <div class="dropdown-menu dropdown-menu-right">
                             <a class="dropdown-item"
-                                href="{{ route('admin.profile') }}">
+                                href="{{ route('user.profile') }}">
                                 <i class="feather icon-user"></i> {{ __('Edit Profile') }}
                             </a>
-                            <a class="dropdown-item" href="{{ route('admin.password.update') }}"><i
+                            <a class="dropdown-item" href="{{ route('user.password.update') }}"><i
                                     class="feather icon-lock"></i> {{ __('Change Password') }}</a>
                             <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="{{ route('admin.auth.logout') }}"
+                            <a class="dropdown-item" href="{{ route('user.logout') }}"
                                 onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                                 <i class="feather icon-log-out"></i>
                                 {{ __('Logout') }}
                             </a>
 
-                            <form id="logout-form" action="{{ route('admin.auth.logout') }}" method="POST"
+                            <form id="logout-form" action="{{ route('user.logout') }}" method="POST"
                                 class="d-none">
                                 @csrf
                             </form>
-                        </div> -->
+                        </div>
                     </li>
                 </ul>
             </div>

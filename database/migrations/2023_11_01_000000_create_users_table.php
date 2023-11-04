@@ -25,7 +25,7 @@ return new class extends Migration
             $table->string('password');
             $table->unsignedBigInteger('experience_expertise_id')->unsigned()->index()->nullable();
             $table->string('professional_Experience')->nullable();
-            $table->unsignedBigInteger('linguistic_service_id')->unsigned()->index()->nullable();
+            $table->text('linguistic_services')->nullable();
             $table->string('cv')->nullable();
             $table->unsignedBigInteger('native_language_id')->unsigned()->index()->nullable();
             $table->double('rate_per_word')->nullable();
@@ -38,7 +38,6 @@ return new class extends Migration
             $table->string('dob')->nullable();
             $table->unsignedBigInteger('city_id')->unsigned()->index()->nullable();
             $table->foreign('experience_expertise_id')->references('id')->on('experience_and_expertises')->onDelete('cascade');
-            $table->foreign('linguistic_service_id')->references('id')->on('linguistic_services')->onDelete('cascade');
             $table->foreign('native_language_id')->references('id')->on('languages')->onDelete('cascade');
             $table->foreign('city_id')->references('id')->on('languages')->onDelete('cascade');
             $table->rememberToken();
