@@ -15,12 +15,11 @@ class LoginController extends Controller
             if (Auth::guard('user')->loginUsingId($user->id)) {
                 return redirect()->route('user.dashboard');
             }
-            else{
-                dd("failed");
-            }
         }
 
-        return redirect()->route('login');
+        $externalUrl = env('APP_AFTER_LOGOUT_URL');
+        return redirect()->away($externalUrl);
+
     }
 
 
@@ -28,7 +27,10 @@ class LoginController extends Controller
     public function logout(Request $request)
     {
         auth()->guard('user')->logout();
-        return redirect()->route('login');
+
+        $externalUrl = env('APP_AFTER_LOGOUT_URL').'?logout';
+        return redirect()->away($externalUrl);
+
     }
 
 

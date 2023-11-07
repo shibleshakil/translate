@@ -113,3 +113,9 @@ body {
     border-color: #000;
     outline: 0;
 }
+
+
+.lang-combination-table select,
+.lang-combination-table input{
+    min-width: 200px;
+}

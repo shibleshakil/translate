@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FileController;
 use App\Http\Controllers\Web\WebController;
+use App\Http\Controllers\Common\CommonController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,6 +18,9 @@ use App\Http\Controllers\Web\WebController;
 Route::get('/', function (){
     return redirect()->route('admin.auth.login');
 });
+
+Route::get('get-lang-combination-price', [CommonController::class, 'getLangComPrice'])->name('getLangComPrice');
+Route::get('getAvailableLanCom', [CommonController::class, 'getAvailableLanCom'])->name('getAvailableLanCom');
 
 Route::middleware(['maintenance'])->group(function () {
     Route::get('/home', [WebController::class, 'index'])->name('home');

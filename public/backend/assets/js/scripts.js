@@ -168,3 +168,43 @@ function statusUpdate(url, status) {
         }
     });
 }
+
+function getLangComPrice(url, from_lang, to_lang, sector, rate_per_word, rate_per_minute) {
+    $.ajax({
+        url: url,
+        type: "get",
+        data: {
+            from_lang:from_lang,
+            to_lang:to_lang,
+            sector:sector,
+        },
+        dataType: "json",
+        success: function (res) {
+            $(rate_per_word).val(res.rate_per_word);
+            $(rate_per_minute).val(res.rate_per_minute);
+        }
+    });
+}
+
+function getAvailableLanCom(url, id, view) {
+    $.ajax({
+        url: url,
+        type: "get",
+        data: {
+            "id": id,
+        },
+        dataType: "json",
+        success: function (data) {
+            var output = '<option value="">Select</option>';
+            if (data.length > 0) {
+                $.each(data, function (index, value) {
+                    output += '<option value="' + value['id'] + '">' + value['title'] + '</option>';
+                });
+            } else {
+                var output = '<option value="">No Data Available</option>';
+            }
+            $(view).html(output);
+        },
+    });
+}
+

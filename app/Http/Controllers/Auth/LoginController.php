@@ -23,7 +23,8 @@ class LoginController extends Controller
 
     public function showLoginForm()
     {
-        return view('web.auth.login');
+        $externalUrl = env('APP_AFTER_LOGOUT_URL').'?logout';
+        return redirect()->away($externalUrl);
     }
 
     /**

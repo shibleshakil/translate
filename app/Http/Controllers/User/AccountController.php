@@ -23,17 +23,23 @@ class AccountController extends Controller
     public function profile(){
         $data = auth('user')->user();
         $cities = City::orderBy('title')->get();
-        $exp_n_experts = ExperienceAndExpertise::orderBy('title')->get();
-        $languages = Language::orderBy('title')->get();
-        $sectors = Sector::orderBy('title')->get();
-        $lin_services = LinguisticService::orderBy('title')->get();
-        $catTools = CatTool::orderBy('title')->get();
 
-        $lang_combinations = UserLangCombination::where('user_id', $data->id)->get();
-        $experiences = UserExperience::where('user_id', $data->id)->get();
-        $references = UserReference::where('user_id', $data->id)->get();
-        return view('users.profile', compact('data', 'cities', 'exp_n_experts', 'languages', 'sectors',
-        'lang_combinations', 'lin_services', 'catTools', 'experiences', 'references'));
+        if($data->type == 1){
+            $exp_n_experts = ExperienceAndExpertise::orderBy('title')->get();
+            $languages = Language::orderBy('title')->get();
+            $sectors = Sector::orderBy('title')->get();
+            $lin_services = LinguisticService::orderBy('title')->get();
+            $catTools = CatTool::orderBy('title')->get();
+
+            $lang_combinations = UserLangCombination::where('user_id', $data->id)->get();
+            $experiences = UserExperience::where('user_id', $data->id)->get();
+            $references = UserReference::where('user_id', $data->id)->get();
+            return view('users.profile', compact('data', 'cities', 'exp_n_experts', 'languages', 'sectors',
+            'lang_combinations', 'lin_services', 'catTools', 'experiences', 'references'));
+        }
+
+        return view('users.client_profile', compact('data', 'cities'));
+
     }
 
     public function showPasswordForm(){
@@ -148,7 +154,11 @@ class AccountController extends Controller
                     $data = UserLangCombination::updateorInsert([
                         'user_id' => auth('user')->user()->id,
                         'from' => $value,
-                        'to' => $request->to_lang[$key]
+                        'to' => $request->to_lang[$key],
+                        'sector_id' => $request->sector[$key]
+                    ],[
+                        'rate_per_word' => $request->rate_per_word[$key],
+                        'rate_per_minute' => $request->rate_per_minute[$key],
                     ]);
                 }
             }

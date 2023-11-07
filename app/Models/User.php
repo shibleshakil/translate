@@ -42,4 +42,24 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function langCombination(){
+        return $this->hasMany(UserLangCombination::class, 'user_id', 'id');
+    }
+
+    public function totalLangCombination(){
+        return $this->langCombination->count();
+    }
+
+    public function showCompleteProfilePopup(){
+        if ($this->type == 2) {
+            return false;
+        }else{
+            if ($this->totalLangCombination() > 0) {
+                return false;
+            }
+            return true;
+        }
+    }
+
 }

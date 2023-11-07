@@ -2,6 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\User\Api\LoginController;
 use App\Http\Controllers\User\Api\RegisterController;
 
 /*
@@ -19,3 +20,4 @@ use App\Http\Controllers\User\Api\RegisterController;
 //     return $request->user();
 // });
 Route::post('/register', [RegisterController::class, 'register']);
+Route::post('/login', [LoginController::class, 'login']);

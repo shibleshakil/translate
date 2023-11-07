@@ -97,7 +97,33 @@
     <script src="{{ asset ('public/backend/app-assets/js/scripts/forms/switch.js')}}"></script>
     <script src="{{ asset ('public/backend/assets/js/datatable.js?v1.1')}}"></script>
     <script src="{{ asset ('public/backend/assets/js/dropify-init.js?v1.1')}}"></script>
-    <script src="{{ asset ('public/backend/assets/js/scripts.js?v1.2')}}"></script>
+    <script src="{{ asset ('public/backend/assets/js/scripts.js?v1.3')}}"></script>
+    @if (auth('user')->user()->showCompleteProfilePopup())
+        <!-- Modal -->
+        <div class="modal fade text-left" id="profile_compelation" tabindex="-1" role="dialog" aria-labelledby="myModalLabel1" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title" id="myModalLabel1">Profile completion Pop up</h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <h5>
+                            Please complete your profile to continue
+                            <a href="{{ route('user.profile') }}">Go to profile</a>
+                        </h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript">
+            $(function () {
+                $("#profile_compelation").modal('show');
+            })
+        </script>
+    @endif
     <!-- END: Theme JS-->
     <script type="text/javascript">
         $(function () {

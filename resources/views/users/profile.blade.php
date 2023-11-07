@@ -42,12 +42,6 @@
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link d-flex align-items-center" id="linguistic-references-tab" data-toggle="tab" href="#linguistic-references"
-                                aria-controls="linguistic-references" role="tab" aria-selected="false">
-                                    <i class="feather icon-info mr-25"></i><span class="d-none d-sm-block">Linguistic References</span>
-                                </a>
-                            </li>
-                            <li class="nav-item">
                                 <a class="nav-link d-flex align-items-center" id="tools-software-tab" data-toggle="tab" href="#tools-software"
                                 aria-controls="tools-software" role="tab" aria-selected="false">
                                     <i class="feather icon-info mr-25"></i><span class="d-none d-sm-block">CAT Tools & Softwares</span>
@@ -57,6 +51,12 @@
                                 <a class="nav-link d-flex align-items-center" id="cvpart-tab" data-toggle="tab" href="#cvpart"
                                 aria-controls="cvpart" role="tab" aria-selected="false">
                                     <i class="feather icon-info mr-25"></i><span class="d-none d-sm-block">CV</span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link d-flex align-items-center" id="linguistic-references-tab" data-toggle="tab" href="#linguistic-references"
+                                aria-controls="linguistic-references" role="tab" aria-selected="false">
+                                    <i class="feather icon-info mr-25"></i><span class="d-none d-sm-block">Linguistic References</span>
                                 </a>
                             </li>
                         </ul>
@@ -132,14 +132,14 @@
                                                 @endforeach
                                             </select>
                                         </div>
-                                        <div class="col-md-6 form-group">
+                                        {{-- <div class="col-md-6 form-group">
                                             <label>Specialised Subject <span class="text-danger">*</span></label>
                                             <select class="select2 form-control" name="specialized_subject[]" multiple>
                                                 @foreach ($sectors as $type)
                                                     <option value="{{ $type->id }}" {{ in_array($type->id, ($data->specialized_subject ? json_decode($data->specialized_subject) : [])) ? 'selected' : '' }}>{{ $type->title }}</option>
                                                 @endforeach
                                             </select>
-                                        </div>
+                                        </div> --}}
                                         <div class="col-md-6 form-group">
                                             <label>Years of Professional Experience<span class="text-danger">*</span></label>
                                             <select class="select form-control" name="professional_Experience">
@@ -209,14 +209,14 @@
                                                 {{ $data->daily_translation_capacity == '+4000' ? 'selected' : '' }}>+4000</option>
                                             </select>
                                         </div>
-                                        <div class="col-md-6 form-group">
+                                        {{-- <div class="col-md-6 form-group">
                                             <label>Desired rates per word</label>
-                                            <input type="number" class="form-control phone" name="rate_per_word" placeholder="rate_per_word" value="{{ $data->rate_per_word }}">
+                                            <input type="number" class="form-control phone" name="rate_per_word" placeholder="0.8" value="{{ $data->rate_per_word }}">
                                         </div>
                                         <div class="col-md-6 form-group">
                                             <label>Desired rates per audio minute</label>
-                                            <input type="number" class="form-control phone" name="rate_per_minute" placeholder="rate_per_minute" value="{{ $data->rate_per_minute }}">
-                                        </div>
+                                            <input type="number" class="form-control phone" name="rate_per_minute" placeholder="0.8" value="{{ $data->rate_per_minute }}">
+                                        </div> --}}
                                         <div class="col-12 d-flex flex-sm-row flex-column justify-content-end mt-1">
                                             <button type="submit" class="btn btn-primary glow mb-1 mb-sm-0 mr-0 mr-sm-1">Save
                                                 changes</button>
@@ -230,12 +230,21 @@
                                 <!-- users edit Info form start -->
                                 <form class="form" method="post" action="{{ route ('user.profile.lang-combination') }}" enctype="multipart/form-data">@csrf
                                     <div class="row">
-                                        <div class="col-12">
-                                            <table class="table">
+                                        <div class="col-12 table-responsive">
+                                            <input type="hidden" id="lang_com_count" value="lc">
+                                            <table class="table lang-combination-table">
                                                 <thead>
                                                     <tr>
-                                                        <th width="45%">From Language</th>
-                                                        <th width="45%">To Language</th>
+                                                        <th width="15%">From Language <span class="text-danger">*</span></th>
+                                                        <th width="15%">To Language <span class="text-danger">*</span></th>
+                                                        <th width="15%">Specialised Subject <span class="text-danger">*</span></th>
+                                                        <th width="15%">Rates per word <span class="text-danger">*</span>
+                                                            {{-- <button type="button" class="btn btn-warning template" data-toggle="tooltip"
+                                                                data-original-title="suggested prices will increase your chance to get more job in our platform." data-trigger="click">
+                                                                <i class="feather icon-info"></i>
+                                                            </button> --}}
+                                                        </th>
+                                                        <th width="15%">Rates per audio minute <span class="text-danger">*</span></th>
                                                         <th width="10%"></th>
                                                     </tr>
                                                 </thead>
@@ -244,7 +253,8 @@
                                                         @foreach ($lang_combinations as $lc)
                                                         <tr>
                                                             <td>
-                                                                <select name="from_lang[]" id="" class="form-control" style="width:100%">
+                                                                <select name="from_lang[]" id="from_lang_{{ $lc->id }}" class="form-control select from_lang"
+                                                                    style="width:100%" data-count="{{ $lc->id }}" required>
                                                                     <option value="">Select</option>
                                                                     @foreach ($languages as $type)
                                                                     <option value="{{ $type->id }}" {{ ($type->id == $lc->from) ? 'selected' : '' }}>{{ $type->title }}</option>
@@ -252,7 +262,8 @@
                                                                 </select>
                                                             </td>
                                                             <td>
-                                                                <select name="to_lang[]" id="" class="form-control" style="width:100%">
+                                                                <select name="to_lang[]" id="to_lang_{{ $lc->id }}" class="form-control select to_langt"
+                                                                    style="width:100%" data-count="{{ $lc->id }}" required>
 
                                                                     <option value="">Select</option>
                                                                     @foreach ($languages as $type)
@@ -260,7 +271,30 @@
                                                                     @endforeach
                                                                 </select>
                                                             </td>
-                                                            <td><button type="button" class="btn btn-danger" onclick="deleteData('{{ route('user.lang-combination.delete', [$data->id]) }}')">Remove</button></td>
+                                                            <td>
+                                                                <select name="sector[]" id="sector_{{ $lc->id }}" class="form-control select sector"
+                                                                    style="width:100%" data-count="{{ $lc->id }}" required>
+
+                                                                    <option value="">Select</option>
+                                                                    @foreach ($sectors as $type)
+                                                                    <option value="{{ $type->id }}" {{ ($type->id == $lc->sector_id) ? 'selected' : '' }}>{{ $type->title }}</option>
+                                                                    @endforeach
+                                                                </select>
+                                                            </td>
+                                                            <td>
+                                                                <input type="number" class="form-control phone rate_per_word" name="rate_per_word[]"
+                                                                id="rate_per_word_{{ $lc->id }}" data-count="{{ $lc->id }}"
+                                                                placeholder="0.8" value="{{ $lc->rate_per_word }}" required step="any">
+                                                            </td>
+                                                            <td>
+                                                                <input type="number" class="form-control phone rate_per_minute" name="rate_per_minute[]"
+                                                                id="rate_per_minute_{{ $lc->id }}" data-count="{{ $lc->id }}"
+                                                                placeholder="0.8" value="{{ $lc->rate_per_minute }}" required step="any">
+                                                            </td>
+                                                            <td>
+                                                                <button type="button" class="btn btn-danger"
+                                                                onclick="deleteData('{{ route('user.lang-combination.delete', [$lc->id]) }}')">Remove</button>
+                                                            </td>
                                                         </tr>
                                                         @endforeach
                                                     @endif
@@ -344,12 +378,12 @@
                                             <div class="col-md-6 form-group">
                                                 <label for="">Full Name</label>
                                                 <input type="text" id="ref_name_1" name="ref_name[]" class="form-control"
-                                                placeholder="Ex: John Doe" value="{{ $ref->ref_name }}">
+                                                placeholder="Ex: John Doe" value="{{ $ref->ref_name }}" required>
                                             </div>
                                             <div class="col-md-6 form-group">
                                                 <label for="">Email</label>
                                                 <input type="email" id="ref_email_1" name="ref_email[]" class="form-control"
-                                                placeholder="Ex: JohnDoe@example.com" value="{{ $ref->ref_email }}">
+                                                placeholder="Ex: JohnDoe@example.com" value="{{ $ref->ref_email }}" required>
                                             </div>
                                             <div class="col-md-6 form-group">
                                                 <label for="">Phone Number</label>
@@ -367,7 +401,7 @@
                                                 placeholder="Ex: Meta" value="{{ $ref->ref_company }}">
                                             </div>
                                             <div class="col-md-12 text-right form-group">
-                                                <button type="button" class="btn btn-danger" onclick="deleteData('{{ route('user.references.delete', [$data->id]) }}')" data-exp="'+expCount+'">Remove</button>
+                                                <button type="button" class="btn btn-danger" onclick="deleteData('{{ route('user.references.delete', [$ref->id]) }}')" data-exp="'+expCount+'">Remove</button>
                                             </div>
                                         </div>
                                         @endforeach
@@ -490,10 +524,42 @@
 @section('script')
 
     <script type="text/javascript">
+        $(document).on('change', '.from_lang', function() {
+            var target = $(this).attr('data-count');
+            var from_lang = $("#from_lang_"+target).val();
+            var to_lang = $("#to_lang_"+target).val();
+
+            const availLanUrl = "{{ route ('getAvailableLanCom') }}";
+
+            if (from_lang != '') {
+                getAvailableLanCom(availLanUrl, from_lang, "#to_lang_"+target);
+            }
+
+
+        });
+
+        $(document).on('change', '.from_lang, .to_lang, .sector', function() {
+            console.log('ok');
+            var target = $(this).attr('data-count');
+            var from_lang = $("#from_lang_"+target).val();
+            var to_lang = $("#to_lang_"+target).val();
+            var sector = $("#sector_"+target).val();
+
+            const getrate = "{{ route ('getLangComPrice') }}";
+
+            if (from_lang != '' && to_lang != '' && sector != '') {
+                getLangComPrice(getrate, from_lang, to_lang, sector, "#rate_per_word_"+target, "#rate_per_minute_"+target);
+            }
+
+        });
+
         function addLangCombination(lc) {
+            var lang_com_count = $("#lang_com_count").val();
+            lang_com_count = lang_com_count  + 1;
+            $("#lang_com_count").val(lang_com_count);
             var new_combination = '<tr>'+
                 '<td>'+
-                    '<select name="from_lang[]" id="" class="form-control" style="width:100%">'+
+                    '<select name="from_lang[]" id="from_lang_'+lang_com_count+'" data-count="'+lang_com_count+'" class="form-control select from_lang" style="width:100%" required>'+
 
                         '<option value="">Select</option>'+
                         '@foreach ($languages as $type)'+
@@ -502,13 +568,31 @@
                     '</select>'+
                 '</td>'+
                 '<td>'+
-                    '<select name="to_lang[]" id="" class="form-control" style="width:100%">'+
+                    '<select name="to_lang[]" id="to_lang_'+lang_com_count+'" data-count="'+lang_com_count+'" class="form-control select to_lang" style="width:100%" required>'+
+
+                        // '<option value="">Select</option>'+
+                        // '@foreach ($languages as $type)'+
+                        //     '<option value="{{ $type->id }}">{{ $type->title }}</option>'+
+                        // '@endforeach'+
+                    '</select>'+
+                '</td>'+
+
+                '<td>'+
+                    '<select name="sector[]" id="sector_'+lang_com_count+'" data-count="'+lang_com_count+'" class="form-control select sector" style="width:100%" required>'+
 
                         '<option value="">Select</option>'+
-                        '@foreach ($languages as $type)'+
-                            '<option value="{{ $type->id }}">{{ $type->title }}</option>'+
+                        '@foreach ($sectors as $type)'+
+                        '<option value="{{ $type->id }}">{{ $type->title }}</option>'+
                         '@endforeach'+
                     '</select>'+
+                '</td>'+
+                '<td>'+
+                    '<input type="number" class="form-control phone rate_per_word" name="rate_per_word[]" '+
+                    'placeholder="0.8" value="" id="rate_per_word_'+lang_com_count+'" data-count="'+lang_com_count+'" required  step="any">'+
+                '</td>'+
+                '<td>'+
+                    '<input type="number" class="form-control phone rate_per_minute" name="rate_per_minute[]" '+
+                    'placeholder="0.8" value="" id="rate_per_minute_'+lang_com_count+'" data-count="'+lang_com_count+'" required  step="any">'+
                 '</td>'+
                 '<td><button type="button" class="btn btn-danger" onclick="removeLangCombination(this)">Remove</button></td>'+
             '</tr>';
@@ -579,12 +663,12 @@
                 '<div class="col-md-6 form-group">'+
                     '<label for="">Full Name</label>'+
                     '<input type="text" id="ref_name_'+refCount+'" name="ref_name[]" class="form-control"'+
-                    'placeholder="Ex: John Doe">'+
+                    'placeholder="Ex: John Doe" required>'+
                 '</div>'+
                 '<div class="col-md-6 form-group">'+
                     '<label for="">Email</label>'+
                     '<input type="email" id="ref_email_'+refCount+'" name="ref_email[]" class="form-control"'+
-                    'placeholder="Ex: JohnDoe@example.com">'+
+                    'placeholder="Ex: JohnDoe@example.com" required>'+
                 '</div>'+
                 '<div class="col-md-6 form-group">'+
                     '<label for="">Phone Number</label>'+
